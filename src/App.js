@@ -6,6 +6,8 @@ import Register from './pages/Register';
 import { isLoggedIn } from './utils/auth';
 import Logout from './pages/Logout';
 import AppLayout from './layouts/AppLayout';
+import Downloads from './pages/Downloads';
+
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -57,6 +59,7 @@ function App() {
 
         <Route path="/" element={<AppLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/downloads" element={<Downloads />} />
         </Route>
 
         {/* Auth */}

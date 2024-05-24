@@ -5,6 +5,8 @@ import PlatformsView from '../components/home/PlatformsView'
 import multichatExample from '../assets/img/multichatExample.webp'
 import messagingExample from '../assets/img/messagingScreensExample.png'
 import logo from '../assets/img/logo.png'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Home() {
   return (
@@ -17,9 +19,14 @@ function Home() {
         </h1>
         <p className='text-center opacity-80'>Access all of your messages from one platform.</p>
 
-        <div className="container">
+        <button className='btn btn-primary rounded-lg py-3 px-3 m-auto d-block mt-5'>
+          Download for Windows
+          <FontAwesomeIcon className='ps-2' icon={faArrowRight} />
+        </button>
 
-          <img src={multichatExample} style={{ maxWidth: 660 }} className='m-auto w-100 d-block' alt="" />
+        <div className="container pt-5">
+
+          <img src={multichatExample} style={{ maxWidth: 730 }} className='m-auto w-100 d-block' alt="" />
 
           <div className='py-5 text-center mt-5'>
             <h1 className='bold mb-3'>Bringing Your Conversations Together

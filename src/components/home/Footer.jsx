@@ -33,7 +33,7 @@ function Footer() {
                                     class="fa-brands text-secondary h4 fa-x-twitter"></i></a>
                                 <a href="#" class="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
                                     class="fa-brands text-secondary h4 fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/company/advaisenet/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
+                                <a href="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
                                     class="fa-brands text-secondary h4 fa-linkedin"></i></a>
                             </ul>
 
@@ -90,9 +90,9 @@ function Footer() {
                                     <li><a href="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
                                         <i class="fa-solid fa-headset pe-2"></i> Contact live support
                                     </a></li>
-                                    <li><a href="tel:33613498382" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-phone pe-2"></i> +33613498382</a>
+                                    <li><a href="tel:33613498382" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-phone pe-2"></i> +423563953</a>
                                     </li>
-                                    <li><a href="mailto:contact@advaise.net" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-envelope pe-2"></i> contact@advaise.net</a>
+                                    <li><a href="mailto:contact@multi-chat.io" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-envelope pe-2"></i> contact@multi-chat.io</a>
                                     </li>
                                 </ul>
 
@@ -105,7 +105,7 @@ function Footer() {
                     <div>
                         <p class="text-center text-secondary m-0">
                             Copyright &copy;
-                            2024 ADVAISE. All rights reserved.
+                            2024 Multichat. All rights reserved.
                         </p>
                     </div>
                 </div>

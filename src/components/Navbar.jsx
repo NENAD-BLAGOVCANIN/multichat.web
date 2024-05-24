@@ -17,19 +17,19 @@ function Navbar() {
                             <a class="nav-link hover-lg active" href="/">Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link hover-lg" href="#features">Downloads</a>
+                            <a class="nav-link hover-lg" href="/downloads">Downloads</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link hover-lg" href="#pricing">Features</a>
+                            <a class="nav-link hover-lg" href="#features">Features</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link hover-lg" href="#pricing">Docs</a>
+                            <a class="nav-link hover-lg" href="/docs">Docs</a>
                         </li>
                     </ul>
                 </div>
                 <div className='d-flex align-items-center'>
                     <div className='px-1'>
-                        <a href="/register" className='btn btn-primary rounded'>Sign up</a>
+                        <a href="/register" className='btn btn-primary rounded-lg px-3 py-2'>Sign up</a>
                     </div>
                 </div>
             </div>

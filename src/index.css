@@ -190,7 +190,8 @@ hr {
 }
 
 .navbar{
-  background-color: var(--color-main-background) !important;
+  background: var(--background) !important;
+  border-bottom: 1px solid white;
   z-index: 999;
 }
 
