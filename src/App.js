@@ -1,24 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import { isLoggedIn } from './utils/auth';
+import Logout from './pages/Logout';
 
 function App() {
+  const [authenticated, setAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  useEffect(() => {
+    const savedThemePreference = localStorage.getItem('themePreference');
+
+    if (savedThemePreference === 'dark') {
+      setDarkMode(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('themePreference', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      const loggedIn = isLoggedIn();
+      setAuthenticated(loggedIn);
+      setLoading(false);
+    };
+
+    checkAuthentication();
+
+  }, []);
+
+  if (loading) {
+    return <div></div>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          authenticated ? <Navigate to="/home" /> : <Navigate to="/login" />
+        } />
+        <Route path="/home" element={<Home />} />
+
+        {/* Auth */}
+        <Route path="/login" element={<Login authenticated={authenticated} setAuthenticated={setAuthenticated} toggleDarkMode={toggleDarkMode} />} />
+        <Route path="/register" element={<Register authenticated={authenticated} setAuthenticated={setAuthenticated} toggleDarkMode={toggleDarkMode} />} />
+        <Route path="/logout" element={<Logout />} />
+
+        {/* Fallback route to handle 404 or unmatched routes */}
+        <Route path="*" element={<Navigate to={authenticated ? "/home" : "/login"} />} />
+      </Routes>
+    </Router>
   );
 }
 
