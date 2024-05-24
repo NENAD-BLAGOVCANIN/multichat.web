@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import { isLoggedIn } from './utils/auth';
 import Logout from './pages/Logout';
+import AppLayout from './layouts/AppLayout';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -53,10 +54,14 @@ function App() {
   return (
     <Router>
       <Routes>
+        
         <Route path="/" element={
           authenticated ? <Navigate to="/home" /> : <Navigate to="/login" />
         } />
-        <Route path="/home" element={<Home />} />
+
+        <Route path="/" element={<AppLayout />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
 
         {/* Auth */}
         <Route path="/login" element={<Login authenticated={authenticated} setAuthenticated={setAuthenticated} toggleDarkMode={toggleDarkMode} />} />

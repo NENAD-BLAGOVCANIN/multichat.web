@@ -189,12 +189,29 @@ hr {
   width: auto;
 }
 
+.navbar{
+  background-color: var(--color-main-background) !important;
+  z-index: 999;
+}
+
+.navbar .nav-item .nav-link{
+  color: var(--color-text) !important;
+  font-weight: 500;
+}
+
+.navbar-brand img{
+  height: 35px;
+}
+
 .main-content-wrapper {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding-top: 2.5rem;
   min-height: 90vh;
+}
+
+.main-container{
+  padding-top: 70px;
 }
 
 .opacity-80 {
@@ -209,10 +226,15 @@ hr {
   background-color: var(--color-main-background) !important;
 }
 
-.hover-light:hover {
-  background-color: rgba(255, 255, 255, 0.233);
+.hover,
+.hover-lg {
+  transition: opacity .25s ease !important;
 }
 
 .hover:hover {
-  opacity: .6 !important;
+  opacity: 0.8;
+}
+
+.hover-lg:hover {
+  opacity: 0.6;
 }
