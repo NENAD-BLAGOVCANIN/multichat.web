@@ -42,7 +42,6 @@ function Home() {
           </div>
 
           <Features />
-          <Footer />
 
         </div>
       </div>

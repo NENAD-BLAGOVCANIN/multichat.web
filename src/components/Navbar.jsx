@@ -17,10 +17,13 @@ function Navbar() {
                             <a class="nav-link hover-lg active" href="/">Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link hover-lg" href="#features">Features</a>
+                            <a class="nav-link hover-lg" href="#features">Downloads</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link hover-lg" href="#pricing">Pricing</a>
+                            <a class="nav-link hover-lg" href="#pricing">Features</a>
+                        </li>
+                        <li class="nav-item px-2">
+                            <a class="nav-link hover-lg" href="#pricing">Docs</a>
                         </li>
                     </ul>
                 </div>
