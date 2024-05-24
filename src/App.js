@@ -54,13 +54,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        
-        <Route path="/" element={
-          authenticated ? <Navigate to="/home" /> : <Navigate to="/login" />
-        } />
 
         <Route path="/" element={<AppLayout />}>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Route>
 
         {/* Auth */}
@@ -69,7 +65,7 @@ function App() {
         <Route path="/logout" element={<Logout />} />
 
         {/* Fallback route to handle 404 or unmatched routes */}
-        <Route path="*" element={<Navigate to={authenticated ? "/home" : "/login"} />} />
+        <Route path="*" element={<Navigate to={'/'} />} />
       </Routes>
     </Router>
   );
