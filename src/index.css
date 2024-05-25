@@ -17,7 +17,7 @@
 
 .dark-mode {
   --color-text: #dfdfdf;
-  --color-text-lighter: #bbbbbb;
+  --color-text-lighter: #959698;
   --background: linear-gradient(73deg, rgba(12, 19, 24, 1) 0%, rgba(12, 21, 27, 1) 28%, rgba(12, 21, 28, 1) 81%, rgba(12, 25, 34, 1) 100%);
   --color-main-background: #0e2b3f;
 }
@@ -190,14 +190,18 @@ hr {
 }
 
 .navbar{
-  background: var(--background) !important;
-  border-bottom: 1px solid white;
+  background: black !important;
   z-index: 999;
 }
 
 .navbar .nav-item .nav-link{
-  color: var(--color-text) !important;
+  color: var(--color-text-lighter) !important;
   font-weight: 500;
+}
+
+
+.navbar .nav-item .nav-link.active, .navbar .nav-item .nav-link:hover{
+  color: var(--color-text) !important;
 }
 
 .navbar-brand img{
@@ -221,6 +225,7 @@ hr {
 
 .card {
   color: var(--color-text) !important;
+  background: var(--color-main-background) !important;
 }
 
 .switch-off.btn {

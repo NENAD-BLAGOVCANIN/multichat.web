@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/img/logo.png'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
     return (
@@ -14,17 +14,25 @@ function Navbar() {
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item px-2">
-                            <Link class="nav-link hover-lg active" to="/">Home</Link>
+                        <li className="nav-item px-2">
+                            <NavLink className="nav-link" exact to="/" activeClassName="active">
+                                Home
+                            </NavLink>
                         </li>
-                        <li class="nav-item px-2">
-                            <Link class="nav-link hover-lg" to="/downloads">Downloads</Link>
+                        <li className="nav-item px-2">
+                            <NavLink className="nav-link" to="/downloads" activeClassName="active">
+                                Downloads
+                            </NavLink>
                         </li>
-                        <li class="nav-item px-2">
-                            <Link class="nav-link hover-lg" to="#features">Features</Link>
+                        <li className="nav-item px-2">
+                            <NavLink className="nav-link" to="/features" activeClassName="active">
+                                Features
+                            </NavLink>
                         </li>
-                        <li class="nav-item px-2">
-                            <Link class="nav-link hover-lg" to="/docs">Docs</Link>
+                        <li className="nav-item px-2">
+                            <NavLink className="nav-link" to="/docs" activeClassName="active">
+                                Docs
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

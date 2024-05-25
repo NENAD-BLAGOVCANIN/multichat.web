@@ -12,7 +12,7 @@ function Home() {
     <div className='blur-background-wrapper'>
       <div className='main-content-wrapper'>
 
-        <h1 className='text-center bold pt-5'>
+        <h1 className='text-center bold pt-5' style={{fontSize: '35pt'}}>
           <img src={logo} className='img-fluid' style={{ height: 65 }} alt="" />
           <span className='ps-3'>Welcome to Multichat</span>
         </h1>
