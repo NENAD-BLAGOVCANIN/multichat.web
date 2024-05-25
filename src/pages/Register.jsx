@@ -71,7 +71,7 @@ export default function Register({ authenticated, setAuthenticated }) {
                   </div>
                   <div className='d-flex justify-content-center'>
                     <span className='text-secondary small fw-500 text-decoration-none pe-2'>Already have an account?</span>
-                    <Link to="/#/login" className='small fw-500 color-text text-decoration-none'>Log In</Link>
+                    <Link to="/login" className='small fw-500 color-text text-decoration-none'>Log In</Link>
                   </div>
                 </div>
 
