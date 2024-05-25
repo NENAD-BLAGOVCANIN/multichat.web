@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from '../components/home/Footer'
 import Features from '../components/home/Features'
 import PlatformsView from '../components/home/PlatformsView'
 import multichatExample from '../assets/img/multichatExample.webp'

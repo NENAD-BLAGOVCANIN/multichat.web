@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../assets/img/logo.png'
 import { register } from '../api/register';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../api/login';
@@ -18,7 +17,7 @@ export default function Register({ authenticated, setAuthenticated }) {
     e.preventDefault();
 
     try {
-      const user = await register(name, email, password);
+      await register(name, email, password);
       const response = await login(email, password);
       if (response.success) {
         setAuthenticated(true);

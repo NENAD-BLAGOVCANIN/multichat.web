@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faCircleHalfStroke, faEdit, faInfinity, faKeyboard, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
-import { faFonticonsFi } from '@fortawesome/free-brands-svg-icons'
 
 function Features() {
     return (
