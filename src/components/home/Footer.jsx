@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/img/logo.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -27,12 +28,12 @@ function Footer() {
                             </form>
 
                             <ul class="navbar-nav flex-row d-flex p-0 pt-4">
-                                <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Twitter"><i
-                                    class="fa-brands text-secondary h4 fa-x-twitter"></i></a>
-                                <a href="#" class="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
-                                    class="fa-brands text-secondary h4 fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
-                                    class="fa-brands text-secondary h4 fa-linkedin"></i></a>
+                                <Link to="#" data-bs-toggle="tooltip" data-placement="top" title="Twitter"><i
+                                    class="fa-brands text-secondary h4 fa-x-twitter"></i></Link>
+                                <Link to="#" class="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
+                                    class="fa-brands text-secondary h4 fa-facebook"></i></Link>
+                                <Link to="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
+                                    class="fa-brands text-secondary h4 fa-linkedin"></i></Link>
                             </ul>
 
                         </div>
@@ -41,30 +42,30 @@ function Footer() {
                                 <p class="pb-2 fw-500 m-0">Quick Links</p>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a href="/" class="py-2 d-block text-secondary text-decoration-none">
+                                        <Link to="/" class="py-2 d-block text-secondary text-decoration-none">
                                             Home
-                                        </a>
+                                        </Link>
                                     </li>
-                                    <li><a href="/blogs" class="py-2 d-block text-secondary text-decoration-none">
+                                    <li><Link to="/blogs" class="py-2 d-block text-secondary text-decoration-none">
                                         Blog
-                                    </a></li>
-                                    <li><a href="#featuresSection" class="py-2 d-block text-secondary text-decoration-none">
-                                        Features & Privacy</a>
+                                    </Link></li>
+                                    <li><Link to="#featuresSection" class="py-2 d-block text-secondary text-decoration-none">
+                                        Features & Privacy</Link>
                                     </li>
                                 </ul>
                                 <p class="pb-2 fw-500 m-0 pt-3">Info</p>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a href="/privacy-policy" class="py-2 d-block text-secondary text-decoration-none">
+                                        <Link to="/privacy-policy" class="py-2 d-block text-secondary text-decoration-none">
                                             Privacy Policy
-                                        </a>
+                                        </Link>
                                     </li>
-                                    <li><a href="/user-agreement" class="py-2 d-block text-secondary text-decoration-none">
-                                        User Agreement</a>
+                                    <li><Link to="/user-agreement" class="py-2 d-block text-secondary text-decoration-none">
+                                        User Agreement</Link>
                                     </li>
-                                    <li><a href="/about-us" class="py-2 d-block text-secondary text-decoration-none">
+                                    <li><Link to="/about-us" class="py-2 d-block text-secondary text-decoration-none">
                                         About Us
-                                    </a></li>
+                                    </Link></li>
                                 </ul>
                             </div>
 
@@ -73,24 +74,24 @@ function Footer() {
                             <div class="footer-links-block d-block m-auto">
                                 <p class="pb-2 fw-500 m-0">Users</p>
                                 <ul class="list-unstyled">
-                                    <li><a href="/register" class="py-2 d-block text-secondary text-decoration-none">
+                                    <li><Link to="/register" class="py-2 d-block text-secondary text-decoration-none">
                                         Sign Up
-                                    </a></li>
-                                    <li><a href="/login" class="py-2 d-block text-secondary text-decoration-none">
+                                    </Link></li>
+                                    <li><Link to="/login" class="py-2 d-block text-secondary text-decoration-none">
                                         Log In
-                                    </a></li>
-                                    <li><a href="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
+                                    </Link></li>
+                                    <li><Link to="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
                                         Contact Support
-                                    </a></li>
+                                    </Link></li>
                                 </ul>
                                 <p class="pb-2 fw-500 m-0 pt-3">Contact</p>
                                 <ul class="list-unstyled">
-                                    <li><a href="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
+                                    <li><Link to="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
                                         <i class="fa-solid fa-headset pe-2"></i> Contact live support
-                                    </a></li>
-                                    <li><a href="tel:33613498382" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-phone pe-2"></i> +423563953</a>
+                                    </Link></li>
+                                    <li><Link to="tel:33613498382" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-phone pe-2"></i> +423563953</Link>
                                     </li>
-                                    <li><a href="mailto:contact@multi-chat.io" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-envelope pe-2"></i> contact@multi-chat.io</a>
+                                    <li><Link to="mailto:contact@multi-chat.io" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-envelope pe-2"></i> contact@multi-chat.io</Link>
                                     </li>
                                 </ul>
 
