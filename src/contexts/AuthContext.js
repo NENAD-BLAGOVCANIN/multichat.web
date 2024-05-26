@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
         setEmail('');
         setToken('');
         localStorage.removeItem('token');
-        navigate('/login');
+        navigate('/');
     };
 
     const checkTokenExpiration = (token) => {

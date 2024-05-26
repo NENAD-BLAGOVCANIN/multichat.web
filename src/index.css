@@ -189,22 +189,23 @@ hr {
   width: auto;
 }
 
-.navbar{
+.navbar {
   background: black !important;
   z-index: 999;
 }
 
-.navbar .nav-item .nav-link{
+.navbar .nav-item .nav-link {
   color: var(--color-text-lighter) !important;
   font-weight: 500;
 }
 
 
-.navbar .nav-item .nav-link.active, .navbar .nav-item .nav-link:hover{
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:hover {
   color: var(--color-text) !important;
 }
 
-.navbar-brand img{
+.navbar-brand img {
   height: 35px;
 }
 
@@ -215,7 +216,7 @@ hr {
   min-height: 90vh;
 }
 
-.main-container{
+.main-container {
   padding-top: 70px;
 }
 
@@ -245,16 +246,48 @@ hr {
   opacity: 0.6;
 }
 
-footer li a{
+footer li a {
   font-size: 400 !important;
 }
 
-footer{
+footer {
   max-width: unset !important;
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-links-block{
-      width: fit-content !important;
+  .footer-links-block {
+    width: fit-content !important;
   }
+}
+
+.dropdown-menu-left {
+  right: 0 !important;
+  left: unset !important;
+}
+
+.custom-dropdown .dropdown-menu {
+  background-color: var(--color-main-background) !important;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 1rem !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 10px;
+  -webkit-transition: 0.3s margin-top ease, 0.3s opacity ease,
+    0.3s visibility ease;
+  -o-transition: 0.3s margin-top ease, 0.3s opacity ease, 0.3s visibility ease;
+  transition: 0.3s margin-top ease, 0.3s opacity ease, 0.3s visibility ease;
+  max-width: 380px;
+}
+
+
+.custom-dropdown .title-wrap {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.custom-dropdown .title {
+  font-size: 12px;
+  font-weight: 700;
 }

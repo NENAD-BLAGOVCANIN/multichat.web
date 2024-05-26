@@ -1,11 +1,18 @@
-import React from 'react'
-import logo from '../assets/img/logo.png'
+import React, { useState } from 'react'
+import logo from '../../assets/img/logo.png'
 import { Link, NavLink } from 'react-router-dom'
-import { useAuth } from '../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
+import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.svg';
+import UserDropdown from "./UserDropdown";
 
 function Navbar() {
 
     const { authenticated, email, logout } = useAuth();
+    const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+
+    const toggleUserDropdown = () => {
+        setIsUserDropdownOpen(!isUserDropdownOpen);
+    };
 
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-lg">
@@ -42,7 +49,31 @@ function Navbar() {
                 </div>
                 {authenticated ? (
                     <>
-                        <span>Hello, {email}</span>
+                        <div className="dropdown custom-dropdown">
+                            <a
+                                href="#"
+                                onClick={toggleUserDropdown}
+                                className="dropdown-link d-flex align-items-center"
+                                aria-haspopup="true"
+                                aria-expanded={isUserDropdownOpen}
+                            >
+                                <img
+                                    src={profileImagePlaceholder}
+                                    className="rounded pointer"
+                                    alt=""
+                                    style={{
+                                        maxHeight: 28,
+                                        aspectRatio: 1,
+                                        objectFit: "cover",
+                                        height: "100%",
+                                    }}
+                                />
+                            </a>
+
+                            {isUserDropdownOpen && (
+                                <UserDropdown />
+                            )}
+                        </div>
                     </>
                 ) : (
                     <div className='d-flex align-items-center'>
