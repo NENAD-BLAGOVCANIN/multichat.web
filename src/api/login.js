@@ -1,14 +1,13 @@
 import { apiUrl } from './config';
 
 const login = async (email, password) => {
-    
     const variables = {
         email: email,
         password: password
     };
 
     try {
-        const response = await fetch(apiUrl+'/token/', {
+        const response = await fetch(apiUrl + '/token/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -18,14 +17,16 @@ const login = async (email, password) => {
 
         const responseData = await response.json();
 
-        if (response.ok) {
-            return responseData;
-        } else {
-            throw new Error(responseData.errors);
+        if (!response.ok) {
+            throw new Error(responseData.detail || 'Login failed');
         }
+
+        return responseData;
+
     } catch (error) {
-        throw new Error(error);
+        return { success: false, message: error.message };
     }
 };
+
 
 export { login };

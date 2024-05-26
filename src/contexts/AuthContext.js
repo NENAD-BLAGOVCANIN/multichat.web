@@ -19,23 +19,20 @@ export const AuthProvider = ({ children }) => {
 
     // Function to log in
     const handleLogin = async (email, password) => {
-        try {
-            const response = await login(email, password);
-            if (response.access) {
-                const decodedToken = jwtDecode(response.access);
-                setAuthenticated(true);
-                setEmail(email);
-                setToken(response.access);
-                localStorage.setItem('token', response.access);
-                navigate('/');
-            } else {
-                console.error('Login failed: No access token returned');
-            }
-        } catch (error) {
-            console.error('Login failed:', error);
+        const response = await login(email, password);
+        if (response.access) {
+            const decodedToken = jwtDecode(response.access);
+            setAuthenticated(true);
+            setEmail(email);
+            setToken(response.access);
+            localStorage.setItem('token', response.access);
+            navigate('/');
+            return { success: true };
+        } else {
+            return { success: false, message: response.message || 'Login failed' };
         }
     };
-
+    
     const handleLogout = () => {
         setAuthenticated(false);
         setEmail('');

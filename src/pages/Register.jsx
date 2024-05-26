@@ -3,7 +3,8 @@ import { register } from '../api/register';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../api/login';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Register() {
 
@@ -12,16 +13,14 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await register(name, email, password);
-      const response = await login(email, password);
-      if (response.success) {
-        navigate('/');
-      }
+      login(email, password);
 
     } catch (error) {
       setError('An error occurred while logging in.');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function Login() {
@@ -9,13 +9,16 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate();
     const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setError('');
 
-        login(email, password);
+        const response = await login(email, password);
+        if (!response.success) {
+            setError(response.message);
+        }
     };
 
 
