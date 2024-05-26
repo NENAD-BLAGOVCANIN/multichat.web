@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { login } from '../api/login';
 import { useNavigate } from 'react-router-dom';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom'; 
+import { useAuth } from '../contexts/AuthContext';
 
 export default function Login({ authenticated, setAuthenticated }) {
 
@@ -10,22 +10,12 @@ export default function Login({ authenticated, setAuthenticated }) {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const { success, message } = await login(email, password);
-            if (success) {
-                setAuthenticated(true);
-                navigate('/');
-            } else {
-                setError(message || 'Login failed. Please check your credentials.');
-            }
-        } catch (error) {
-            setError('Wrong email or password');
-            console.error(error);
-        }
+        login(email, password);
     };
 
 

@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '../assets/img/logo.png'
 import { Link, NavLink } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 
 function Navbar() {
+
+    const { authenticated, email, logout } = useAuth();
+
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-lg">
             <div class="container-fluid">
@@ -36,11 +40,20 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
-                <div className='d-flex align-items-center'>
-                    <div className='px-1'>
-                        <Link to="/register" className='btn btn-primary rounded-lg px-3 py-2'>Sign up</Link>
+                {authenticated ? (
+                    <>
+                        <span>Hello, {email}</span>
+                        <a href="/downloads">Downloads</a>
+                        <button onClick={logout}>Logout</button>
+                    </>
+                ) : (
+                    <div className='d-flex align-items-center'>
+                        <div className='px-1'>
+                            <Link to="/register" className='btn btn-primary rounded-lg px-3 py-2'>Sign up</Link>
+                        </div>
                     </div>
-                </div>
+                )}
+
             </div>
         </nav>
     )

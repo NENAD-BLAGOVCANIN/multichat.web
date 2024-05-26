@@ -19,8 +19,7 @@ const login = async (email, password) => {
         const responseData = await response.json();
 
         if (response.ok) {
-            localStorage.setItem('accessToken', responseData.access);
-            return { success: true, message: "Login successful" };
+            return responseData;
         } else {
             throw new Error(responseData.errors);
         }

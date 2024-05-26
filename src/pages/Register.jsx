@@ -75,9 +75,6 @@ export default function Register({ authenticated, setAuthenticated }) {
                   </div>
                 </div>
 
-
-
-
               </form>
             </div>
 
