@@ -4,7 +4,7 @@ import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom'; 
 import { useAuth } from '../contexts/AuthContext';
 
-export default function Login({ authenticated, setAuthenticated }) {
+export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

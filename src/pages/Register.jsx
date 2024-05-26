@@ -5,7 +5,7 @@ import { login } from '../api/login';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom'; 
 
-export default function Register({ authenticated, setAuthenticated }) {
+export default function Register() {
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -20,7 +20,6 @@ export default function Register({ authenticated, setAuthenticated }) {
       await register(name, email, password);
       const response = await login(email, password);
       if (response.success) {
-        setAuthenticated(true);
         navigate('/');
       }
 
