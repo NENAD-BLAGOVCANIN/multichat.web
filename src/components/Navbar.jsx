@@ -43,8 +43,6 @@ function Navbar() {
                 {authenticated ? (
                     <>
                         <span>Hello, {email}</span>
-                        <a href="/downloads">Downloads</a>
-                        <button onClick={logout}>Logout</button>
                     </>
                 ) : (
                     <div className='d-flex align-items-center'>
