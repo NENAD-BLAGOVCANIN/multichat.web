@@ -5,6 +5,7 @@ import { login } from '../api/login';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 export default function Register() {
 
@@ -20,8 +21,11 @@ export default function Register() {
 
     try {
       await register(name, email, password);
-      login(email, password);
-
+      const response = await login(email, password);
+      if (response.success) {
+        toast.success('Successfully registered an account!');
+        navigate('/home');
+      }
     } catch (error) {
       setError('An error occurred while logging in.');
       console.error(error);
