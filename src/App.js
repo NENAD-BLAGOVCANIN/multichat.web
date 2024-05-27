@@ -45,7 +45,7 @@ const App = () => {
     <Router>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<AppLayout />}>
+          <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
             <Route path="/" element={<Home />} />
             <Route path="/downloads" element={<PrivateRoute element={<Downloads />} />} />
           </Route>

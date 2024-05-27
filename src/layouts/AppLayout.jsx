@@ -3,11 +3,11 @@ import Navbar from "../components/navbar/Navbar";
 import { Outlet } from "react-router";
 import Footer from "../components/home/Footer";
 
-function AppLayout() {
+function AppLayout({darkMode, toggleDarkMode}) {
 
     return (
         <div className="main-content-wrapper">
-            <Navbar />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
             <div className="main-container">
                 <Outlet />
             </div>

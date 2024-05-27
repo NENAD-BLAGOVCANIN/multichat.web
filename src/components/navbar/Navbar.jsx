@@ -4,8 +4,9 @@ import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.svg';
 import UserDropdown from "./UserDropdown";
+import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
-function Navbar() {
+function Navbar({ darkMode, toggleDarkMode }) {
 
     const { authenticated, email, logout } = useAuth();
     const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -15,7 +16,7 @@ function Navbar() {
     };
 
     return (
-        <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-lg">
+        <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-md">
             <div class="container-fluid px-4">
                 <Link class="navbar-brand" to="/">
                     <img src={logo} alt="" />
@@ -46,6 +47,17 @@ function Navbar() {
                             </NavLink>
                         </li>
                     </ul>
+                </div>
+                <div className="form-group pe-3">
+
+                    <BootstrapSwitchButton
+                        checked={darkMode}
+                        className="bg-gray"
+                        onlabel='☀️'
+                        offlabel='🌘'
+                        onChange={toggleDarkMode}
+                    />
+
                 </div>
                 {authenticated ? (
                     <>

@@ -10,16 +10,16 @@
   --color-light: #f8f8f8;
   --color-dark: rgb(16, 17, 22);
   --color-dark-lighter: rgb(14, 43, 63);
-  --background: rgb(255, 255, 255);
-  --color-main-background: rgb(236, 238, 241);
+  --background: rgb(240, 243, 245);
+  --color-main-background: rgb(255, 255, 255);
   --sidebar-width: 310px
 }
 
 .dark-mode {
   --color-text: #dfdfdf;
   --color-text-lighter: #959698;
-  --background: linear-gradient(73deg, rgba(12, 19, 24, 1) 0%, rgba(12, 21, 27, 1) 28%, rgba(12, 21, 28, 1) 81%, rgba(12, 25, 34, 1) 100%);
-  --color-main-background: #0e2b3f;
+  --background: linear-gradient(73deg, rgb(17, 25, 31) 0%, rgb(13, 21, 26) 28%, rgb(14, 23, 31) 81%, rgb(10, 21, 28) 100%);
+  --color-main-background: #1b242b;
 }
 
 body {
@@ -190,7 +190,7 @@ hr {
 }
 
 .navbar {
-  background: black !important;
+  background: var(--color-main-background) !important;
   z-index: 999;
 }
 
@@ -252,6 +252,7 @@ footer li a {
 
 footer {
   max-width: unset !important;
+  background: var(--color-main-background);
 }
 
 @media only screen and (min-width: 768px) {
@@ -290,4 +291,15 @@ footer {
 .custom-dropdown .title {
   font-size: 12px;
   font-weight: 700;
+}
+
+.switch.btn {
+  height: 28px !important;
+  min-height: 28px !important;
+}
+
+.switch-on, .switch-off {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  bottom: unset !important;
 }

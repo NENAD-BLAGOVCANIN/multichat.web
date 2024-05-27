@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <footer class="bg-black mt-5">
+        <footer class="mt-5">
             <div class="container-fluid px-0 pt-5 m-0">
                 <div class="container py-4">
                     <div class="row m-0 p-0 justify-content-center">
