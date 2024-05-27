@@ -298,8 +298,59 @@ footer {
   min-height: 28px !important;
 }
 
-.switch-on, .switch-off {
+.switch-on,
+.switch-off {
   top: 50% !important;
   transform: translateY(-50%) !important;
   bottom: unset !important;
+}
+
+.animation-target {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.animation-target::before {
+  content: attr(data-content);
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  animation: typeText 2.2s steps(40, end) forwards, revealText 1.2s steps(40, end) 2.2s forwards;
+}
+
+@keyframes typeText {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes revealText {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: auto;
+  }
+}
+
+
+
+.image-animation {
+  animation: moveUpDown 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
 }

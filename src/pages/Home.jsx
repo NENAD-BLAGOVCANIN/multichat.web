@@ -12,9 +12,9 @@ function Home() {
     <div className='blur-background-wrapper'>
       <div className='main-content-wrapper'>
 
-        <h1 className='text-center bold pt-5' style={{fontSize: '35pt'}}>
+        <h1 className='text-center bold pt-5 align-items-center d-flex justify-content-center' style={{ fontSize: '35pt' }}>
           <img src={logo} className='img-fluid' style={{ height: 65 }} alt="" />
-          <span className='ps-3'>Welcome to Multichat</span>
+          <span class="animation-target ps-3" data-content="Welcome to Multichat"></span>
         </h1>
         <p className='text-center opacity-80'>Access all of your messages from one platform.</p>
 
@@ -25,7 +25,7 @@ function Home() {
 
         <div className="container pt-5">
 
-          <img src={multichatExample} style={{ maxWidth: 730 }} className='m-auto w-100 d-block' alt="" />
+          <img src={multichatExample} style={{ maxWidth: 730 }} class='m-auto w-100 d-block image-animation' alt="" />
 
           <div className='py-5 text-center mt-5'>
             <h1 className='bold mb-3'>Bringing Your Conversations Together
