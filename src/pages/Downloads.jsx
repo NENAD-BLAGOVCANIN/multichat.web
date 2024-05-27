@@ -9,7 +9,7 @@ function Downloads() {
       <h2 className='bold'>Downloads</h2>
 
       <div className="row">
-        <div className="col-md-6 p-4">
+        <div className="col-md-6 py-4">
           <div className='card'>
             <div className='card-body'>
               <div className='row'>
@@ -46,7 +46,7 @@ function Downloads() {
             </div>
           </div>
         </div>
-        <div className="col-md-6 p-4">
+        <div className="col-md-6 py-4">
           <div className='card'>
             <div className='card-body'>
               <div className='row'>
