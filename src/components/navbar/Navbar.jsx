@@ -18,7 +18,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-md">
             <div class="container-fluid px-4">
-                <Link class="navbar-brand" to="/">
+                <Link class="navbar-brand pe-5" to="/">
                     <img src={logo} alt="" />
                 </Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +90,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
                 ) : (
                     <div className='d-flex align-items-center'>
                         <div className='px-1'>
-                            <Link to="/register" className='btn btn-primary rounded-lg px-3 py-2'>Sign up</Link>
+                            <Link to="/register" className='btn btn-primary rounded px-3 py-2'>Sign up</Link>
                         </div>
                     </div>
                 )}
