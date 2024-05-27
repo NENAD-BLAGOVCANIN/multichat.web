@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 export default function Login() {
 
@@ -10,13 +11,17 @@ export default function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const { login } = useAuth();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
 
         const response = await login(email, password);
-        if (!response.success) {
+        if (response.success) {
+            toast.success('Successfully logged in!');
+            navigate('/home');
+        } else {
             setError(response.message);
         }
     };

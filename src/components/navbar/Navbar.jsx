@@ -16,7 +16,7 @@ function Navbar() {
 
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-lg">
-            <div class="container-fluid">
+            <div class="container-fluid px-4">
                 <Link class="navbar-brand" to="/">
                     <img src={logo} alt="" />
                 </Link>
@@ -26,22 +26,22 @@ function Navbar() {
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" exact to="/" activeClassName="active">
+                            <NavLink className="nav-link" exact to="/">
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/downloads" activeClassName="active">
+                            <NavLink className="nav-link" to="/downloads">
                                 Downloads
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/features" activeClassName="active">
+                            <NavLink className="nav-link" to="/features">
                                 Features
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/docs" activeClassName="active">
+                            <NavLink className="nav-link" to="/docs">
                                 Docs
                             </NavLink>
                         </li>
