@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [email, setEmail] = useState('');
     const [token, setToken] = useState('');
+    const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     // Function to log in
@@ -25,19 +26,19 @@ export const AuthProvider = ({ children }) => {
             setAuthenticated(true);
             setEmail(email);
             setToken(response.access);
-            localStorage.setItem('token', response.access);
+            localStorage.setItem('accessToken', response.access);
             navigate('/');
             return { success: true };
         } else {
             return { success: false, message: response.message || 'Login failed' };
         }
     };
-    
+
     const handleLogout = () => {
         setAuthenticated(false);
         setEmail('');
         setToken('');
-        localStorage.removeItem('token');
+        localStorage.removeItem('accessToken');
         navigate('/');
     };
 
@@ -49,13 +50,14 @@ export const AuthProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        const storedToken = localStorage.getItem('token');
+        const storedToken = localStorage.getItem('accessToken');
         if (storedToken) {
             checkTokenExpiration(storedToken);
             setAuthenticated(true);
             setToken(storedToken);
             setEmail(jwtDecode(storedToken).email);
         }
+        setLoading(false);
     }, []);
 
     const value = {
@@ -64,7 +66,8 @@ export const AuthProvider = ({ children }) => {
         token,
         login: handleLogin,
         logout: handleLogout,
+        loading
     };
 
-    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+    return <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>;
 };

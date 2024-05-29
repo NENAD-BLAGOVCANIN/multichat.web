@@ -1,13 +1,14 @@
 import { apiUrl } from './config';
 
 const login = async (email, password) => {
+    
     const variables = {
         email: email,
         password: password
     };
 
     try {
-        const response = await fetch(apiUrl + '/token/', {
+        const response = await fetch(apiUrl+'/token/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -36,7 +36,7 @@ function Downloads() {
 
                 <div className='h-100 d-flex justify-content-center align-items-center pt-3'>
                   <div className='p-3'>
-                    <a href="" className='btn btn-primary rounded-lg w-fit px-4 py-2'>Download</a>
+                    <a href="/downloads/win/setup.exe" className='btn btn-primary rounded-lg w-fit px-4 py-2'>Download</a>
                   </div>
                   <div className='p-3'>
                     <a href="" className='text-decoration-none color-text small'>System Requirements</a>
@@ -73,7 +73,7 @@ function Downloads() {
 
                 <div className='h-100 d-flex justify-content-center align-items-center pt-3'>
                   <div className='p-3'>
-                    <a href="" className='btn btn-primary rounded-lg w-fit px-4 py-2'>Download</a>
+                    <a href="/downloads/mac/setup.exe" className='btn btn-primary rounded-lg w-fit px-4 py-2'>Download</a>
                   </div>
                   <div className='p-3'>
                     <a href="" className='text-decoration-none color-text small'>System Requirements</a>

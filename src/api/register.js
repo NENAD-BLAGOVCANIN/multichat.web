@@ -31,3 +31,4 @@ const register = async (name, email, password) => {
 };
 
 export { register };
+
