@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './contexts/AuthContext'; // Adjust the path as necessary
+import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 import AppLayout from './layouts/AppLayout';
+import AdminLayout from './layouts/AdminLayout';
 import Home from './pages/Home';
 import Downloads from './pages/Downloads';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Logout from './pages/Logout';
+import Dashboard from './pages/admin/Dashboard';
+import Users from './pages/admin/Users';
 
-const PrivateRoute = ({ element, ...rest }) => {
-  const { authenticated } = useAuth();
-  return authenticated ? element : <Navigate to="/login" />;
+const PrivateRoutes = () => {
+  const { authenticated, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  return authenticated ? <Outlet /> : <Navigate to="/login" />;
 };
 
 const App = () => {
@@ -45,10 +53,22 @@ const App = () => {
     <Router>
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/downloads" element={<PrivateRoute element={<Downloads />} />} />
+
+          <Route element={<PrivateRoutes />}>
+
+            <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/downloads" element={<Downloads />} />
+            </Route>
+
+            {/* Admin Panel */}
+            <Route path="/" element={<AdminLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
+              <Route path="/admin/dashboard" element={<Dashboard />} />
+              <Route path="/admin/users" element={<Users />} />
+            </Route>
+
           </Route>
+
 
           {/* Auth */}
           <Route path="/login" element={<Login />} />

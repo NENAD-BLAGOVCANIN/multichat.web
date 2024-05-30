@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }) => {
     const handleLogin = async (email, password) => {
         const response = await login(email, password);
         if (response.access) {
-            const decodedToken = jwtDecode(response.access);
             setAuthenticated(true);
             setEmail(email);
             setToken(response.access);

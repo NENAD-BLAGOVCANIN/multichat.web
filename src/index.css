@@ -12,7 +12,12 @@
   --color-dark-lighter: rgb(14, 43, 63);
   --background: rgb(240, 243, 245);
   --color-main-background: rgb(255, 255, 255);
-  --sidebar-width: 310px
+  --sidebar-width: 290px;
+}
+
+#sidebar.active {
+  --sidebar-width: 0;
+  margin-left: calc(0px - 290px);
 }
 
 .dark-mode {
@@ -29,6 +34,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text) !important;
   background: var(--background) !important;
+}
+
+.page-content-wrapper {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
 }
 
 #root {
@@ -194,6 +205,11 @@ hr {
   z-index: 999;
 }
 
+.admin-header {
+  position: fixed !important;
+  max-width: calc(100% - var(--sidebar-width)) !important;
+}
+
 .navbar .nav-item .nav-link {
   color: var(--color-text-lighter) !important;
   font-weight: 500;
@@ -214,6 +230,12 @@ hr {
   z-index: 1;
   width: 100%;
   min-height: 90vh;
+}
+
+.admin-content-wrapper {
+  width: 100%;
+  overflow: auto;
+  padding-left: var(--sidebar-width);
 }
 
 .main-container {
@@ -353,4 +375,74 @@ footer {
   to {
     transform: translateY(-10px);
   }
+}
+
+
+
+#sidebar {
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--color-main-background);
+  border-right: 1px solid var(--bs-muted);
+  transition: all 0.3s;
+  padding-top: 1.5rem;
+  padding-bottom: 1.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#sidebar.active #toggleModalButton {
+  left: 0;
+  transform: translateX(0%);
+  z-index: 999 !important;
+}
+
+#sidebar-logo {
+  max-width: 35px;
+  width: 100%;
+}
+
+.nav-item.active,
+.nav-item.active .nav-link,
+.nav-item:hover,
+.nav-item:hover .nav-link {
+  color: var(--color-text) !important;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: transparent !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.nav-item .nav-link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-weight: 500;
+  color: var(--color-text-lighter);
+}
+
+#toggleModalButton {
+  left: var(--sidebar-width);
+  transform: translateX(-50%);
+  bottom: 3rem;
+}
+
+.nav-item .nav-link svg {
+  font-size: 13px !important;
+}
+
+@media only screen and (max-width: 855px) {
+  #sidebar {
+    position: fixed !important;
+    z-index: 9999 !important;
+  }
+}
+
+.sidebar-link-group {
+  padding-bottom: 1.85rem;
 }
