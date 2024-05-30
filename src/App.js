@@ -54,12 +54,13 @@ const App = () => {
       <AuthProvider>
         <Routes>
 
-          <Route element={<PrivateRoutes />}>
 
-            <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
-              <Route path="/" element={<Home />} />
-              <Route path="/downloads" element={<Downloads />} />
-            </Route>
+          <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/downloads" element={<Downloads />} />
+          </Route>
+
+          <Route element={<PrivateRoutes />}>
 
             {/* Admin Panel */}
             <Route path="/" element={<AdminLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
