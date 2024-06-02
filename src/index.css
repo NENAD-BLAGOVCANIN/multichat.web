@@ -23,8 +23,13 @@
 .dark-mode {
   --color-text: #dfdfdf;
   --color-text-lighter: #959698;
-  --background: linear-gradient(73deg, rgb(17, 25, 31) 0%, rgb(13, 21, 26) 28%, rgb(14, 23, 31) 81%, rgb(10, 21, 28) 100%);
-  --color-main-background: #1b242b;
+  --background: #212630;
+  --color-main-background: #2e3438;
+}
+
+
+*:focus {
+  box-shadow: none !important;
 }
 
 body {
@@ -34,6 +39,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text) !important;
   background: var(--background) !important;
+  font-size: 11.5pt !important;
 }
 
 .page-content-wrapper {
@@ -115,9 +121,14 @@ body {
 }
 
 .form-control {
-  background-color: var(--color-main-background) !important;
-  border: 1px solid var(--bs-border-color) !important;
+  border: 1px solid #6d7379 !important;
+  background: transparent !important;
+  transition: border-color 0.3s ease;
   color: var(--color-text) !important;
+}
+
+.form-control:focus {
+  border-color: var(--color-text) !important;
 }
 
 .form-control::placeholder {
@@ -138,11 +149,16 @@ body {
 }
 
 .small {
-  font-size: 13px !important;
+  font-size: 12.5px !important;
 }
 
 .medium {
-  font-size: 15px !important;
+  font-size: 13px !important;
+}
+
+.auth-page-logo {
+  max-width: 85px;
+  width: 100%;
 }
 
 .main-auth-page-container {
@@ -201,7 +217,7 @@ hr {
 }
 
 .navbar {
-  background: var(--color-main-background) !important;
+  background: var(--background) !important;
   z-index: 999;
 }
 
@@ -274,7 +290,7 @@ footer li a {
 
 footer {
   max-width: unset !important;
-  background: var(--color-main-background);
+  border-top: 1px solid var(--bs-secondary);
 }
 
 @media only screen and (min-width: 768px) {

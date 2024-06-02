@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { register } from '../api/register';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../api/login';
+import logo from '../assets/img/logo.png'
 import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
@@ -43,8 +43,16 @@ export default function Register() {
             <div className='w-100 px-4 m-auto d-block' style={{ maxWidth: 600 }}>
 
 
-              <div className='pt-3 pb-5'>
-                <span className='py-3 h3 bold'>Sign up</span>
+              <div>
+                <div className='py-3 mb-3'>
+                  <img src={logo} alt="" className='auth-page-logo' />
+                </div>
+
+                <div className='py-3'>
+                  <h3 className='bold'>Sign up</h3>
+                  <p>Welcome! Please enter your details.</p>
+                </div>
+
               </div>
 
 
@@ -52,16 +60,19 @@ export default function Register() {
 
               <form onSubmit={handleSubmit}>
                 <div className='py-2'>
-                  <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3 border-0' style={{ backgroundColor: '#EBE9F9' }} placeholder='Your Name' />
+                  <label className='mb-1'>Name</label>
+                  <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your name' />
                 </div>
                 <div className='py-2'>
-                  <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3 border-0' style={{ backgroundColor: '#EBE9F9' }} placeholder='Your email address' />
+                  <label className='mb-1'>Email</label>
+                  <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your email' />
                 </div>
                 <div className='py-2'>
-                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3 border-0' style={{ backgroundColor: '#EBE9F9' }} placeholder='Your password' />
+                  <label className='mb-1'>Password</label>
+                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
                 </div>
                 <div className='py-2 mb-3'>
-                  <button type="submit" className='btn btn-primary w-100 py-3 border-0 fw-500' style={{ backgroundColor: '#EBE9F9' }}>Sign Up</button>
+                  <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>Sign Up</button>
                 </div>
 
                 <div className='d-flex justify-content-between py-2'>

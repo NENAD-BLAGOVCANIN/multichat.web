@@ -53,8 +53,8 @@ function Navbar({ darkMode, toggleDarkMode }) {
                     <BootstrapSwitchButton
                         checked={darkMode}
                         className="bg-gray"
-                        onlabel='☀️'
-                        offlabel='🌘'
+                        onlabel='🌘'
+                        offlabel='☀️'
                         onChange={toggleDarkMode}
                     />
 
