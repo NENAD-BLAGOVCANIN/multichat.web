@@ -36,10 +36,10 @@ export default function Register() {
   return (
     <div className='main-auth-page-container'>
 
-      <div className="card p-0 w-100 bg-transparent overflow-hidden" style={{ maxWidth: 'unset', height: '100vh' }}>
+      <div className="card p-0 w-100 bg-transparent overflow-hidden" style={{ maxWidth: 'unset', minHeight: '100vh' }}>
 
         <div className="row m-0">
-          <div className="col-md-6 d-flex align-items-center" style={{ height: '100vh' }}>
+          <div className="col-md-6 d-flex align-items-center" style={{ minHeight: '100vh' }}>
             <div className='w-100 px-4 m-auto d-block' style={{ maxWidth: 600 }}>
 
 
@@ -71,7 +71,7 @@ export default function Register() {
                   <label className='mb-1'>Password</label>
                   <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
                 </div>
-                <div className='py-2 mb-3'>
+                <div className='py-2 mb-3 mt-2'>
                   <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>Sign Up</button>
                 </div>
 
@@ -94,7 +94,7 @@ export default function Register() {
           </div>
           <div className="col-md-6 px-0">
             <div style={{ height: '100vh' }} className='d-flex justify-content-center align-items-center'>
-              <img src={mobileImgExample} className='w-100 h-100' style={{ objectFit: 'cover', maxWidth: 800 }} alt="" />
+              <img src={mobileImgExample} className='w-100' style={{ objectFit: 'cover', maxWidth: 800 }} alt="" />
             </div>
           </div>
         </div>

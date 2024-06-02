@@ -4,7 +4,7 @@ import { faBell, faCircleHalfStroke, faEdit, faInfinity, faKeyboard, faShieldHal
 
 function Features() {
     return (
-        <div className="row">
+        <div className="row" id="features">
             <div className="col-md-4 p-4">
                 <div className='card rounded bg-app py-3 px-4 h-100 border-0'>
                     <FontAwesomeIcon icon={faCircleHalfStroke} className='me-auto mb-3 h5' />
