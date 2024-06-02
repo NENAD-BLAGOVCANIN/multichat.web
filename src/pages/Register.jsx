@@ -40,16 +40,16 @@ export default function Register() {
 
         <div className="row m-0">
           <div className="col-md-6 d-flex align-items-center" style={{ minHeight: '100vh' }}>
-            <div className='w-100 px-4 m-auto d-block' style={{ maxWidth: 600 }}>
+            <div className='w-100 px-4 m-auto d-block py-4' style={{ maxWidth: 600 }}>
 
 
-              <div>
-                <div className='py-3 mb-3'>
+              <div className='d-flex align-items-center mb-3'>
+                <div className='py-3'>
                   <img src={logo} alt="" className='auth-page-logo' />
                 </div>
 
-                <div className='py-3'>
-                  <h3 className='bold'>Sign up</h3>
+                <div className='ps-4'>
+                  <h2 className='bold'>Sign Up</h2>
                   <p>Welcome! Please enter your details.</p>
                 </div>
 
@@ -60,15 +60,15 @@ export default function Register() {
 
               <form onSubmit={handleSubmit}>
                 <div className='py-2'>
-                  <label className='mb-1'>Name</label>
+                  <label className='mb-1 ps-1'>Name</label>
                   <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your name' />
                 </div>
                 <div className='py-2'>
-                  <label className='mb-1'>Email</label>
+                  <label className='mb-1 ps-1'>Email</label>
                   <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your email' />
                 </div>
                 <div className='py-2'>
-                  <label className='mb-1'>Password</label>
+                  <label className='mb-1 ps-1'>Password</label>
                   <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
                 </div>
                 <div className='py-2 mb-3 mt-2'>

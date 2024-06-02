@@ -35,15 +35,15 @@ export default function Login() {
 
                 <div className="row m-0">
                     <div className="col-md-6 d-flex align-items-center" style={{ minHeight: '100vh' }}>
-                        <div className='w-100 px-4 m-auto d-block' style={{ maxWidth: 600 }}>
+                        <div className='w-100 px-4 m-auto d-block py-4' style={{ maxWidth: 600 }}>
 
-                            <div>
-                                <div className='py-3 mb-3'>
+                            <div className='d-flex align-items-center mb-3'>
+                                <div className='py-3'>
                                     <img src={logo} alt="" className='auth-page-logo' />
                                 </div>
 
-                                <div className='py-3'>
-                                    <h3 className='bold'>Log in</h3>
+                                <div className='ps-4'>
+                                    <h2 className='bold'>Log In</h2>
                                     <p>Welcome back! Please enter your details.</p>
                                 </div>
 
@@ -53,12 +53,12 @@ export default function Login() {
 
                             <form onSubmit={handleSubmit} className='w-100'>
                                 <div className='py-2'>
-                                    <label className='mb-1'>Email</label>
-                                    <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3 border-0' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your email' />
+                                    <label className='mb-1 ps-1'>Email</label>
+                                    <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your email' />
                                 </div>
                                 <div className='py-2'>
-                                    <label className='mb-1'>Password</label>
-                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3 border-0' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
+                                    <label className='mb-1 ps-1'>Password</label>
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
                                 </div>
 
                                 <div className='d-flex justify-content-between py-3'>
@@ -73,13 +73,12 @@ export default function Login() {
 
 
                                 <div className='py-2 mt-3'>
-                                    <button type="submit" className='btn btn-primary bg-primary hover-lg w-100 py-3 border-0 fw-500'>Log in</button>
+                                    <button type="submit" className='btn btn-primary hover-lg w-100 py-3 border-0 fw-500' style={{ backgroundColor: '#EBE9F9' }}>Log in</button>
                                 </div>
-                               
 
-                                <div className='d-flex justify-content-center py-4'>
-                                    <span className='px-1 text-secondary'>Don't have an account?</span>
-                                    <Link to="/register" className='px-1 text-primary fw-500 text-decoration-none'>Sign Up</Link>
+                                <div className='d-flex justify-content-center pt-3'>
+                                    <span className='text-secondary small fw-500 text-decoration-none pe-2'>Don't have an account?</span>
+                                    <Link to="/register" className='small fw-500 color-text text-decoration-none'>Sign Up</Link>
                                 </div>
 
 

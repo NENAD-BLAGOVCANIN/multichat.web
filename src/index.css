@@ -1,8 +1,7 @@
 :root {
-  --color-primary: #3B1492;
+  --color-primary: #791f90;
   --color-text: #18161d;
   --color-text-lighter: rgb(126, 129, 131);
-  --color-secondary: rgb(26, 28, 33);
   --color-danger: #cf004c;
   --color-light-gray: #f6f7f9;
   --color-gray: #e8eaee;
@@ -24,7 +23,7 @@
   --color-text: #dfdfdf;
   --color-text-lighter: #959698;
   --background: #212630;
-  --color-main-background: #2e3438;
+  --color-main-background: #191d1f;
 }
 
 
@@ -102,10 +101,6 @@ body {
 
 .bg-secondary {
   background-color: var(--color-secondary) !important;
-}
-
-.text-secondary {
-  color: var(--color-secondary) !important;
 }
 
 .rounded-lg {
@@ -461,4 +456,8 @@ footer {
 
 .sidebar-link-group {
   padding-bottom: 1.85rem;
+}
+
+.form-check-input {
+  border: 1.5px solid var(--color-primary) !important;
 }
