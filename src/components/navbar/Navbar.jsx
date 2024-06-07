@@ -37,11 +37,6 @@ function Navbar({ darkMode, toggleDarkMode }) {
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/features">
-                                Features
-                            </NavLink>
-                        </li>
-                        <li className="nav-item px-2">
                             <NavLink className="nav-link" to="/subscriptions">
                                 Subscriptions
                             </NavLink>
