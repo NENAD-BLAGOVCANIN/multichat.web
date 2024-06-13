@@ -6,8 +6,11 @@ import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 export default function Register() {
+
+  const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -49,8 +52,8 @@ export default function Register() {
                 </div>
 
                 <div className='ps-4'>
-                  <h2 className='bold'>Sign Up</h2>
-                  <p>Welcome! Please enter your details.</p>
+                  <h2 className='bold'>{t('register.sign_up')}</h2>
+                  <p>{t('register.welcome')}</p>
                 </div>
 
               </div>
@@ -60,31 +63,31 @@ export default function Register() {
 
               <form onSubmit={handleSubmit}>
                 <div className='py-2'>
-                  <label className='mb-1 ps-1'>Name</label>
-                  <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your name' />
+                  <label className='mb-1 ps-1'>{t('register.name')}</label>
+                  <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_name')} />
                 </div>
                 <div className='py-2'>
-                  <label className='mb-1 ps-1'>Email</label>
-                  <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='Enter your email' />
+                  <label className='mb-1 ps-1'>{t('register.email')}</label>
+                  <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_email')} />
                 </div>
                 <div className='py-2'>
-                  <label className='mb-1 ps-1'>Password</label>
+                  <label className='mb-1 ps-1'>{t('register.password')}</label>
                   <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
                 </div>
                 <div className='py-2 mb-3 mt-2'>
-                  <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>Sign Up</button>
+                  <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>{t('register.sign_up')}</button>
                 </div>
 
                 <div className='d-flex justify-content-between py-2'>
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     <label className="form-check-label color-text-lighter small" htmlFor="flexCheckDefault">
-                      Remember Me
+                      {t('register.remember_me')}
                     </label>
                   </div>
                   <div className='d-flex justify-content-center'>
-                    <span className='text-secondary small fw-500 text-decoration-none pe-2'>Already have an account?</span>
-                    <Link to="/login" className='small fw-500 color-text text-decoration-none'>Log In</Link>
+                    <span className='text-secondary small fw-500 text-decoration-none pe-2'>{t('register.already_have_an_account')}</span>
+                    <Link to="/login" className='small fw-500 color-text text-decoration-none'>{t('register.login')}</Link>
                   </div>
                 </div>
 

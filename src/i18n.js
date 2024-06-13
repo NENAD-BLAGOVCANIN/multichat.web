@@ -106,6 +106,18 @@ i18n
                         dont_have_an_account: "Don't have an account?",
                         sign_up: "Sign Up"
                     },
+                    register: {
+                        sign_up: "Sign Up",
+                        welcome: "Welcome! Please enter your details.",
+                        name: "Name",
+                        email: "Email",
+                        password: "Password",
+                        enter_your_name: "Enter your name",
+                        enter_your_email: "Enter your email",
+                        remember_me: "Remember Me",
+                        login: "Log In",
+                        already_have_an_account: "Already have an account?",
+                    }
                 }
             },
             zh: {
