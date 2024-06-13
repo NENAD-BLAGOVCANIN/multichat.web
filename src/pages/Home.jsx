@@ -11,16 +11,16 @@ function Home() {
   return (
     <div className='main-content-wrapper'>
 
-      <h1 className='text-center bold pt-5 mt-5 align-items-center d-flex justify-content-center' style={{ fontSize: '40pt' }}>
+      <h1 className='text-center bold pt-5 mt-5 align-items-center d-flex justify-content-center' style={{ fontSize: '45pt' }}>
         <img src={logo} className='img-fluid' style={{ height: 65 }} alt="" />
         <span class="animation-target ps-3" data-content="Welcome to Multichat"></span>
       </h1>
       <p className='text-center opacity-80'>Access all of your messages from one platform.</p>
 
-      <button className='btn btn-primary rounded-lg py-3 px-3 m-auto d-block mt-5'>
+      <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary rounded-lg py-3 px-3 m-auto d-block mt-5'>
         Download for Windows
         <FontAwesomeIcon className='ps-2' icon={faArrowRight} />
-      </button>
+      </a>
 
       <div className="container pt-5">
 
