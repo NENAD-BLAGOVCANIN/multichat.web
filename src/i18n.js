@@ -64,6 +64,13 @@ i18n
                             },
                         }
                     },
+                    downloads: {
+                        downloads: 'Downloads',
+                        version: "VERSION",
+                        size: "SIZE",
+                        download_btn: "Download",
+                        system_reqs: "System Requirements",
+                    },
                     footer: {
                         website_description: `Your all-in-one messaging solution designed to streamline your 
                             digital communication experience. With Multichat, you can conveniently manage multiple
@@ -88,11 +95,16 @@ i18n
                         contact_live_support: "Contact live support",
                     },
                     login: {
-                        remember_me: "Remember Me",
+                        remember_pass: "Remember for 14 days",
                         trouble_logging_in: "Trouble logging in?",
-                        login: "Login",
+                        enter_your_email: "Enter your email",
+                        welcome: "Welcome back! Please enter your details.",
+                        login: "Log In",
                         email: "Email",
                         password: "Password",
+                        forgot_password: "Forgot password?",
+                        dont_have_an_account: "Don't have an account?",
+                        sign_up: "Sign Up"
                     },
                 }
             },
