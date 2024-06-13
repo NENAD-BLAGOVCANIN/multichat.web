@@ -112,7 +112,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
                 ) : (
                     <div className='d-flex align-items-center'>
                         <div className='px-1'>
-                            <Link to="/register" className='btn btn-primary rounded px-3 py-2'>Sign up</Link>
+                            <Link to="/register" className='btn btn-primary rounded px-3 py-2'>{t('navbar.sign_up')}</Link>
                         </div>
                     </div>
                 )}
