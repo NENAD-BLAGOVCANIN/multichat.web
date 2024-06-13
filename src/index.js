@@ -7,6 +7,7 @@ import './index.css';
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { ToastContainer } from 'react-toastify';
+import './i18n.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

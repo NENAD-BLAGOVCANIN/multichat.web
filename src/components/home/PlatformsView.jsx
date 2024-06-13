@@ -3,13 +3,17 @@ import whatsAppLogo from '../../assets/img/WhatsAppLogo.svg'
 import telegramLogo from '../../assets/img/TelegramLogo.svg'
 import skypeLogo from '../../assets/img/SkypeLogo.svg'
 import messengerLogo from '../../assets/img/MessengerLogo.svg'
+import { useTranslation } from 'react-i18next';
 
 function PlatformsView() {
+
+    const { t } = useTranslation();
+
     return (
         <>
             <div className='py-5'>
                 <p className='opacity-80 text-center h5 fw-400'>
-                    Multichat lets you send and receive messages from many major messaging platforms:
+                    {t('home.platforms.title')}
                 </p>
             </div>
 
