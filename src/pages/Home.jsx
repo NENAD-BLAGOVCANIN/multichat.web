@@ -17,7 +17,7 @@ function Home() {
       </h1>
       <p className='text-center opacity-80'>Access all of your messages from one platform.</p>
 
-      <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary rounded-lg py-3 px-3 m-auto d-block mt-5'>
+      <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded-lg py-3 px-3 m-auto d-block mt-5'>
         Download for Windows
         <FontAwesomeIcon className='ps-2' icon={faArrowRight} />
       </a>
