@@ -20,7 +20,7 @@ i18n
                             subtitle: "Access all of your messages from one platform.",
                             download_for_windows: "Download for Windows"
                         },
-                        secion_2: {
+                        section_2: {
                             title: "Bringing Your Conversations Together",
                             subtitle: `Welcome to MultiChat, your all-in-one messaging solution 
                             designed to streamline your digital communication experience. 
@@ -57,6 +57,30 @@ i18n
                                 text: "Control your notifications, snooze or mute your messages when busy."
                             },
                         }
+                    },
+                    footer: {
+                        website_description: `Your all-in-one messaging solution designed to streamline your 
+                            digital communication experience. With Multichat, you can conveniently manage multiple
+                            messaging services in one centralized location.`,
+                        newsletter: {
+                            label: "Sign up for our newsletter:",
+                            your_email: "Your Email",
+                            sign_up: "Sign up"
+                        },
+                        quick_links: "Quick Links",
+                        home: "Home",
+                        blog: "Blog",
+                        features_and_privacy: "Features & Privacy",
+                        info: "Info",
+                        privacy_policy: "Privacy Policy",
+                        user_agreement: "User Agreement",
+                        about_us: "About Us",
+                        users: "Users",
+                        sign_up: "Sign Up",
+                        log_in: "Log In",
+                        contact_support: "Contact Support",
+                        contact: "Contact",
+                        contact_live_support: "Contact live support",
                     },
                     login: {
                         remember_me: "Remember Me",

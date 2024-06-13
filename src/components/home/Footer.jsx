@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '../../assets/img/logo.png'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+
+    const { t } = useTranslation();
+
     return (
         <footer class="mt-5">
             <div class="container-fluid px-0 pt-5 m-0">
@@ -11,17 +15,17 @@ function Footer() {
                         <div class="col-md-4 mb-md-0 mb-4">
                             <img src={logo} style={{ maxHeight: 85 }} alt="" />
                             <p class="text-secondary py-3">
-                                Your all-in-one messaging solution designed to streamline your digital communication experience. With Multichat, you can conveniently manage multiple messaging services in one centralized location.
+                                {t('footer.website_description')}
                             </p>
 
                             <form action="">
-                                <label class="fw-500 ps-1">Sign up for our newsletter:</label>
+                                <label class="fw-500 ps-1">{t('footer.newsletter.label')}</label>
                                 <div class="d-flex align-items-center">
                                     <div class="w-100">
-                                        <input type="text" class="form-control my-2 w-100" placeholder="Your Email" />
+                                        <input type="text" class="form-control my-2 w-100" placeholder={t('footer.newsletter.your_email')} />
                                     </div>
                                     <div class="ps-1">
-                                        <button class="btn btn-dark rounded" style={{ width: "max-content" }}>Sign up</button>
+                                        <button class="btn btn-dark rounded" style={{ width: "max-content" }}>{t('footer.newsletter.sign_up')}</button>
                                     </div>
                                 </div>
 
@@ -39,55 +43,62 @@ function Footer() {
                         </div>
                         <div class="col-md-4 mb-md-0 mb-4">
                             <div class="footer-links-block d-block m-auto">
-                                <p class="pb-2 fw-500 m-0">Quick Links</p>
+                                <p class="pb-2 fw-500 m-0">{t('footer.quick_links')}</p>
                                 <ul class="list-unstyled">
                                     <li>
                                         <Link to="/" class="py-2 d-block text-secondary text-decoration-none">
-                                            Home
+                                            {t('footer.home')}
                                         </Link>
                                     </li>
                                     <li><Link to="/blogs" class="py-2 d-block text-secondary text-decoration-none">
-                                        Blog
+                                        {t('footer.blog')}
                                     </Link></li>
-                                    <li><Link to="#featuresSection" class="py-2 d-block text-secondary text-decoration-none">
-                                        Features & Privacy</Link>
+                                    <li>
+                                        <Link to="#featuresSection" class="py-2 d-block text-secondary text-decoration-none">
+                                            {t('footer.features_and_privacy')}
+                                        </Link>
                                     </li>
                                 </ul>
-                                <p class="pb-2 fw-500 m-0 pt-3">Info</p>
+                                <p class="pb-2 fw-500 m-0 pt-3">{t('footer.info')}</p>
                                 <ul class="list-unstyled">
                                     <li>
                                         <Link to="/privacy-policy" class="py-2 d-block text-secondary text-decoration-none">
-                                            Privacy Policy
+                                            {t('footer.privacy_policy')}
                                         </Link>
                                     </li>
-                                    <li><Link to="/user-agreement" class="py-2 d-block text-secondary text-decoration-none">
-                                        User Agreement</Link>
+                                    <li>
+                                        <Link to="/user-agreement" class="py-2 d-block text-secondary text-decoration-none">
+                                            {t('footer.user_agreement')}
+                                        </Link>
                                     </li>
-                                    <li><Link to="/about-us" class="py-2 d-block text-secondary text-decoration-none">
-                                        About Us
-                                    </Link></li>
+                                    <li>
+                                        <Link to="/about-us" class="py-2 d-block text-secondary text-decoration-none">
+                                            {t('footer.about_us')}
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
 
                         </div>
                         <div class="col-md-4 mb-md-0 mb-4">
                             <div class="footer-links-block d-block m-auto">
-                                <p class="pb-2 fw-500 m-0">Users</p>
+                                <p class="pb-2 fw-500 m-0">{t('footer.users')}</p>
                                 <ul class="list-unstyled">
                                     <li><Link to="/register" class="py-2 d-block text-secondary text-decoration-none">
-                                        Sign Up
+                                        {t('footer.sign_up')}
                                     </Link></li>
                                     <li><Link to="/login" class="py-2 d-block text-secondary text-decoration-none">
-                                        Log In
+                                        {t('footer.log_in')}
                                     </Link></li>
                                     <li><Link to="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
-                                        Contact Support
+                                        {t('footer.contact_support')}
                                     </Link></li>
                                 </ul>
-                                <p class="pb-2 fw-500 m-0 pt-3">Contact</p>
+                                <p class="pb-2 fw-500 m-0 pt-3">{t('footer.contact')}</p>
                                 <ul class="list-unstyled">
                                     <li><Link to="/customer-support" class="py-2 d-block text-secondary text-decoration-none">
-                                        <i class="fa-solid fa-headset pe-2"></i> Contact live support
+                                        <i class="fa-solid fa-headset pe-2"></i>
+                                        {t('footer.contact_live_support')}
                                     </Link></li>
                                     <li><Link to="tel:33613498382" class="py-2 d-block text-secondary text-decoration-none"><i class="fa fa-phone pe-2"></i> +423563953</Link>
                                     </li>
