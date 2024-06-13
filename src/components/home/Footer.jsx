@@ -25,7 +25,7 @@ function Footer() {
                                         <input type="text" class="form-control my-2 w-100" placeholder={t('footer.newsletter.your_email')} />
                                     </div>
                                     <div class="ps-1">
-                                        <button class="btn btn-dark rounded" style={{ width: "max-content" }}>{t('footer.newsletter.sign_up')}</button>
+                                        <button class="btn btn-dark rounded" style={{ width: "max-content" }}>{t('footer.sign_up')}</button>
                                     </div>
                                 </div>
 

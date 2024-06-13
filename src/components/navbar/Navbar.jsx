@@ -5,8 +5,11 @@ import { useAuth } from '../../contexts/AuthContext'
 import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.svg';
 import UserDropdown from "./UserDropdown";
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
+import { useTranslation } from 'react-i18next';
 
 function Navbar({ darkMode, toggleDarkMode }) {
+
+    const { t, i18n } = useTranslation();
 
     const { authenticated, email, logout } = useAuth();
     const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -15,35 +18,54 @@ function Navbar({ darkMode, toggleDarkMode }) {
         setIsUserDropdownOpen(!isUserDropdownOpen);
     };
 
+    const lngs = {
+        en: { nativeName: 'English' },
+        zh: { nativeName: 'Chinese' }
+    };
+
+    const flagMapping = {
+        English: "https://flagicons.lipis.dev/flags/4x3/us.svg",
+        Chinese: "https://flagicons.lipis.dev/flags/4x3/cn.svg",
+    };
+
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-md">
             <div class="container-fluid px-4">
-                <Link class="navbar-brand pe-5" to="/">
+                <Link class="navbar-brand pe-3" to="/">
                     <img src={logo} alt="" />
                 </Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <div>
+                    {Object.keys(lngs).map((lng) => (
+                        <button key={lng} className="btn border-0" type="submit" onClick={() => {
+                            i18n.changeLanguage(lng);
+                        }}>
+                            <img src={flagMapping[lngs[lng].nativeName]} style={{ height: 15 }} />
+                        </button>
+                    ))}
+                </div>
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" exact to="/">
-                                Home
+                                {t('navbar.home')}
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" to="/downloads">
-                                Downloads
+                                {t('navbar.downloads')}
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" to="/subscriptions">
-                                Subscriptions
+                                {t('navbar.subscriptions')}
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" to="/docs">
-                                Docs
+                                {t('navbar.docs')}
                             </NavLink>
                         </li>
                     </ul>

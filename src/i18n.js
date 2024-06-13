@@ -14,6 +14,12 @@ i18n
         resources: {
             en: {
                 translation: {
+                    navbar: {
+                        home: "Home",
+                        downloads: "Downloads",
+                        subscriptions: "Subscriptions",
+                        docs: "Docs",
+                    },
                     home: {
                         hero_section: {
                             title: "Welcome to Multichat",
@@ -65,7 +71,6 @@ i18n
                         newsletter: {
                             label: "Sign up for our newsletter:",
                             your_email: "Your Email",
-                            sign_up: "Sign up"
                         },
                         quick_links: "Quick Links",
                         home: "Home",
@@ -93,7 +98,79 @@ i18n
             },
             zh: {
                 translation: {
-
+                    navbar: {
+                        home: "Home",
+                        downloads: "Downloads",
+                        subscriptions: "Subscriptions",
+                        docs: "Docs",
+                    },
+                    home: {
+                        hero_section: {
+                            title: "Welcome to Multichat",
+                            subtitle: "從一個平台存取您的所有訊息。",
+                            download_for_windows: "Download for Windows"
+                        },
+                        section_2: {
+                            title: "Bringing Your Conversations Together",
+                            subtitle: `Welcome to MultiChat, your all-in-one messaging solution 
+                            designed to streamline your digital communication experience. 
+                            With MultiChat, you can conveniently manage multiple messaging services in one centralized location. 
+                            Say goodbye to switching between apps and hello to effortless multitasking.`
+                        },
+                        platforms: {
+                            title: "Multichat lets you send and receive messages from many major messaging platforms:"
+                        },
+                        features: {
+                            title: "Features",
+                            box_1: {
+                                title: "Dark & Light Modes",
+                                text: "Choose your preferred color scheme to reduce eye strain."
+                            },
+                            box_2: {
+                                title: "Keyboard Shortcuts",
+                                text: "Move at the speed of light with our extensive keyboard support."
+                            },
+                            box_3: {
+                                title: "Customizable UI",
+                                text: "Customize the UI based on your preferences."
+                            },
+                            box_4: {
+                                title: "Privacy and Security",
+                                text: "All of your messages are e2e encrypted, so you can communicate privately with your friends and family."
+                            },
+                            box_5: {
+                                title: "Unlimited accounts",
+                                text: "Open as meny tabs as you like, with each tab having it's own session with unique credentials"
+                            },
+                            box_6: {
+                                title: "Notifications",
+                                text: "Control your notifications, snooze or mute your messages when busy."
+                            },
+                        }
+                    },
+                    footer: {
+                        website_description: `Your all-in-one messaging solution designed to streamline your 
+                            digital communication experience. With Multichat, you can conveniently manage multiple
+                            messaging services in one centralized location.`,
+                        newsletter: {
+                            label: "Sign up for our newsletter:",
+                            your_email: "Your Email",
+                        },
+                        quick_links: "Quick Links",
+                        home: "Home",
+                        blog: "Blog",
+                        features_and_privacy: "Features & Privacy",
+                        info: "Info",
+                        privacy_policy: "Privacy Policy",
+                        user_agreement: "User Agreement",
+                        about_us: "About Us",
+                        users: "Users",
+                        sign_up: "Sign Up",
+                        log_in: "Log In",
+                        contact_support: "Contact Support",
+                        contact: "Contact",
+                        contact_live_support: "Contact live support",
+                    },
                     login: {
                         remember_me: "Remember Me",
                         trouble_logging_in: "Trouble logging in?",
