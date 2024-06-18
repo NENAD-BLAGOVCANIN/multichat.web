@@ -6,10 +6,11 @@ import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.sv
 import UserDropdown from "./UserDropdown";
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 function Navbar({ darkMode, toggleDarkMode }) {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const { authenticated, email, logout } = useAuth();
     const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -17,16 +18,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
     const toggleUserDropdown = () => {
         setIsUserDropdownOpen(!isUserDropdownOpen);
     };
-
-    const lngs = {
-        en: { nativeName: 'English' },
-        zh: { nativeName: 'Chinese' }
-    };
-
-    const flagMapping = {
-        English: "https://flagicons.lipis.dev/flags/4x3/us.svg",
-        Chinese: "https://flagicons.lipis.dev/flags/4x3/cn.svg",
-    };
+    
 
     return (
         <nav class="navbar navbar-expand-lg position-fixed w-100 shadow-md">
@@ -37,15 +29,9 @@ function Navbar({ darkMode, toggleDarkMode }) {
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div>
-                    {Object.keys(lngs).map((lng) => (
-                        <button key={lng} className="btn border-0" type="submit" onClick={() => {
-                            i18n.changeLanguage(lng);
-                        }}>
-                            <img src={flagMapping[lngs[lng].nativeName]} style={{ height: 15 }} />
-                        </button>
-                    ))}
-                </div>
+
+                <LanguageSelector />
+
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li className="nav-item px-2">
