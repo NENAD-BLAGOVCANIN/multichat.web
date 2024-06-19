@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import AppLayout from './layouts/AppLayout';
 import AdminLayout from './layouts/AdminLayout';
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 import Downloads from './pages/Downloads';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -23,39 +23,13 @@ const PrivateRoutes = () => {
 
 const App = () => {
 
-  const [darkMode, setDarkMode] = useState(true);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  useEffect(() => {
-    const savedThemePreference = localStorage.getItem('themePreference');
-
-    if (savedThemePreference === 'dark') {
-      setDarkMode(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('themePreference', darkMode ? 'dark' : 'light');
-  }, [darkMode]);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [darkMode]);
-
   return (
     <Router>
       <AuthProvider>
         <Routes>
 
 
-          <Route path="/" element={<AppLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
+          <Route path="/" element={<AppLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/downloads" element={<Downloads />} />
           </Route>
@@ -63,7 +37,7 @@ const App = () => {
           <Route element={<PrivateRoutes />}>
 
             {/* Admin Panel */}
-            <Route path="/" element={<AdminLayout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />}>
+            <Route path="/" element={<AdminLayout />}>
               <Route path="/admin/dashboard" element={<Dashboard />} />
               <Route path="/admin/users" element={<Users />} />
             </Route>

@@ -24,7 +24,7 @@ i18n
                     home: {
                         hero_section: {
                             title: "Welcome to Multichat",
-                            subtitle: "Access all of your messages from one platform.",
+                            subtitle: "Your all-in-one messaging solution designed to streamline your digital communication experience.",
                             download_for_windows: "Download for Windows"
                         },
                         section_2: {

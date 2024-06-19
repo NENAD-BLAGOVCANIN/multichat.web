@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
-
     const { t, i18n } = useTranslation();
 
     const lngs = {
@@ -10,8 +9,8 @@ const LanguageSelector = () => {
         zh: { nativeName: 'Chinese', code: 'zh' }
     };
 
-
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
         const handleLanguageChange = (lng) => {
@@ -25,20 +24,33 @@ const LanguageSelector = () => {
         };
     }, [i18n]);
 
-    const handleChange = (event) => {
-        const selectedLanguage = event.target.value;
-        i18n.changeLanguage(selectedLanguage);
+    const handleChange = (lng) => {
+        i18n.changeLanguage(lng);
+        setDropdownOpen(false);
     };
 
     return (
-        <div>
-            <select onChange={handleChange} value={currentLanguage} className="form-select bg-transparent pointer color-text border-0">
-                {Object.keys(lngs).map((lng) => (
-                    <option key={lng} value={lng}>
-                        {lngs[lng].code}
-                    </option>
-                ))}
-            </select>
+        <div className="language-selector me-3">
+            <button 
+                onClick={() => setDropdownOpen(!dropdownOpen)} 
+                className="dropdown-toggle"
+            >
+                {lngs[currentLanguage]?.nativeName || lngs.en.nativeName}
+            </button>
+            {dropdownOpen && (
+                <ul className="dropdown-menu">
+                    {Object.keys(lngs).map((lng) => (
+                        <li key={lng}>
+                            <button 
+                                onClick={() => handleChange(lng)} 
+                                className="dropdown-item"
+                            >
+                                {lngs[lng].nativeName}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 };

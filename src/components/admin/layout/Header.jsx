@@ -6,7 +6,7 @@ import profileImagePlaceholder from '../../../assets/img/ProfilePlaceholderImage
 import UserDropdown from "../../navbar/UserDropdown";
 import BootstrapSwitchButton from 'bootstrap-switch-button-react'
 
-function Header({ darkMode, toggleDarkMode }) {
+function Header() {
 
     const { authenticated, email, logout } = useAuth();
     const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -17,7 +17,7 @@ function Header({ darkMode, toggleDarkMode }) {
 
     return (
         <nav class="navbar admin-header navbar-expand-lg position-fixed w-100 shadow-md">
-            <div class="container-fluid px-4 py-2">
+            <div class="container px-4 py-2">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -44,17 +44,6 @@ function Header({ darkMode, toggleDarkMode }) {
                             </NavLink>
                         </li>
                     </ul>
-                </div>
-                <div className="form-group pe-3">
-
-                    <BootstrapSwitchButton
-                        checked={darkMode}
-                        className="bg-gray"
-                        onlabel='☀️'
-                        offlabel='🌘'
-                        onChange={toggleDarkMode}
-                    />
-
                 </div>
 
                 <div className="dropdown custom-dropdown">

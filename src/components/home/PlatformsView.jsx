@@ -21,24 +21,24 @@ function PlatformsView() {
 
             <div className='d-flex justify-content-center align-items-center'>
                 <div className='p-4'>
-                    <img src={whatsAppLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={whatsAppLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
                 <div className='p-4'>
-                    <img src={telegramLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={telegramLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
                 <div className='p-4'>
-                    <img src={messengerLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={messengerLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
             </div>
             <div className='d-flex justify-content-center align-items-center pt-3'>
                 <div className='p-4'>
-                    <img src={skypeLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={skypeLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
                 <div className='p-4'>
-                    <img src={weChatLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={weChatLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
                 <div className='p-4'>
-                    <img src={lineLogo} className='img-fluid' style={{ height: 80 }} alt="" />
+                    <img src={lineLogo} className='img-fluid' style={{ height: 95 }} alt="" />
                 </div>
             </div>
         </>
