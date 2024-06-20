@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple, faWindows } from '@fortawesome/free-brands-svg-icons'
 import { useTranslation } from 'react-i18next';
-import { faCheck, faDownload, faX } from '@fortawesome/free-solid-svg-icons'
+import { faBoltLightning, faCheck, faDownload, faX } from '@fortawesome/free-solid-svg-icons'
 
 function Downloads() {
 
@@ -11,7 +11,7 @@ function Downloads() {
   return (
     <div className='container py-5 px-5'>
 
-      <h2>Free</h2>
+      <h3 className='m-0'>Free</h3>
 
       <div className="row">
         <div className="col-md-6 py-4">
@@ -39,7 +39,7 @@ function Downloads() {
               <hr />
 
               <div className='px-5'>
-                <div className='d-flex flex-column justify-content-between px-5'>
+                <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span>Unlimited Tabs</span>
                     <FontAwesomeIcon icon={faX} className='text-danger' />
@@ -90,7 +90,7 @@ function Downloads() {
               <hr />
 
               <div className='px-5'>
-                <div className='d-flex flex-column justify-content-between px-5'>
+                <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span>Unlimited Tabs</span>
                     <FontAwesomeIcon icon={faX} className='text-danger' />
@@ -117,7 +117,7 @@ function Downloads() {
       </div>
 
 
-      <h2 className='mt-3'>Premium</h2>
+      <h3 className='mt-3 m-0'>Premium <FontAwesomeIcon icon={faBoltLightning} className='text-warning' /> </h3>
 
       <div className="row">
         <div className="col-md-6 py-4">
@@ -145,7 +145,7 @@ function Downloads() {
               <hr />
 
               <div className='px-5'>
-                <div className='d-flex flex-column justify-content-between px-5'>
+                <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span>Unlimited Tabs</span>
                     <FontAwesomeIcon icon={faCheck} className='text-success' />
@@ -195,7 +195,7 @@ function Downloads() {
               <hr />
 
               <div className='px-5'>
-                <div className='d-flex flex-column justify-content-between px-5'>
+                <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span>Unlimited Tabs</span>
                     <FontAwesomeIcon icon={faCheck} className='text-success' />
