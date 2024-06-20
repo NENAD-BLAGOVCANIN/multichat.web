@@ -8,7 +8,6 @@ function AdminLayout() {
         <div className="page-content-wrapper">
             <Sidebar />
             <div className="admin-content-wrapper">
-                <Header />
                 <div className="main-container">
                     <Outlet />
                 </div>

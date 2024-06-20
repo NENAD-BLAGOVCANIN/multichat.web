@@ -10,7 +10,7 @@ function HeroSection() {
 
     return (
         <div className='w-100 bg-dark py-5'>
-            <div className='container py-5'>
+            <div className='container py-5 px-5'>
                 <div className="row">
                     <div className="col-lg-6">
                         <div className='h-100 d-flex flex-column justify-content-center'>

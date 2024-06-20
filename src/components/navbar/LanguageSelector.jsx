@@ -1,3 +1,5 @@
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -31,18 +33,19 @@ const LanguageSelector = () => {
 
     return (
         <div className="language-selector me-3">
-            <button 
-                onClick={() => setDropdownOpen(!dropdownOpen)} 
+            <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
                 className="dropdown-toggle"
             >
+                <FontAwesomeIcon icon={faGlobe} className='pe-2' />
                 {lngs[currentLanguage]?.nativeName || lngs.en.nativeName}
             </button>
             {dropdownOpen && (
                 <ul className="dropdown-menu">
                     {Object.keys(lngs).map((lng) => (
                         <li key={lng}>
-                            <button 
-                                onClick={() => handleChange(lng)} 
+                            <button
+                                onClick={() => handleChange(lng)}
                                 className="dropdown-item"
                             >
                                 {lngs[lng].nativeName}

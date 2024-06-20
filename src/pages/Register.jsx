@@ -39,70 +39,54 @@ export default function Register() {
   return (
     <div className='main-auth-page-container'>
 
-      <div className="card p-0 w-100 bg-transparent overflow-hidden" style={{ maxWidth: 'unset', minHeight: '100vh' }}>
+      <div className='w-100 px-5 m-auto d-block py-5 rounded-lg shadow-sm bg-white' style={{ maxWidth: 600 }}>
 
-        <div className="row m-0">
-          <div className="col-md-6 d-flex align-items-center" style={{ minHeight: '100vh' }}>
-            <div className='w-100 px-4 m-auto d-block py-4' style={{ maxWidth: 600 }}>
-
-
-              <div className='d-flex align-items-center mb-3'>
-                <div className='py-3'>
-                  <img src={logo} alt="" className='auth-page-logo' />
-                </div>
-
-                <div className='ps-4'>
-                  <h2 className='bold'>{t('register.sign_up')}</h2>
-                  <p>{t('register.welcome')}</p>
-                </div>
-
-              </div>
-
-
-              {error && <span className='text-danger small'>{error}</span>} { }
-
-              <form onSubmit={handleSubmit}>
-                <div className='py-2'>
-                  <label className='mb-1 ps-1'>{t('register.name')}</label>
-                  <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_name')} />
-                </div>
-                <div className='py-2'>
-                  <label className='mb-1 ps-1'>{t('register.email')}</label>
-                  <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_email')} />
-                </div>
-                <div className='py-2'>
-                  <label className='mb-1 ps-1'>{t('register.password')}</label>
-                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
-                </div>
-                <div className='py-2 mb-3 mt-2'>
-                  <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>{t('register.sign_up')}</button>
-                </div>
-
-                <div className='d-flex justify-content-between py-2'>
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    <label className="form-check-label color-text-lighter small" htmlFor="flexCheckDefault">
-                      {t('register.remember_me')}
-                    </label>
-                  </div>
-                  <div className='d-flex justify-content-center'>
-                    <span className='text-secondary small fw-500 text-decoration-none pe-2'>{t('register.already_have_an_account')}</span>
-                    <Link to="/login" className='small fw-500 color-text text-decoration-none'>{t('register.login')}</Link>
-                  </div>
-                </div>
-
-              </form>
-            </div>
-
+        <div className='d-flex align-items-center mb-3'>
+          <div className='py-3'>
+            <img src={logo} alt="" className='auth-page-logo' />
           </div>
-          <div className="col-md-6 px-0">
-            <div style={{ height: '100vh' }} className='d-flex justify-content-center align-items-center'>
-              <img src={mobileImgExample} className='w-100' style={{ objectFit: 'cover', maxWidth: 800 }} alt="" />
-            </div>
+
+          <div className='ps-4'>
+            <h2 className='bold'>{t('register.sign_up')}</h2>
+            <p>{t('register.welcome')}</p>
           </div>
+
         </div>
 
 
+        {error && <span className='text-danger small'>{error}</span>} { }
+
+        <form onSubmit={handleSubmit}>
+          <div className='py-2'>
+            <label className='mb-1 ps-1'>{t('register.name')}</label>
+            <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_name')} />
+          </div>
+          <div className='py-2'>
+            <label className='mb-1 ps-1'>{t('register.email')}</label>
+            <input type="text" name='email' value={email} onChange={(e) => setEmail(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_email')} />
+          </div>
+          <div className='py-2'>
+            <label className='mb-1 ps-1'>{t('register.password')}</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
+          </div>
+          <div className='py-2 mb-3 mt-2'>
+            <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>{t('register.sign_up')}</button>
+          </div>
+
+          <div className='d-flex justify-content-between py-2'>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+              <label className="form-check-label color-text-lighter small" htmlFor="flexCheckDefault">
+                {t('register.remember_me')}
+              </label>
+            </div>
+            <div className='d-flex justify-content-center'>
+              <span className='text-secondary small fw-500 text-decoration-none pe-2'>{t('register.already_have_an_account')}</span>
+              <Link to="/login" className='small fw-500 color-text text-decoration-none'>{t('register.login')}</Link>
+            </div>
+          </div>
+
+        </form>
       </div>
 
     </div>

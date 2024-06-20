@@ -7,10 +7,10 @@ function UserDropdown() {
 
     return (
         <div>
-            <div className="dropdown-menu dropdown-menu-left show active" aria-labelledby="accountDropdown"
+            <div className="dropdown-menu dropdown-menu-left show active" id='accountDropdown' aria-labelledby="accountDropdown"
                 style={{ position: 'absolute', width: 250 }}>
                 <div className="title-wrap d-flex align-items-center pb-4">
-                    <h3 className="title color-text text-center justify-content-center w-100 mb-0">Welcome, Nenad</h3>
+                    <h3 className="title text-center justify-content-center w-100 mb-0">Welcome, Nenad</h3>
                 </div>
 
 

@@ -78,6 +78,8 @@ function Dashboard() {
 
         <div className="container">
 
+            <h3 className='mt-4 mb-3 ps-2'>Dashboard</h3>
+
             <div className="row">
                 <div className="col-md-4 p-3">
                     <div className="bg-app p-3 rounded">

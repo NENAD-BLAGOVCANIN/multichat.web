@@ -55,7 +55,6 @@ body {
   background-color: var(--background) !important;
 }
 
-
 .bold {
   font-weight: bold !important;
 }
@@ -120,7 +119,7 @@ body {
 }
 
 .form-control {
-  border: 1px solid #6d7379 !important;
+  border: 1px solid #cdd2d3 !important;
   background: transparent !important;
   transition: border-color 0.3s ease;
   color: var(--color-text) !important;
@@ -534,4 +533,9 @@ footer {
   src: url('./assets/fonts/extrabold.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+#accountDropdown{
+  background-color: var(--color-dark-lighter) !important;
+  opacity: .93;
 }

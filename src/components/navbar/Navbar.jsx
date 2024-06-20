@@ -21,7 +21,7 @@ function Navbar() {
 
     return (
         <nav class="navbar navbar-expand-lg w-100">
-            <div class="container px-4 py-2">
+            <div class="container px-5 py-2">
                 <Link class="navbar-brand pe-3" to="/">
                     <img src={logo} alt="" />
                 </Link>
