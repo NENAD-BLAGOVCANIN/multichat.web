@@ -75,7 +75,7 @@ export default function Login() {
 
 
                     <div className='py-2 mt-3'>
-                        <Button variant="primary" type="submit" onClick={handleSubmit} loading={loading} >
+                        <Button variant="primary" type="submit" loading={loading} >
                             {t('login.login')}
                         </Button>
                     </div>

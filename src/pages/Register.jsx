@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
+import Button from '../components/Button';
 
 export default function Register() {
 
@@ -18,9 +19,12 @@ export default function Register() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { login } = useAuth();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+    setLoading(true);
 
     try {
       await register(name, email, password);
@@ -33,6 +37,7 @@ export default function Register() {
       setError('An error occurred while logging in.');
       console.error(error);
     }
+    setLoading(false);
   };
 
 
@@ -70,7 +75,9 @@ export default function Register() {
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name='password' className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder='••••••••' />
           </div>
           <div className='py-2 mb-3 mt-2'>
-            <button type="submit" className='btn btn-primary w-100 py-3 fw-500' style={{ backgroundColor: '#EBE9F9' }}>{t('register.sign_up')}</button>
+            <Button variant="primary" type="submit" loading={loading} >
+              {t('register.sign_up')}
+            </Button>
           </div>
 
           <div className='d-flex justify-content-between py-2'>
