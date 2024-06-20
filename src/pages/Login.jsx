@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import mobileImgExample from '../assets/img/mobile-img-example.png'
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import logo from '../assets/img/logo.png'
 import { useTranslation } from 'react-i18next';
+import Button from '../components/Button';
 
 export default function Login() {
 
@@ -13,6 +13,7 @@ export default function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
@@ -20,6 +21,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setLoading(true);
 
         const response = await login(email, password);
         if (response.success) {
@@ -28,6 +30,7 @@ export default function Login() {
         } else {
             setError(response.message);
         }
+        setLoading(false);
     };
 
 
@@ -72,7 +75,9 @@ export default function Login() {
 
 
                     <div className='py-2 mt-3'>
-                        <button type="submit" className='btn btn-primary hover-lg w-100 py-3 border-0 fw-500' style={{ backgroundColor: '#EBE9F9' }}>{t('login.login')}</button>
+                        <Button variant="primary" type="submit" onClick={handleSubmit} loading={loading} >
+                            {t('login.login')}
+                        </Button>
                     </div>
 
                     <div className='d-flex justify-content-center pt-3'>

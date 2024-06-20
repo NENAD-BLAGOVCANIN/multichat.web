@@ -20,17 +20,17 @@ function Navbar() {
 
 
     return (
-        <nav class="navbar navbar-expand-lg w-100">
-            <div class="container px-5 py-2">
-                <Link class="navbar-brand pe-3" to="/">
+        <nav className="navbar navbar-expand-lg w-100">
+            <div className="container px-5 py-2">
+                <Link className="navbar-brand pe-3" to="/">
                     <img src={logo} alt="" />
                 </Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
+                <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+                    <ul className="navbar-nav">
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" exact to="/">
                                 {t('navbar.home')}
