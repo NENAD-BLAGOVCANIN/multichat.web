@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo_wide.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.svg';
