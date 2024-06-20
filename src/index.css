@@ -8,10 +8,12 @@
   --color-dark-gray: #f0f0f0;
   --color-light: #f8f8f8;
   --color-dark: #23272a;
-  --color-dark-lighter: rgb(14, 43, 63);
+  --color-dark-lighter: #0e2b3f;
   --background: rgb(240, 243, 245);
   --color-main-background: rgb(255, 255, 255);
   --sidebar-width: 290px;
+  --background-gradient: linear-gradient(90deg, rgba(35,39,42,1) 0%, rgba(15,59,89,1) 33%, rgba(14,43,63,1) 65%, rgba(35,39,42,1) 100%);
+
 }
 
 #sidebar.active {
@@ -219,7 +221,7 @@ hr {
 }
 
 .navbar {
-  background: var(--color-dark) !important;
+  background: transparent !important;
   z-index: 999;
 }
 
@@ -477,6 +479,10 @@ footer {
   font-weight: 700;
   font-size: 60px;
   font-family: 'extrabold', sans-serif;
+}
+
+#hero-section-wrapper{
+  background: var(--background-gradient) !important;
 }
 
 .hero-subtitle{

@@ -4,6 +4,7 @@ import PlatformsView from '../../components/home/PlatformsView'
 import messagingExample from '../../assets/img/messagingScreensExample.png'
 import { useTranslation } from 'react-i18next';
 import HeroSection from './HeroSection'
+import Navbar from '../../components/navbar/Navbar';
 
 function Home() {
 
@@ -12,7 +13,12 @@ function Home() {
   return (
     <div className='main-content-wrapper'>
 
-      <HeroSection />
+      <div id='hero-section-wrapper'>
+        <Navbar />
+        <HeroSection />
+      </div>
+
+
 
       <div className="container pt-5">
 

@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Logout from './pages/Logout';
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
+import HomeLayout from './layouts/HomeLayout';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -29,8 +30,11 @@ const App = () => {
         <Routes>
 
 
-          <Route path="/" element={<AppLayout />}>
+          <Route path="/" element={<HomeLayout />}>
             <Route path="/" element={<Home />} />
+          </Route>
+
+          <Route path="/" element={<AppLayout />}>
             <Route path="/downloads" element={<Downloads />} />
           </Route>
 
