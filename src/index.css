@@ -553,3 +553,29 @@ footer {
   background-color: var(--color-dark-lighter) !important;
   opacity: .93;
 }
+
+.sys-reqs-txt {
+  overflow: hidden;
+  text-align: center;
+}
+
+.sys-reqs-txt::before,
+.sys-reqs-txt::after {
+  background-color: var(--bs-gray-500);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.sys-reqs-txt::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.sys-reqs-txt::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
