@@ -7,7 +7,9 @@ function AppLayout() {
 
     return (
         <div className="main-content-wrapper">
-            <Navbar />
+            <div className="navbar-wrapper">
+                <Navbar />
+            </div>
             <div className="main-container">
                 <Outlet />
             </div>

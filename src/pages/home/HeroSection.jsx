@@ -1,5 +1,5 @@
 import React from 'react'
-import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next';
 import multichatExample from '../../assets/img/multichatExample.webp'

@@ -43,6 +43,10 @@ body {
   font-size: 11.5pt !important;
 }
 
+.main-container{
+  min-height: 80vh;
+}
+
 .page-content-wrapper {
   display: flex;
   position: relative;
@@ -83,6 +87,10 @@ body {
 
 .hover-secondary:hover {
   background-color: #18161d1c !important;
+}
+
+.navbar-wrapper{
+  background: var(--color-dark);
 }
 
 .btn-primary,
