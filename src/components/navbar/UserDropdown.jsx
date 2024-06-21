@@ -22,9 +22,9 @@ function UserDropdown() {
                 </li>
 
                 <li className='nav-item px-2 rounded'>
-                    <Link to="/profile" className='nav-link py-1'>
+                    <Link to="/account" className='nav-link py-1'>
                         <FontAwesomeIcon icon={faUser} />
-                        <span className='ps-3 medium'>My Profile</span>
+                        <span className='ps-3 medium'>My Account</span>
                     </Link>
                 </li>
                 <li className='nav-item px-2 rounded'>
