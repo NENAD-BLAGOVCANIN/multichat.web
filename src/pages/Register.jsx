@@ -46,7 +46,7 @@ export default function Register() {
 
       <div className='w-100 px-5 m-auto d-block py-5 rounded-lg shadow-sm bg-white' style={{ maxWidth: 600 }}>
 
-        <div className='d-flex align-items-center mb-3'>
+        <div className='d-flex align-items-center mb-3 mt-5'>
           <div className='py-3'>
             <img src={logo} alt="" className='auth-page-logo' />
           </div>
@@ -61,7 +61,7 @@ export default function Register() {
 
         {error && <span className='text-danger small'>{error}</span>} { }
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='mb-5'>
           <div className='py-2'>
             <label className='mb-1 ps-1'>{t('register.name')}</label>
             <input type="text" name='name' value={name} onChange={(e) => setName(e.target.value)} className='form-control py-3' style={{ backgroundColor: '#EBE9F9' }} placeholder={t('register.enter_your_name')} />
