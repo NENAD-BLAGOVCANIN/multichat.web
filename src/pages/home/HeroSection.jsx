@@ -25,7 +25,9 @@ function HeroSection() {
                                     {t('home.hero_section.download_for_windows')}
                                 </a>
 
-                                <span className='px-3 text-white medium'>Windows 10 or higher</span>
+                                <span className='px-3 text-white medium'>
+                                    {t('home.hero_section.windows_10_or_higher')}
+                                </span>
                             </div>
 
                         </div>

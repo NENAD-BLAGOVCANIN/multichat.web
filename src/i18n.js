@@ -26,7 +26,8 @@ i18n
                             title: "GET ON ANY DEVICE",
                             subtitle: "Your all-in-one messaging solution designed to streamline your digital communication experience.",
                             download_for_windows: "Download for Windows",
-                            download_for_mac: "Download for MacOS"
+                            download_for_mac: "Download for MacOS",
+                            windows_10_or_higher: "Windows 10 or higher",
                         },
                         section_2: {
                             title: "Bringing Your Conversations Together",
