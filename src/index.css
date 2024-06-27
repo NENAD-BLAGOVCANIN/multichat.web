@@ -557,6 +557,9 @@ footer {
 .sys-reqs-txt {
   overflow: hidden;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sys-reqs-txt::before,

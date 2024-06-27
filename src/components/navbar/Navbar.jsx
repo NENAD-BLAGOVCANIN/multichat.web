@@ -42,13 +42,8 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/subscriptions">
-                                {t('navbar.subscriptions')}
-                            </NavLink>
-                        </li>
-                        <li className="nav-item px-2">
-                            <NavLink className="nav-link" to="/docs">
-                                {t('navbar.docs')}
+                            <NavLink className="nav-link" to="/pricing">
+                                {t('navbar.pricing')}
                             </NavLink>
                         </li>
                     </ul>

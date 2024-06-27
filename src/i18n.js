@@ -17,7 +17,7 @@ i18n
                     navbar: {
                         home: "Home",
                         downloads: "Downloads",
-                        subscriptions: "Subscriptions",
+                        pricing: "Pricing",
                         docs: "Docs",
                         sign_up: "Sign up"
                     },
@@ -25,7 +25,8 @@ i18n
                         hero_section: {
                             title: "GET ON ANY DEVICE",
                             subtitle: "Your all-in-one messaging solution designed to streamline your digital communication experience.",
-                            download_for_windows: "Download for Windows"
+                            download_for_windows: "Download for Windows",
+                            download_for_mac: "Download for MacOS"
                         },
                         section_2: {
                             title: "Bringing Your Conversations Together",
@@ -126,7 +127,7 @@ i18n
                     navbar: {
                         home: "首頁",
                         downloads: "下載",
-                        subscriptions: "訂閱",
+                        pricing: "訂閱",
                         docs: "文檔",
                         sign_up: "註冊"
                     },
@@ -134,7 +135,8 @@ i18n
                         hero_section: {
                             title: "歡迎來到 Multichat",
                             subtitle: "從一個平台訪問您的所有消息。",
-                            download_for_windows: "下載 Windows 版"
+                            download_for_windows: "下載 Windows 版",
+                            download_for_mac: "下載 Mac 版"
                         },
                         section_2: {
                             title: "聚合您的對話",
