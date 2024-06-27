@@ -43,36 +43,36 @@ function Footer() {
                         </div>
                         <div className="col-md-4 mb-md-0 mb-4">
                             <div className="footer-links-block d-block m-auto">
-                                <p className="pb-2 fw-500 m-0 text-primary">{t('footer.quick_links')}</p>
+                                <p className="pb-2 fw-500 m-0 text-white">{t('footer.quick_links')}</p>
                                 <ul className="list-unstyled">
                                     <li>
-                                        <Link to="/" className="py-2 d-block text-white text-decoration-none">
+                                        <Link to="/" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.home')}
                                         </Link>
                                     </li>
-                                    <li><Link to="/blogs" className="py-2 d-block text-white text-decoration-none">
+                                    <li><Link to="/blogs" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.blog')}
                                     </Link></li>
                                     <li>
-                                        <Link to="#featuresSection" className="py-2 d-block text-white text-decoration-none">
+                                        <Link to="#featuresSection" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.features_and_privacy')}
                                         </Link>
                                     </li>
                                 </ul>
-                                <p className="pb-2 fw-500 m-0 pt-3 text-primary">{t('footer.info')}</p>
+                                <p className="pb-2 fw-500 m-0 pt-3 text-white">{t('footer.info')}</p>
                                 <ul className="list-unstyled">
                                     <li>
-                                        <Link to="/privacy-policy" className="py-2 d-block text-white text-decoration-none">
+                                        <Link to="/privacy-policy" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.privacy_policy')}
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/user-agreement" className="py-2 d-block text-white text-decoration-none">
+                                        <Link to="/user-agreement" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.user_agreement')}
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/about-us" className="py-2 d-block text-white text-decoration-none">
+                                        <Link to="/about-us" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.about_us')}
                                         </Link>
                                     </li>
@@ -82,27 +82,27 @@ function Footer() {
                         </div>
                         <div className="col-md-4 mb-md-0 mb-4">
                             <div className="footer-links-block d-block m-auto">
-                                <p className="pb-2 fw-500 m-0 text-primary">{t('footer.users')}</p>
+                                <p className="pb-2 fw-500 m-0 text-white">{t('footer.users')}</p>
                                 <ul className="list-unstyled">
-                                    <li><Link to="/register" className="py-2 d-block text-white text-decoration-none">
+                                    <li><Link to="/register" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.sign_up')}
                                     </Link></li>
-                                    <li><Link to="/login" className="py-2 d-block text-white text-decoration-none">
+                                    <li><Link to="/login" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.log_in')}
                                     </Link></li>
-                                    <li><Link to="/customer-support" className="py-2 d-block text-white text-decoration-none">
+                                    <li><Link to="/customer-support" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.contact_support')}
                                     </Link></li>
                                 </ul>
-                                <p className="pb-2 fw-500 m-0 pt-3 text-primary">{t('footer.contact')}</p>
+                                <p className="pb-2 fw-500 m-0 pt-3 text-white">{t('footer.contact')}</p>
                                 <ul className="list-unstyled">
-                                    <li><Link to="/customer-support" className="py-2 d-block text-white text-decoration-none">
+                                    <li><Link to="/customer-support" className="py-2 d-block text-light text-decoration-none">
                                         <i className="fa-solid fa-headset pe-2"></i>
                                         {t('footer.contact_live_support')}
                                     </Link></li>
-                                    <li><Link to="tel:33613498382" className="py-2 d-block text-white text-decoration-none"><i className="fa fa-phone pe-2"></i> +423563953</Link>
+                                    <li><Link to="tel:33613498382" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-phone pe-2"></i> +423563953</Link>
                                     </li>
-                                    <li><Link to="mailto:contact@multi-chat.io" className="py-2 d-block text-white text-decoration-none"><i className="fa fa-envelope pe-2"></i> contact@multi-chat.io</Link>
+                                    <li><Link to="mailto:contact@multi-chat.io" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-envelope pe-2"></i> contact@multi-chat.io</Link>
                                     </li>
                                 </ul>
 

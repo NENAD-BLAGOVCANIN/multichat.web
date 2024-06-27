@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import logo from '../../assets/img/logo_wide_300.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import profileImagePlaceholder from '../../assets/img/ProfilePlaceholderImage.svg';
+import { ReactComponent as UserSmallIcon } from '../../assets/img/svg/user-sm.svg'
 import UserDropdown from "./UserDropdown";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
 
@@ -60,17 +62,8 @@ function Navbar() {
                             aria-haspopup="true"
                             aria-expanded={isUserDropdownOpen}
                         >
-                            <img
-                                src={profileImagePlaceholder}
-                                className="rounded pointer"
-                                alt=""
-                                style={{
-                                    maxHeight: 28,
-                                    aspectRatio: 1,
-                                    objectFit: "cover",
-                                    height: "100%",
-                                }}
-                            />
+                            <UserSmallIcon />
+                            <FontAwesomeIcon icon={faChevronDown} className='text-white small' />
                         </a>
 
                         {isUserDropdownOpen && (
