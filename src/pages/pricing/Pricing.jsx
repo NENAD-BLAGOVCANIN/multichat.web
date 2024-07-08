@@ -10,9 +10,6 @@ function Pricing() {
     return (
         <div className='container py-5 px-5'>
 
-            <h2><b>Pricing</b></h2>
-            <p>You can always use the free plan with limited features.</p>
-
             <div className="row">
                 <div className="col-md-4 py-4">
                     <div className='card border-0 shadow-sm rounded-0'>

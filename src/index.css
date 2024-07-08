@@ -352,8 +352,7 @@ footer {
   color: var(--color-text);
 }
 
-#hero-section-wrapper .custom-dropdown .user-dropdown-toggler,
-#hero-section-wrapper .title {
+#hero-section-wrapper .custom-dropdown .user-dropdown-toggler{
   color: white !important;
 }
 
@@ -367,16 +366,6 @@ footer {
 
 #hero-section-wrapper .language-selector * {
   color: white !important;
-}
-
-.custom-dropdown .title-wrap {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.custom-dropdown .title {
-  font-size: 10pt;
-  font-weight: 700;
 }
 
 .switch.btn {

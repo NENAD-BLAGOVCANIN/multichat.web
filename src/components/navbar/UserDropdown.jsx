@@ -9,10 +9,6 @@ function UserDropdown() {
         <div>
             <div className="dropdown-menu dropdown-menu-left shadow-lg rounded show active" id='accountDropdown' aria-labelledby="accountDropdown"
                 style={{ position: 'absolute', width: 300 }}>
-                <div className="title-wrap d-flex align-items-center pb-4">
-                    <h3 className="title text-center justify-content-center w-100 mb-0">Welcome, Nenad</h3>
-                </div>
-
 
                 {/* <li className='nav-item px-2 rounded'>
                     <Link to="/admin/dashboard" className='nav-link py-1'>
@@ -29,8 +25,8 @@ function UserDropdown() {
                 </li>
                 <li className='nav-item px-2 rounded'>
                     <Link to="/logout" className='nav-link py-1'>
-                        <FontAwesomeIcon icon={faRightFromBracket} />
-                        <span className='ps-3 medium'>Logout</span>
+                        <FontAwesomeIcon icon={faRightFromBracket} className='text-danger' />
+                        <span className='ps-3 medium text-danger'>Logout</span>
                     </Link>
                 </li>
 

@@ -11,8 +11,6 @@ function Downloads() {
   return (
     <div className='container py-5 px-5'>
 
-      <h2><b>Downloads</b></h2>
-
       <div className="row">
         <div className="col-md-6 py-4">
           <div className='card border-0 shadow-sm rounded-0'>

@@ -14,6 +14,8 @@ import HomeLayout from './layouts/HomeLayout';
 import Account from './pages/account/Account';
 import Pricing from './pages/pricing/Pricing';
 import About from './pages/about/About';
+import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
+import TermsOfService from './pages/termsOfService/TermsOfService';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -42,6 +44,8 @@ const App = () => {
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
           </Route>
 
           <Route element={<PrivateRoutes />}>
