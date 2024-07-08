@@ -13,6 +13,7 @@ import Users from './pages/admin/Users';
 import HomeLayout from './layouts/HomeLayout';
 import Account from './pages/account/Account';
 import Pricing from './pages/pricing/Pricing';
+import About from './pages/about/About';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/account" element={<Account />} />
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/about" element={<About />} />
           </Route>
 
           <Route element={<PrivateRoutes />}>

@@ -7,7 +7,7 @@ function AppLayout() {
 
     return (
         <div className="main-content-wrapper">
-            <div className="navbar-wrapper">
+            <div className="navbar-wrapper shadow-sm">
                 <Navbar />
             </div>
             <div className="main-container">

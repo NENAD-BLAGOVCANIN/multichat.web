@@ -54,6 +54,7 @@ body {
 }
 
 .main-container {
+  padding-top: 77px;
   min-height: 80vh;
 }
 
@@ -83,6 +84,10 @@ body {
   color: var(--color-text-lighter) !important;
 }
 
+.text-justify{
+  text-align: justify;
+}
+
 .bg-gray {
   background-color: var(--color-light-gray) !important;
 }
@@ -100,6 +105,9 @@ body {
 }
 
 .navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 9;
   background: var(--color-main-background);
 }
 
@@ -256,6 +264,9 @@ hr {
 
 #hero-section-wrapper .navbar .nav-item .nav-link:hover {
   color: #fff !important;
+}
+
+.navbar .nav-item .nav-link:hover {
   text-decoration: underline;
 }
 

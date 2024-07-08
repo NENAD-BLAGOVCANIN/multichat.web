@@ -7,7 +7,7 @@ function HomeLayout() {
 
     return (
         <div className="main-content-wrapper">
-            <div className="main-container">
+            <div>
                 <Outlet />
             </div>
             <Footer />

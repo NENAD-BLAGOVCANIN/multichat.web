@@ -48,6 +48,11 @@ function Navbar() {
                                 {t('navbar.pricing')}
                             </NavLink>
                         </li>
+                        <li className="nav-item px-2">
+                            <NavLink className="nav-link" to="/about">
+                                About
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
 

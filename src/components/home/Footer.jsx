@@ -8,7 +8,7 @@ function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer className="mt-5">
+        <footer className="mt-5 pt-5 pb-3">
             <div className="container-fluid px-0 pt-5 m-0">
                 <div className="container py-4">
                     <div className="row m-0 p-0 justify-content-center">
