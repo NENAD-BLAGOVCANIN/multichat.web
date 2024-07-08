@@ -2,7 +2,7 @@ import React from 'react'
 
 function Account() {
     return (
-        <div className="container">
+        <div className="container px-5">
 
             <h3 className="mt-5 pb-5 bold">My Account</h3>
 

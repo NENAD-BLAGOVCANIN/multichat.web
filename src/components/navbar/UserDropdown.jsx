@@ -14,12 +14,12 @@ function UserDropdown() {
                 </div>
 
 
-                <li className='nav-item px-2 rounded'>
+                {/* <li className='nav-item px-2 rounded'>
                     <Link to="/admin/dashboard" className='nav-link py-1'>
                         <FontAwesomeIcon icon={faChartSimple} />
                         <span className='ps-3 medium'>Admin Panel</span>
                     </Link>
-                </li>
+                </li> */}
 
                 <li className='nav-item px-2 rounded'>
                     <Link to="/account" className='nav-link py-1'>
