@@ -7,7 +7,7 @@ import UserDropdown from "./UserDropdown";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
 
@@ -22,7 +22,7 @@ function Navbar() {
 
 
     return (
-        <nav className="navbar navbar-expand-lg w-100">
+        <nav className="navbar navbar-home navbar-expand-lg w-100">
             <div className="container px-5 py-2">
                 <Link className="navbar-brand pe-3" to="/">
                     <img src={logo} alt="" />
@@ -58,12 +58,12 @@ function Navbar() {
                         <a
                             href="#"
                             onClick={toggleUserDropdown}
-                            className="dropdown-link d-flex align-items-center"
+                            className="dropdown-link d-flex align-items-center user-dropdown-toggler"
                             aria-haspopup="true"
                             aria-expanded={isUserDropdownOpen}
                         >
-                            <UserSmallIcon />
-                            <FontAwesomeIcon icon={faChevronDown} className='text-white small' />
+                            <FontAwesomeIcon icon={faUser} className='pe-2' />
+                            <FontAwesomeIcon icon={faChevronDown} className='small' />
                         </a>
 
                         {isUserDropdownOpen && (

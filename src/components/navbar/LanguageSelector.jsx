@@ -33,16 +33,16 @@ const LanguageSelector = () => {
 
     return (
         <div className="language-selector me-3">
-            <button
+            <span
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className='btn text-white'
+                className='px-2 pointer d-flex align-items-center'
             >
                 <FontAwesomeIcon icon={faGlobe} className='pe-2' />
                 {lngs[currentLanguage]?.nativeName || lngs.en.nativeName}
-                <FontAwesomeIcon icon={faChevronDown} className='text-white small ps-2' />
-            </button>
+                <FontAwesomeIcon icon={faChevronDown} className='small ps-2' />
+            </span>
             {dropdownOpen && (
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu dropdown-menu-left shadow-lg rounded">
                     {Object.keys(lngs).map((lng) => (
                         <li key={lng}>
                             <button
