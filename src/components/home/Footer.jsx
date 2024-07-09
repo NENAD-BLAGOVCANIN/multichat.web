@@ -32,12 +32,12 @@ function Footer() {
                             </form>
 
                             <ul className="navbar-nav flex-row d-flex p-0 pt-4">
-                                <Link to="#" data-bs-toggle="tooltip" data-placement="top" title="Twitter"><i
-                                    className="fa-brands text-white h4 fa-x-twitter"></i></Link>
-                                <Link to="#" className="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
-                                    className="fa-brands text-white h4 fa-facebook"></i></Link>
-                                <Link to="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
-                                    className="fa-brands text-white h4 fa-linkedin"></i></Link>
+                                <a href="#" data-bs-toggle="tooltip" data-placement="top" title="Twitter"><i
+                                    className="fa-brands text-white h4 fa-x-twitter"></i></a>
+                                <a href="#" className="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
+                                    className="fa-brands text-white h4 fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
+                                    className="fa-brands text-white h4 fa-linkedin"></i></a>
                             </ul>
 
                         </div>
@@ -46,35 +46,35 @@ function Footer() {
                                 <p className="pb-2 fw-500 m-0 text-white">{t('footer.quick_links')}</p>
                                 <ul className="list-unstyled">
                                     <li>
-                                        <Link to="/" className="py-2 d-block text-light text-decoration-none">
+                                        <a href="/" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.home')}
-                                        </Link>
+                                        </a>
                                     </li>
-                                    <li><Link to="/blogs" className="py-2 d-block text-light text-decoration-none">
-                                        {t('footer.blog')}
-                                    </Link></li>
+                                    <li><a href="/downloads" className="py-2 d-block text-light text-decoration-none">
+                                        Downloads
+                                    </a></li>
                                     <li>
-                                        <Link to="#featuresSection" className="py-2 d-block text-light text-decoration-none">
-                                            {t('footer.features_and_privacy')}
-                                        </Link>
+                                        <a href="/pricing" className="py-2 d-block text-light text-decoration-none">
+                                            Pricing
+                                        </a>
                                     </li>
                                 </ul>
                                 <p className="pb-2 fw-500 m-0 pt-3 text-white">{t('footer.info')}</p>
                                 <ul className="list-unstyled">
                                     <li>
-                                        <Link to="/privacy-policy" className="py-2 d-block text-light text-decoration-none">
+                                        <a href="/privacy-policy" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.privacy_policy')}
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link to="/user-agreement" className="py-2 d-block text-light text-decoration-none">
-                                            {t('footer.user_agreement')}
-                                        </Link>
+                                        <a href="/terms-of-service" className="py-2 d-block text-light text-decoration-none">
+                                            Terms of Service
+                                        </a>
                                     </li>
                                     <li>
-                                        <Link to="/about-us" className="py-2 d-block text-light text-decoration-none">
+                                        <a href="/about" className="py-2 d-block text-light text-decoration-none">
                                             {t('footer.about_us')}
-                                        </Link>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -84,25 +84,25 @@ function Footer() {
                             <div className="footer-links-block d-block m-auto">
                                 <p className="pb-2 fw-500 m-0 text-white">{t('footer.users')}</p>
                                 <ul className="list-unstyled">
-                                    <li><Link to="/register" className="py-2 d-block text-light text-decoration-none">
+                                    <li><a href="/register" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.sign_up')}
-                                    </Link></li>
-                                    <li><Link to="/login" className="py-2 d-block text-light text-decoration-none">
+                                    </a></li>
+                                    <li><a href="/login" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.log_in')}
-                                    </Link></li>
-                                    <li><Link to="/customer-support" className="py-2 d-block text-light text-decoration-none">
+                                    </a></li>
+                                    <li><a href="/customer-support" className="py-2 d-block text-light text-decoration-none">
                                         {t('footer.contact_support')}
-                                    </Link></li>
+                                    </a></li>
                                 </ul>
                                 <p className="pb-2 fw-500 m-0 pt-3 text-white">{t('footer.contact')}</p>
                                 <ul className="list-unstyled">
-                                    <li><Link to="/customer-support" className="py-2 d-block text-light text-decoration-none">
+                                    <li><a href="/customer-support" className="py-2 d-block text-light text-decoration-none">
                                         <i className="fa-solid fa-headset pe-2"></i>
                                         {t('footer.contact_live_support')}
-                                    </Link></li>
-                                    <li><Link to="tel:33613498382" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-phone pe-2"></i> +423563953</Link>
+                                    </a></li>
+                                    <li><a href="tel:33613498382" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-phone pe-2"></i> +423563953</a>
                                     </li>
-                                    <li><Link to="mailto:contact@multi-chat.io" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-envelope pe-2"></i> contact@multi-chat.io</Link>
+                                    <li><a href="mailto:contact@multi-chat.io" className="py-2 d-block text-light text-decoration-none"><i className="fa fa-envelope pe-2"></i> contact@multi-chat.io</a>
                                     </li>
                                 </ul>
 
