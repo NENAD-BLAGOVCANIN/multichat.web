@@ -25,7 +25,7 @@ function Pricing() {
 
 
                             <div className='py-4'>
-                                <a href='https://pay.raply.ai/b/7sI14Cd88blP6s0aF2' className='btn btn-primary w-100 py-2'>Start Free Trial</a>
+                                <a href='https://pay.raply.ai/b/7sI14Cd88blP6s0aF2' className='btn btn-dark w-100 py-2'>Start Free Trial</a>
                             </div>
 
 
@@ -40,15 +40,7 @@ function Pricing() {
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>Enhanced data synchronization (every 15 minutes)</span>
-                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
-                                    </div>
-                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
                                         <span className='pe-2'>Advanced notifications</span>
-                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
-                                    </div>
-                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>Additional themes</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
@@ -94,10 +86,6 @@ function Pricing() {
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>Basic data synchronization (hourly)</span>
-                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
-                                    </div>
-                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
                                         <span className='pe-2'>Standard desktop notifications</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
@@ -125,7 +113,7 @@ function Pricing() {
                             <p className='medium pt-2'>Billed monthly</p>
 
                             <div className='py-4'>
-                                <a href='https://pay.raply.ai/b/00g6oWd884XreYw5kJ' className='btn btn-primary w-100 py-2'>Start Free Trial</a>
+                                <a href='https://pay.raply.ai/b/00g6oWd884XreYw5kJ' className='btn btn-dark w-100 py-2'>Start Free Trial</a>
                             </div>
 
 
@@ -140,15 +128,7 @@ function Pricing() {
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>Real-time data synchronization</span>
-                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
-                                    </div>
-                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
                                         <span className='pe-2'>Full notifications suite</span>
-                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
-                                    </div>
-                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>Complete theme access</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
