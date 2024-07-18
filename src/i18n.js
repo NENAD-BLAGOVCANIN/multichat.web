@@ -152,73 +152,80 @@ i18n
                     navbar: {
                         home: "首頁",
                         downloads: "下載",
-                        pricing: "訂閱",
-                        docs: "文檔",
+                        pricing: "定價",
+                        about: "關於",
+                        docs: "文件",
                         sign_up: "註冊"
                     },
                     home: {
                         hero_section: {
-                            title: "歡迎來到 Multichat",
-                            subtitle: "從一個平台訪問您的所有消息。",
-                            download_for_windows: "下載 Windows 版",
-                            download_for_mac: "下載 Mac 版"
+                            title: "適用於任何設備",
+                            subtitle: "您的全方位消息解決方案，旨在簡化您的數字通信體驗。",
+                            download_for_windows: "下載適用於Windows",
+                            download_for_mac: "下載適用於MacOS",
+                            windows_10_or_higher: "Windows 10或更高版本",
                         },
                         section_2: {
                             title: "聚合您的對話",
-                            subtitle: `歡迎來到 MultiChat，您的全方位消息解決方案
-                                旨在簡化您的數字通信體驗。
-                                使用 MultiChat，您可以方便地在一個集中位置管理多個消息服務。
-                                告別在應用間切換，迎接輕鬆多任務處理。`
+                            subtitle: `歡迎來到MultiChat，您的全方位消息解決方案，
+                            旨在簡化您的數字通信體驗。
+                            有了MultiChat，您可以方便地在一個集中的位置管理多個消息服務。
+                            告別在應用之間切換，迎接輕鬆的多任務處理。`
                         },
                         platforms: {
-                            title: "Multichat 讓您可以從許多主要的消息平台發送和接收消息："
+                            title: "Multichat讓您能夠在許多主要消息平台上發送和接收消息："
                         },
                         features: {
                             title: "功能",
                             box_1: {
-                                title: "黑暗和光明模式",
-                                text: "選擇您喜好的配色方案以減少眼睛疲勞。"
+                                title: "深色和淺色模式",
+                                text: "選擇您喜歡的配色方案以減少眼睛疲勞。"
                             },
                             box_2: {
                                 title: "鍵盤快捷鍵",
-                                text: "使用我們廣泛的鍵盤支持，以光速移動。"
+                                text: "通過我們的廣泛鍵盤支持以光速移動。"
                             },
                             box_3: {
-                                title: "可自定義的用戶界面",
-                                text: "根據您的喜好自定義用戶界面。"
+                                title: "可定制的用戶界面",
+                                text: "根據您的偏好自定義用戶界面。"
                             },
                             box_4: {
-                                title: "隱私與安全",
-                                text: "您的所有消息都經過端到端加密，因此您可以私下與朋友和家人通信。"
+                                title: "隱私和安全",
+                                text: "您的所有消息均為端到端加密，因此您可以與朋友和家人私下通信。"
                             },
                             box_5: {
-                                title: "無限帳戶",
-                                text: "打開任意多的標籤，每個標籤都有自己的會話和獨特的憑據。"
+                                title: "不限賬號",
+                                text: "打開任意多的標籤，每個標籤都有自己的會話和唯一的憑據。"
                             },
                             box_6: {
                                 title: "通知",
-                                text: "控制您的通知，在忙碌時暫停或靜音您的消息。"
-                            }
+                                text: "控制您的通知，忙碌時可以暫停或靜音消息。"
+                            },
                         }
                     },
+                    user_dropdown: {
+                        my_account: "我的賬戶",
+                        logout: "登出"
+                    },
                     downloads: {
-                        downloads: "下載",
+                        downloads: '下載',
                         version: "版本",
                         size: "大小",
                         download_btn: "下載",
-                        system_reqs: "系統要求"
+                        system_reqs: "系統要求",
                     },
                     footer: {
-                        website_description: `您的全方位消息解決方案，旨在簡化您的數字通信體驗。
-                            使用 Multichat，您可以方便地在一個集中位置管理多個消息服務。`,
+                        website_description: `您的全方位消息解決方案，旨在簡化您的
+                        數字通信體驗。有了Multichat，您可以方便地在一個集中的位置管理多個
+                        消息服務。`,
                         newsletter: {
-                            label: "註冊我們的新聞通訊：",
-                            your_email: "您的電子郵件"
+                            label: "訂閱我們的新聞郵件：",
+                            your_email: "您的電子郵件",
                         },
-                        quick_links: "快速連結",
+                        quick_links: "快速鏈接",
                         home: "首頁",
                         blog: "博客",
-                        features_and_privacy: "功能與隱私",
+                        features_and_privacy: "功能和隱私",
                         info: "信息",
                         privacy_policy: "隱私政策",
                         user_agreement: "用戶協議",
@@ -228,34 +235,52 @@ i18n
                         log_in: "登錄",
                         contact_support: "聯繫支持",
                         contact: "聯繫",
-                        contact_live_support: "聯繫實時支持"
+                        contact_live_support: "聯繫在線支持",
+                        downloads: "下載",
+                        pricing: "定價",
+                        terms: "服務條款"
+                    },
+                    pricing: {
+                        standard: "標準計劃",
+                        free: "免費計劃",
+                        pro: "專業企業計劃",
+                        billed_monthly: "按月計費",
+                        month: "月",
+                        up_to_20: "最多20個標籤",
+                        up_to_5: "最多5個標籤",
+                        unlimited_tabs: "無限標籤",
+                        basic_support: "基本支持",
+                        priority_support: "優先支持",
+                        premium_support: "高級24/7支持",
+                        advanced_notifications: "高級通知",
+                        full_notifications: "完整通知套件",
+                        standard_notifications: "標準桌面通知"
                     },
                     login: {
                         remember_pass: "記住14天",
-                        trouble_logging_in: "登錄遇到問題？",
+                        trouble_logging_in: "登錄有困難？",
                         enter_your_email: "輸入您的電子郵件",
                         welcome: "歡迎回來！請輸入您的詳細信息。",
                         login: "登錄",
                         email: "電子郵件",
                         password: "密碼",
                         forgot_password: "忘記密碼？",
-                        dont_have_an_account: "還沒有帳號？",
+                        dont_have_an_account: "還沒有賬戶？",
                         sign_up: "註冊"
                     },
                     register: {
                         sign_up: "註冊",
                         welcome: "歡迎！請輸入您的詳細信息。",
-                        name: "姓名",
+                        name: "名字",
                         email: "電子郵件",
                         password: "密碼",
-                        enter_your_name: "輸入您的姓名",
+                        enter_your_name: "輸入您的名字",
                         enter_your_email: "輸入您的電子郵件",
                         remember_me: "記住我",
                         login: "登錄",
-                        already_have_an_account: "已經有帳號？"
+                        already_have_an_account: "已經有賬戶了？",
                     }
                 }
-
             },
         }
     }
