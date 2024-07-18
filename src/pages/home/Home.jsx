@@ -11,7 +11,7 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className='main-content-wrapper'>
+    <div className='main-content-wrapper bg-white'>
 
       <div id='hero-section-wrapper'>
         <Navbar />
@@ -27,8 +27,6 @@ function Home() {
           <p className='opacity-80 m-auto d-block py-3 w-100' style={{ maxWidth: 800, textAlign: 'justify' }}>
             {t('home.section_2.subtitle')}
           </p>
-
-          <img src={messagingExample} style={{ maxWidth: 800 }} className='w-100 m-auto d-block' alt="" />
 
         </div>
       </div>

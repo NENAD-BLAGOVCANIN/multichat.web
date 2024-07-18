@@ -56,7 +56,7 @@ function Navbar() {
                         </li>
                         <li className="nav-item px-2">
                             <NavLink className="nav-link" to="/about">
-                                About
+                                {t('navbar.about')}
                             </NavLink>
                         </li>
                     </ul>

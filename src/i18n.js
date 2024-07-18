@@ -18,6 +18,7 @@ i18n
                         home: "Home",
                         downloads: "Downloads",
                         pricing: "Pricing",
+                        about: "About",
                         docs: "Docs",
                         sign_up: "Sign up"
                     },
@@ -67,6 +68,10 @@ i18n
                             },
                         }
                     },
+                    user_dropdown: {
+                        my_account: "My Account",
+                        logout: "Logout"
+                    },
                     downloads: {
                         downloads: 'Downloads',
                         version: "VERSION",
@@ -96,6 +101,25 @@ i18n
                         contact_support: "Contact Support",
                         contact: "Contact",
                         contact_live_support: "Contact live support",
+                        downloads: "Downloads",
+                        pricing: "Pricing",
+                        terms: "Terms of Service"
+                    },
+                    pricing: {
+                        standard: "Standard Plan",
+                        free: "Free Plan",
+                        pro: "Pro Enterprise Plan",
+                        billed_monthly: "Billed monthly",
+                        month: "month",
+                        up_to_20: "Up to 20 tabs",
+                        up_to_5: "Up to 5 tabs",
+                        unlimited_tabs: "Unlimited tabs",
+                        basic_support: "Basic support",
+                        priority_support: "Priority support",
+                        premium_support: "Premium 24/7 support",
+                        advanced_notifications: "Advanced notifications",
+                        full_notifications: "Full notifications suite",
+                        standard_notifications: "Standard desktop notifications"
                     },
                     login: {
                         remember_pass: "Remember for 14 days",

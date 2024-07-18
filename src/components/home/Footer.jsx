@@ -8,7 +8,7 @@ function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer className="mt-5 pt-5 pb-3">
+        <footer className="pt-5 pb-3">
             <div className="container-fluid px-0 pt-5 m-0">
                 <div className="container py-4">
                     <div className="row m-0 p-0 justify-content-center">
@@ -51,11 +51,11 @@ function Footer() {
                                         </a>
                                     </li>
                                     <li><a href="/downloads" className="py-2 d-block text-light text-decoration-none">
-                                        Downloads
+                                        {t('footer.downloads')}
                                     </a></li>
                                     <li>
                                         <a href="/pricing" className="py-2 d-block text-light text-decoration-none">
-                                            Pricing
+                                            {t('footer.pricing')}
                                         </a>
                                     </li>
                                 </ul>
@@ -68,7 +68,7 @@ function Footer() {
                                     </li>
                                     <li>
                                         <a href="/terms-of-service" className="py-2 d-block text-light text-decoration-none">
-                                            Terms of Service
+                                            {t('footer.terms')}
                                         </a>
                                     </li>
                                     <li>
