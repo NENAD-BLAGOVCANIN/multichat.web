@@ -502,7 +502,6 @@ footer {
   line-height: 1;
   color: white !important;
   display: flex;
-  justify-content: center;
   align-items: center;
   letter-spacing: 2px;
   font-weight: 700;
