@@ -12,37 +12,45 @@ function PlatformsView() {
     const { t } = useTranslation();
 
     return (
-        <div className='py-5'>
-            <div className='py-5 mt-5 mb-3'>
-                <p className='opacity-80 text-center h5 fw-400'>
-                    {t('home.platforms.title')}
+        <div className='px-5 pt-5' style={{ maxWidth: 620 }}>
+
+            <div className="row">
+                <div className="pt-5 pb-3">
+                    <h1>{t('home.platforms.title')}</h1>
+                </div>
+
+                <p className='text-muted'>
+                    {t('home.platforms.text')}
                 </p>
+
+
+                <div className='d-flex w-100 align-items-center'>
+                    <div className='py-4 pe-4'>
+                        <img src={whatsAppLogo} className='img-fluid' style={{ width: 55 }} alt="" />
+                    </div>
+                    <div className='p-4'>
+                        <img src={weChatLogo} className='img-fluid' style={{ width: 65 }} alt="" />
+                    </div>
+                    <div className='p-4'>
+                        <img src={telegramLogo} className='img-fluid' style={{ width: 55 }} alt="" />
+                    </div>
+
+                </div>
+                <div className='d-flex w-100 align-items-center pt-3 mb-5 pb-5'>
+                    <div className='py-4 pe-4'>
+                        <img src={skypeLogo} className='img-fluid' style={{ width: 55 }} alt="" />
+                    </div>
+                    <div className='p-4'>
+                        <img src={discordLogo} className='img-fluid' style={{ width: 65 }} alt="" />
+                    </div>
+                    <div className='p-4'>
+                        <img src={messengerLogo} className='img-fluid' style={{ width: 55 }} alt="" />
+                    </div>
+
+                </div>
             </div>
 
-            <div className='d-flex justify-content-center align-items-center'>
-                <div className='p-4'>
-                    <img src={whatsAppLogo} className='img-fluid' style={{ width: 125 }} alt="" />
-                </div>
-                <div className='p-4'>
-                    <img src={weChatLogo} className='img-fluid' style={{ width: 135 }} alt="" />
-                </div>
-                <div className='p-4'>
-                    <img src={telegramLogo} className='img-fluid' style={{ width: 125 }} alt="" />
-                </div>
-                
-            </div>
-            <div className='d-flex justify-content-center align-items-center pt-3 mb-5 pb-5'>
-                <div className='p-4'>
-                    <img src={skypeLogo} className='img-fluid' style={{ width: 125 }} alt="" />
-                </div>
-                <div className='p-4'>
-                    <img src={discordLogo} className='img-fluid' style={{ width: 135 }} alt="" />
-                </div>
-                <div className='p-4'>
-                    <img src={messengerLogo} className='img-fluid' style={{ width: 125 }} alt="" />
-                </div>
-                
-            </div>
+
         </div>
     )
 }

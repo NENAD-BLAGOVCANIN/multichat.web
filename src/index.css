@@ -506,7 +506,7 @@ footer {
 
 .headline {
   line-height: 1;
-  color: white !important;
+  color: white;
   display: flex;
   align-items: center;
   letter-spacing: 2px;

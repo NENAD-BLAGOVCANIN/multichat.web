@@ -5,11 +5,11 @@ import UserDropdown from "./UserDropdown";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faChevronCircleRight, faChevronDown, faChevronRight, faUser } from '@fortawesome/free-solid-svg-icons'
 import logoDark from '../../assets/img/logo_dark_wide_300.png';
 import logoWide from '../../assets/img/logo_wide_300.png';
 import { useLocation } from 'react-router-dom'
-import { Person } from 'react-bootstrap-icons';
+import { ArrowRight, ChevronRight, Person } from 'react-bootstrap-icons';
 
 function Navbar() {
 
@@ -83,7 +83,10 @@ function Navbar() {
                 ) : (
                     <div className='d-flex align-items-center'>
                         <div className='px-1'>
-                            <Link to="/register" className='btn btn-primary rounded-lg px-3 py-2'>{t('navbar.sign_up')}</Link>
+                            <Link to="/register" className='btn btn-primary rounded-lg px-3 py-2'>
+                                <span className='pe-2'>{t('navbar.sign_up')}</span>
+                                <FontAwesomeIcon icon={faChevronRight} className='small' />
+                            </Link>
                         </div>
                     </div>
                 )}

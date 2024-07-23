@@ -21,24 +21,29 @@ function Home() {
 
       <div className="container pt-5">
 
-        <div className='pt-5 mt-5'>
-          <h1 className='bold text-center mb-3'>{t('home.section_2.title')}</h1>
-          <p className='opacity-80 m-auto d-block py-3 w-100' style={{ maxWidth: 800, textAlign: 'justify' }}>
-            {t('home.section_2.subtitle')}
-          </p>
+        <div className="row">
+          <div className="col-md-6">
+            <div className='pt-5 px-5 mt-5'>
+              <h1 className='mb-3'>{t('home.section_2.title')}</h1>
+              <p className='opacity-80 py-3 w-100' style={{ maxWidth: 800, textAlign: 'justify' }}>
+                {t('home.section_2.subtitle')}
+              </p>
 
+            </div>
+          </div>
+          <div className="col-md-6">
+
+          </div>
         </div>
+
+
       </div>
 
-      <div className='py-5'>
+      <div className='container py-5'>
         <PlatformsView />
       </div>
 
       <div className="container">
-
-        <div className="pt-5 pb-3">
-          <h1 className='px-3'>{t('home.features.title')}</h1>
-        </div>
 
         <Features />
 

@@ -38,7 +38,8 @@ i18n
                             Say goodbye to switching between apps and hello to effortless multitasking.`
                         },
                         platforms: {
-                            title: "Multichat lets you send and receive messages from many major messaging platforms:"
+                            title: "Platforms",
+                            text: "Multichat lets you send and receive messages from many major messaging platforms, all in one app. We currently support these platforms:"
                         },
                         features: {
                             title: "Features",
