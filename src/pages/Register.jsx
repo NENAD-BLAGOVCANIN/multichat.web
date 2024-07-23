@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { register } from '../api/register';
+import { register } from '../modules/common/api/register';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/img/logo.png'
 import mobileImgExample from '../assets/img/mobile-img-example.png'

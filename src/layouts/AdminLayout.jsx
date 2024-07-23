@@ -6,8 +6,8 @@ function AdminLayout() {
     return (
         <div className="page-content-wrapper">
             <Sidebar />
-            <div className="admin-content-wrapper">
-                <div className="main-container">
+            <div className="main-admin-content-wrapper">
+                <div className="main-admin-container">
                     <Outlet />
                 </div>
             </div>

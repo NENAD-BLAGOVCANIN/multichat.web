@@ -25,7 +25,7 @@ function Downloads() {
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
-                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-dark w-fit rounded py-3 px-4'>
+                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
                     <FontAwesomeIcon className='pe-2' icon={faDownload} />
                     {t('home.hero_section.download_for_windows')}
                   </a>
@@ -34,7 +34,7 @@ function Downloads() {
               </div>
 
 
-              <div className='px-5 py-4'>
+              <div className='px-5 pb-4 pt-5'>
                 <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span className='medium'>OS</span>
@@ -68,7 +68,7 @@ function Downloads() {
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
-                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-dark w-fit rounded py-3 px-4'>
+                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
                     <FontAwesomeIcon className='pe-2' icon={faDownload} />
                     {t('home.hero_section.download_for_mac')}
                   </a>
@@ -77,7 +77,7 @@ function Downloads() {
               </div>
 
 
-              <div className='px-5 py-4'>
+              <div className='px-5 pb-4 pt-5'>
                 <div className='d-flex flex-column justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center h-100 justify-content-between py-1'>
                     <span className='medium'>OS</span>

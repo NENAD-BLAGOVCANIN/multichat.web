@@ -56,6 +56,14 @@ body {
 .main-container {
   padding-top: 77px;
   min-height: 80vh;
+  width: 100%;
+}
+
+.main-admin-container {
+  padding: 1.5rem;
+  padding-top: .4rem !important;
+  min-height: 80vh;
+  width: 100%;
 }
 
 .page-content-wrapper {
@@ -279,6 +287,12 @@ hr {
   z-index: 1;
   width: 100%;
   min-height: 90vh;
+}
+
+.main-admin-content-wrapper {
+  width: 100%;
+  overflow: auto;
+  padding-left: var(--sidebar-width);
 }
 
 .admin-content-wrapper {

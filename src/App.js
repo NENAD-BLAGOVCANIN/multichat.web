@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import AppLayout from './layouts/AppLayout';
@@ -16,6 +16,7 @@ import Pricing from './pages/pricing/Pricing';
 import About from './pages/about/About';
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/termsOfService/TermsOfService';
+import adminPanelRoutes from './modules/admin_panel';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -27,45 +28,84 @@ const PrivateRoutes = () => {
   return authenticated ? <Outlet /> : <Navigate to="/login" />;
 };
 
-const App = () => {
+const routesConfig = [
+  {
+    path: '/',
+    element: <HomeLayout />,
+    children: [
+      { path: '/', element: <Home /> }
+    ]
+  },
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [
+      { path: '/account', element: <Account /> },
+      { path: '/downloads', element: <Downloads /> },
+      { path: '/pricing', element: <Pricing /> },
+      { path: '/about', element: <About /> },
+      { path: '/privacy-policy', element: <PrivacyPolicy /> },
+      { path: '/terms-of-service', element: <TermsOfService /> }
+    ]
+  },
+  {
+    element: <PrivateRoutes />,
+    children: [
+      {
+        path: '/',
+        element: <AdminLayout />,
+        children: [
+          { path: '/admin/dashboard', element: <Dashboard /> },
+          { path: '/admin/users', element: <Users /> }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register />
+  },
+  {
+    path: '/logout',
+    element: <Logout />
+  },
+  {
+    path: '/admin',
+    element: <AdminLayout />,
+    children: [
+      ...adminPanelRoutes,
+    ],
+  },
+  {
+    path: '*',
+    element: <Navigate to="/" />
+  }
+];
 
+const renderRoutes = (routes) => {
+  return routes.map((route, index) => {
+    if (route.children) {
+      return (
+        <Route key={index} path={route.path} element={route.element}>
+          {renderRoutes(route.children)}
+        </Route>
+      );
+    }
+
+    return <Route key={index} path={route.path} element={route.element} />;
+  });
+};
+
+const App = () => {
   return (
     <Router>
       <AuthProvider>
         <Routes>
-
-
-          <Route path="/" element={<HomeLayout />}>
-            <Route path="/" element={<Home />} />
-          </Route>
-
-          <Route path="/" element={<AppLayout />}>
-            <Route path="/account" element={<Account />} />
-            <Route path="/downloads" element={<Downloads />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-          </Route>
-
-          <Route element={<PrivateRoutes />}>
-
-            {/* Admin Panel */}
-            <Route path="/" element={<AdminLayout />}>
-              <Route path="/admin/dashboard" element={<Dashboard />} />
-              <Route path="/admin/users" element={<Users />} />
-            </Route>
-
-          </Route>
-
-
-          {/* Auth */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
-
-          {/* Fallback route to handle 404 or unmatched routes */}
-          <Route path="*" element={<Navigate to="/" />} />
+          {renderRoutes(routesConfig)}
         </Routes>
       </AuthProvider>
     </Router>
