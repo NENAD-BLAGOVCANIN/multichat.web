@@ -70,7 +70,7 @@ function Pricing() {
                             <div className=''>
                                 <div className='d-flex flex-column justify-content-between px-1 py-2'>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
-                                        <span className='pe-2'>{t('pricing.up_to_20')}</span>
+                                        <span className='pe-2'>{t('pricing.up_to_5')}</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
                                     <div className='d-flex align-items-center h-100 justify-content-between py-2'>
