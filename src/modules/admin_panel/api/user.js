@@ -4,9 +4,9 @@ export const getUsers = async () => {
 
     try {
 
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('accessToken');
 
-        const response = await fetch(apiUrl + '/users', {
+        const response = await fetch(apiUrl + '/users/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

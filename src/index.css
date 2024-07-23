@@ -612,3 +612,7 @@ footer {
 .platform-icon{
   height: 65px;
 }
+
+td{
+  vertical-align: middle;
+}

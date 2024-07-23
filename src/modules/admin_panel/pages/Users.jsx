@@ -32,36 +32,37 @@ function Users() {
 
   return (
 
-    <>
+    <div className='container'>
 
-      <div className='m-auto d-block w-100' style={{ maxWidth: 1500, overflowX: 'auto' }}>
+      <h3 className='mt-4 mb-3 ps-2'>Users</h3>
+
+      <div className='m-auto d-block w-100 mt-4' style={{ maxWidth: 1500, overflowX: 'auto' }}>
         <div className='table-responsive'>
-          <table className='table table-striped table-hover'>
+          <table className='table table-hover'>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th className='text-center'>Actions</th>
+                <th className='medium fw-400'>ID</th>
+                <th className='medium fw-400'>Name</th>
+                <th className='medium fw-400'>Email</th>
+                <th className='medium fw-400'>Subscription</th>
+                <th className='medium fw-400 text-center'>Actions</th>
               </tr>
             </thead>
             <tbody>
               {users.map(user => (
                 <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td><span className='badge badge-primary bg-success'>{user.role.name}</span></td>
-                  <td>
+                  <td className='medium'>{user.id}</td>
+                  <td className='medium'>{user.name}</td>
+                  <td className='medium'>{user.email}</td>
+                  <td className='medium'>
+                    <span className='badge badge-primary bg-warning'>
+                      {user?.subscription?.title}
+                    </span>
+                  </td>
+                  <td className='medium'>
                     <div className="h-100 d-flex align-items-center justify-content-center">
                       <div className='px-1'>
-                        <button className='btn btn-basic bg-gray-light shadow-sm'>
-                          <FontAwesomeIcon icon={faEdit} />
-                        </button>
-                      </div>
-                      <div className='px-1'>
-                        <button className='btn btn-basic bg-gray-light text-danger shadow-sm' onClick={() => handleDeleteUser(user.id)}>
+                        <button className='btn btn-basic bg-gray-light text-danger' onClick={() => handleDeleteUser(user.id)}>
                           <FontAwesomeIcon icon={faTrash} />
                         </button>
                       </div>
@@ -75,7 +76,7 @@ function Users() {
         </div>
       </div>
 
-    </>
+    </div>
   )
 }
 

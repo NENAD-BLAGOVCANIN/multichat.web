@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getUserInfo } from '../../common/api/user';
-import { faCamera, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Account() {
     const [userInfo, setUserInfo] = useState([]);
@@ -37,7 +35,7 @@ function Account() {
     return (
         <div className='container px-5 py-5'>
 
-            <h2 className='bold mb-5'>My Account</h2>
+            <h2 className='mb-5'>My Account</h2>
 
 
             <p className="text-muted">Name: {userInfo.name}</p>
