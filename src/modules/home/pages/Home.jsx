@@ -36,8 +36,8 @@ function Home() {
 
       <div className="container">
 
-        <div className="py-5">
-          <h1 className='text-center bold'>{t('home.features.title')}</h1>
+        <div className="pt-5 pb-3">
+          <h1 className='px-3'>{t('home.features.title')}</h1>
         </div>
 
         <Features />

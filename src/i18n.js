@@ -47,8 +47,8 @@ i18n
                                 text: "Choose your preferred color scheme to reduce eye strain."
                             },
                             box_2: {
-                                title: "Keyboard Shortcuts",
-                                text: "Move at the speed of light with our extensive keyboard support."
+                                title: "Multiple Messaging Platforms",
+                                text: "Multichat lets you use many messaging platforms all in one place."
                             },
                             box_3: {
                                 title: "Customizable UI",
@@ -59,7 +59,7 @@ i18n
                                 text: "All of your messages are e2e encrypted, so you can communicate privately with your friends and family."
                             },
                             box_5: {
-                                title: "Unlimited accounts",
+                                title: "Unlimited tabs",
                                 text: "Open as meny tabs as you like, with each tab having it's own session with unique credentials"
                             },
                             box_6: {
