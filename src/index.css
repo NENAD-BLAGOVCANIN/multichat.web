@@ -50,7 +50,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text) !important;
   background: var(--background) !important;
-  font-size: 11.5pt !important;
+  font-size: 12pt !important;
 }
 
 .main-container {
@@ -191,7 +191,7 @@ body {
 }
 
 .medium {
-  font-size: 13px !important;
+  font-size: 14px !important;
 }
 
 .auth-page-logo {
@@ -233,7 +233,7 @@ body {
 }
 
 hr {
-  border-top: 2px solid var(--color-gray) !important;
+  border-top: 1px solid var(--color-gray) !important;
   opacity: 1 !important;
 }
 

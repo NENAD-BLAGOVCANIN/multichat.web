@@ -13,12 +13,14 @@ function UserDropdown() {
             <div className="dropdown-menu dropdown-menu-left shadow-lg rounded show active" id='accountDropdown' aria-labelledby="accountDropdown"
                 style={{ position: 'absolute', width: 300 }}>
 
-                {/* <li className='nav-item px-2 rounded'>
+                <li className='nav-item px-2 rounded'>
                     <Link to="/admin/dashboard" className='nav-link py-1'>
                         <FontAwesomeIcon icon={faChartSimple} />
-                        <span className='ps-3 medium'>Admin Panel</span>
+                        <span className='ps-3 medium'>Dashboard</span>
                     </Link>
-                </li> */}
+                </li>
+
+                <hr className='text-secondary' />
 
                 <li className='nav-item px-2 rounded'>
                     <Link to="/account" className='nav-link py-1'>

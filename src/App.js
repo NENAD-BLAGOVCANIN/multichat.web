@@ -46,23 +46,15 @@ const routesConfig = [
     element: <PrivateRoutes />,
     children: [
       {
-        path: '/',
+        path: '/admin',
         element: <AdminLayout />,
         children: [
-          { path: '/admin/dashboard', element: <Dashboard /> },
-          { path: '/admin/users', element: <Users /> }
+          ...adminPanelRoutes,
         ]
       }
     ]
   },
   ...authRoutes,
-  {
-    path: '/admin',
-    element: <AdminLayout />,
-    children: [
-      ...adminPanelRoutes,
-    ],
-  },
   {
     path: '*',
     element: <Navigate to="/" />
