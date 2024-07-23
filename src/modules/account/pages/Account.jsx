@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getUserInfo } from '../../modules/common/api/user';
+import { getUserInfo } from '../../common/api/user';
 import { faCamera, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Account() {

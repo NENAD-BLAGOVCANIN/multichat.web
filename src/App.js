@@ -4,13 +4,14 @@ import { AuthProvider, useAuth } from './modules/common/contexts/AuthContext';
 import HomeLayout from './modules/common/layouts/HomeLayout';
 import AppLayout from './modules/common/layouts/AppLayout';
 import AdminLayout from './modules/common/layouts/AdminLayout';
-import Account from './pages/account/Account';
+import Account from './modules/account/pages/Account';
 import adminPanelRoutes from './modules/admin_panel';
 import homeRoutes from './modules/home';
 import authRoutes from './modules/authentication';
 import legalRoutes from './modules/legal';
 import downloadsRoutes from './modules/downloads';
 import pricingRoutes from './modules/pricing';
+import accountRoutes from './modules/account';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -34,7 +35,7 @@ const routesConfig = [
     path: '/',
     element: <AppLayout />,
     children: [
-      { path: '/account', element: <Account /> },
+      ...accountRoutes,
       ...pricingRoutes,
       ...downloadsRoutes,
       ...legalRoutes
