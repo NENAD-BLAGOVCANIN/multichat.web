@@ -4,8 +4,6 @@ import { AuthProvider, useAuth } from './modules/common/contexts/AuthContext';
 import HomeLayout from './modules/common/layouts/HomeLayout';
 import AppLayout from './modules/common/layouts/AppLayout';
 import AdminLayout from './modules/common/layouts/AdminLayout';
-import Dashboard from './pages/admin/Dashboard';
-import Users from './pages/admin/Users';
 import Account from './pages/account/Account';
 import adminPanelRoutes from './modules/admin_panel';
 import homeRoutes from './modules/home';

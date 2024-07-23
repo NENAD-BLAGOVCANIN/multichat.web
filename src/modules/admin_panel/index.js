@@ -1,5 +1,5 @@
 import Dashboard from "./pages/Dashboard";
-import Users from "./pages/users/Users";
+import Users from "./pages/Users";
 
 const adminPanelRoutes = [
   {

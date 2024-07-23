@@ -78,24 +78,6 @@ function Sidebar({ userInfo, setUserInfo }) {
                             <span className='ps-3 medium'>Users</span>
                         </Link>
                     </li>
-                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/businesses' ? 'active' : ''}`}>
-                        <Link to="/admin/businesses" className='nav-link' onClick={() => handlePageChange('/admin/businesses')}>
-                            <FontAwesomeIcon icon={faBuilding} />
-                            <span className='ps-3 medium'>Businesses</span>
-                        </Link>
-                    </li>
-                    <li className={`nav-item px-2 rounded ${currentPage === '/user-management' ? 'active' : ''}`}>
-                        <Link to="/admin/dashboard" className='nav-link' onClick={() => handlePageChange('/admin/dashboard')}>
-                            <FontAwesomeIcon icon={faTriangleExclamation} />
-                            <span className='ps-3 medium'>Roles & Permissions</span>
-                        </Link>
-                    </li>
-                    <li className={`nav-item px-2 rounded ${currentPage === '/history' ? 'active' : ''}`}>
-                        <Link to="/admin/dashboard" className='nav-link' onClick={() => handlePageChange('/admin/dashboard')}>
-                            <FontAwesomeIcon icon={faCompass} />
-                            <span className='ps-3 medium'>History</span>
-                        </Link>
-                    </li>
                 </div>
 
             </ul>
