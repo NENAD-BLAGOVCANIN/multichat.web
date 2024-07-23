@@ -4,18 +4,15 @@ import { AuthProvider, useAuth } from './modules/common/contexts/AuthContext';
 import HomeLayout from './modules/common/layouts/HomeLayout';
 import AppLayout from './modules/common/layouts/AppLayout';
 import AdminLayout from './modules/common/layouts/AdminLayout';
-import Downloads from './pages/Downloads';
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
 import Account from './pages/account/Account';
-import Pricing from './pages/pricing/Pricing';
-import About from './modules/legal/pages/about/About';
-import PrivacyPolicy from './modules/legal/pages/privacyPolicy/PrivacyPolicy';
-import TermsOfService from './modules/legal/pages/termsOfService/TermsOfService';
 import adminPanelRoutes from './modules/admin_panel';
 import homeRoutes from './modules/home';
 import authRoutes from './modules/authentication';
 import legalRoutes from './modules/legal';
+import downloadsRoutes from './modules/downloads';
+import pricingRoutes from './modules/pricing';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -40,8 +37,8 @@ const routesConfig = [
     element: <AppLayout />,
     children: [
       { path: '/account', element: <Account /> },
-      { path: '/downloads', element: <Downloads /> },
-      { path: '/pricing', element: <Pricing /> },
+      ...pricingRoutes,
+      ...downloadsRoutes,
       ...legalRoutes
     ]
   },

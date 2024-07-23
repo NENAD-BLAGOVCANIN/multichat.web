@@ -1,10 +1,9 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faApple, faWindows } from '@fortawesome/free-brands-svg-icons'
 import { useTranslation } from 'react-i18next';
-import { faBoltLightning, faCheck, faDownload, faX } from '@fortawesome/free-solid-svg-icons'
-import { ReactComponent as WindowsIcon } from '../modules/common/assets/img/svg/WindowsIcon.svg';
-import { ReactComponent as AppleIcon } from '../modules/common/assets/img/svg/AppleIcon.svg';
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { ReactComponent as WindowsIcon } from '../../common/assets/img/svg/WindowsIcon.svg';
+import { ReactComponent as AppleIcon } from '../../common/assets/img/svg/AppleIcon.svg';
 
 function Downloads() {
 
