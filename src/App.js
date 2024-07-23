@@ -9,12 +9,13 @@ import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
 import Account from './pages/account/Account';
 import Pricing from './pages/pricing/Pricing';
-import About from './pages/about/About';
-import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
-import TermsOfService from './pages/termsOfService/TermsOfService';
+import About from './modules/legal/pages/about/About';
+import PrivacyPolicy from './modules/legal/pages/privacyPolicy/PrivacyPolicy';
+import TermsOfService from './modules/legal/pages/termsOfService/TermsOfService';
 import adminPanelRoutes from './modules/admin_panel';
 import homeRoutes from './modules/home';
 import authRoutes from './modules/authentication';
+import legalRoutes from './modules/legal';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -41,9 +42,7 @@ const routesConfig = [
       { path: '/account', element: <Account /> },
       { path: '/downloads', element: <Downloads /> },
       { path: '/pricing', element: <Pricing /> },
-      { path: '/about', element: <About /> },
-      { path: '/privacy-policy', element: <PrivacyPolicy /> },
-      { path: '/terms-of-service', element: <TermsOfService /> }
+      ...legalRoutes
     ]
   },
   {
