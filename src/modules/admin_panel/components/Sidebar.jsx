@@ -7,6 +7,8 @@ import {
     faBuilding
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { PersonCircle, UiChecksGrid, QuestionCircle, Chat, Stripe } from 'react-bootstrap-icons';
+
 
 function Sidebar({ userInfo, setUserInfo }) {
 
@@ -59,7 +61,7 @@ function Sidebar({ userInfo, setUserInfo }) {
                     <li className={`nav-item px-2 rounded`}>
                         <Link to="/" className='nav-link'>
                             <FontAwesomeIcon icon={faArrowLeft} className='pe-2' />
-                            <span className='ps-3 medium'>Return home</span>
+                            <span className='ps-3 medium muted'>Return home</span>
                         </Link>
                     </li>
                 </div>
@@ -68,14 +70,26 @@ function Sidebar({ userInfo, setUserInfo }) {
 
                     <li className={`nav-item px-2 rounded ${currentPage === '/admin/dashboard' ? 'active' : ''}`}>
                         <Link to="/admin/dashboard" className='nav-link' onClick={() => handlePageChange('/admin/dashboard')}>
-                            <FontAwesomeIcon icon={faCompass} />
+                            <UiChecksGrid />
                             <span className='ps-3 medium'>Dashboard</span>
                         </Link>
                     </li>
                     <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
                         <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
-                            <FontAwesomeIcon icon={faUserGroup} />
+                            <PersonCircle />
                             <span className='ps-3 medium'>Users</span>
+                        </Link>
+                    </li>
+                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
+                        <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
+                            <Chat />
+                            <span className='ps-3 medium'>Messaging Services</span>
+                        </Link>
+                    </li>
+                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
+                        <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
+                            <Stripe />
+                            <span className='ps-3 medium'>Subscriptions</span>
                         </Link>
                     </li>
                 </div>

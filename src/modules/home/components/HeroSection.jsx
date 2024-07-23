@@ -3,6 +3,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next';
 import multichatExample from '../../common/assets/img/multichatExample.webp'
+import { Download } from 'react-bootstrap-icons';
 
 function HeroSection() {
 
@@ -21,7 +22,7 @@ function HeroSection() {
 
                             <div className='d-flex align-items-center mt-1'>
                                 <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded-lg py-3 px-4'>
-                                    <FontAwesomeIcon className='pe-2' icon={faDownload} />
+                                    <Download className='me-2' />
                                     {t('home.hero_section.download_for_windows')}
                                 </a>
 

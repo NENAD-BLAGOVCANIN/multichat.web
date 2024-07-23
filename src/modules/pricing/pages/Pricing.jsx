@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next';
-import { faBoltLightning, faCheck, faDownload, faX } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faX } from '@fortawesome/free-solid-svg-icons'
 
 function Pricing() {
 

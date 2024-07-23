@@ -1,6 +1,7 @@
 import { faGlobe, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
+import { Translate } from 'react-bootstrap-icons';
 import { useTranslation } from 'react-i18next';
 
 const LanguageSelector = () => {
@@ -37,7 +38,7 @@ const LanguageSelector = () => {
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 className='px-2 pointer d-flex align-items-center'
             >
-                <FontAwesomeIcon icon={faGlobe} className='pe-2' />
+                <Translate className='me-2' />
                 {lngs[currentLanguage]?.nativeName || lngs.en.nativeName}
                 <FontAwesomeIcon icon={faChevronDown} className='small ps-2' />
             </span>

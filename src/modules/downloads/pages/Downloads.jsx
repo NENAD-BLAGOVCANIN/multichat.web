@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { ReactComponent as WindowsIcon } from '../../common/assets/img/svg/WindowsIcon.svg';
 import { ReactComponent as AppleIcon } from '../../common/assets/img/svg/AppleIcon.svg';
+import { Apple, Download, Microsoft } from 'react-bootstrap-icons';
 
 function Downloads() {
 
@@ -18,14 +19,14 @@ function Downloads() {
             <div className='card-body'>
               <div className='d-flex justify-content-center align-items-center h-100'>
                 <div className='mt-3'>
-                  <WindowsIcon className='platform-icon' />
+                  <Microsoft className='h1' />
                 </div>
               </div>
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
                   <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
-                    <FontAwesomeIcon className='pe-2' icon={faDownload} />
+                    <Download className='me-3' />
                     {t('home.hero_section.download_for_windows')}
                   </a>
                 </div>
@@ -61,14 +62,14 @@ function Downloads() {
             <div className='card-body'>
               <div className='d-flex justify-content-center align-items-center h-100'>
                 <div className='mt-3'>
-                  <AppleIcon className='platform-icon' />
+                  <Apple className='h1' />
                 </div>
               </div>
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
                   <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
-                    <FontAwesomeIcon className='pe-2' icon={faDownload} />
+                    <Download className='me-3' />
                     {t('home.hero_section.download_for_mac')}
                   </a>
                 </div>

@@ -10,7 +10,7 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className='main-content-wrapper bg-white'>
+    <div className='main-content-wrapper'>
 
       <div id='hero-section-wrapper'>
         <Navbar />

@@ -1,15 +1,15 @@
 :root {
   --color-primary: #791f90;
   --color-text: #18161d;
-  --color-text-lighter: rgb(126, 129, 131);
+  --color-text-lighter: #4b4a4e;
   --color-danger: #cf004c;
   --color-light-gray: #f6f7f9;
   --color-gray: #e8eaee;
   --color-dark-gray: #f0f0f0;
   --color-light: #f8f8f8;
-  --color-dark: #23272a;
-  --color-dark-lighter: #0e2b3f;
-  --background: rgb(240, 243, 245);
+  --color-dark: #151a1e;
+  --color-dark-lighter: #232a30;
+  --background: rgb(244, 247, 249);
   --color-main-background: rgb(255, 255, 255);
   --sidebar-width: 290px;
   --background-gradient: linear-gradient(90deg, rgba(35, 39, 42, 1) 0%, rgba(15, 59, 89, 1) 33%, rgba(14, 43, 63, 1) 65%, rgba(35, 39, 42, 1) 100%);
@@ -23,7 +23,7 @@
 
 .dark-mode {
   --color-text: #fff;
-  --color-text-lighter: #c7c7c7;
+  --color-text-lighter: #36353a;
   --background: #23272a;
   --color-main-background: #23272a;
 }
@@ -234,7 +234,7 @@ body {
 
 hr {
   border-top: 1px solid var(--color-gray) !important;
-  opacity: 1 !important;
+  opacity: .7 !important;
 }
 
 .auth-page-logo {
@@ -266,7 +266,6 @@ hr {
 
 #hero-section-wrapper .navbar .nav-item .nav-link {
   color: #fff !important;
-  font-weight: 500;
 }
 
 
@@ -333,9 +332,7 @@ footer li a {
 
 footer {
   max-width: unset !important;
-  background: var(--color-dark) !important;
-  color: white !important;
-  border-top: 1px solid var(--bs-secondary);
+  background: white !important;
 }
 
 @media only screen and (min-width: 768px) {
@@ -483,18 +480,13 @@ footer {
 .nav-item .nav-link {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-lighter);
 }
 
 #toggleModalButton {
   left: var(--sidebar-width);
   transform: translateX(-50%);
   bottom: 3rem;
-}
-
-.nav-item .nav-link svg {
-  font-size: 13px !important;
 }
 
 @media only screen and (max-width: 855px) {
@@ -576,7 +568,7 @@ footer {
 
 @font-face {
   font-family: 'extrabold';
-  src: url('./assets/fonts/extrabold.woff2') format('woff');
+  src: url('./modules/common/assets/fonts/extrabold.woff2') format('woff');
   font-weight: normal;
   font-style: normal;
 }

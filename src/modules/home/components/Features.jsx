@@ -10,7 +10,7 @@ function Features() {
     return (
         <div className="row pb-4" id="features">
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faCircleHalfStroke} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_1.title')}
@@ -22,7 +22,7 @@ function Features() {
 
             </div>
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faKeyboard} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_2.title')}
@@ -34,7 +34,7 @@ function Features() {
 
             </div>
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faEdit} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_3.title')}
@@ -46,7 +46,7 @@ function Features() {
 
             </div>
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faShieldHalved} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_4.title')}
@@ -58,7 +58,7 @@ function Features() {
 
             </div>
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faInfinity} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_5.title')}
@@ -70,7 +70,7 @@ function Features() {
 
             </div>
             <div className="col-md-4 p-4">
-                <div className='card rounded-md shadow bg-app py-3 px-4 h-100 border-0'>
+                <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
                     <FontAwesomeIcon icon={faBell} className='me-auto mb-3 h2 text-primary' />
                     <span className="mb-2 bold">
                         {t('home.features.box_6.title')}

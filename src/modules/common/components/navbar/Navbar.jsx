@@ -9,6 +9,7 @@ import { faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons'
 import logoDark from '../../assets/img/logo_dark_wide_300.png';
 import logoWide from '../../assets/img/logo_wide_300.png';
 import { useLocation } from 'react-router-dom'
+import { Person } from 'react-bootstrap-icons';
 
 function Navbar() {
 
@@ -71,7 +72,7 @@ function Navbar() {
                             aria-haspopup="true"
                             aria-expanded={isUserDropdownOpen}
                         >
-                            <FontAwesomeIcon icon={faUser} className='pe-2' />
+                            <Person className='me-2 h4 m-0' />
                             <FontAwesomeIcon icon={faChevronDown} className='small' />
                         </a>
 

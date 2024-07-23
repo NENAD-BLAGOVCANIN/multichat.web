@@ -12,7 +12,7 @@ function PlatformsView() {
     const { t } = useTranslation();
 
     return (
-        <div className='bg-white py-5'>
+        <div className='py-5'>
             <div className='py-5 mt-5 mb-3'>
                 <p className='opacity-80 text-center h5 fw-400'>
                     {t('home.platforms.title')}
