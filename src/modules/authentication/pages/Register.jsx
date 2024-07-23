@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import { register } from '../modules/common/api/register';
+import { register } from '../api/register';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/img/logo.png'
-import mobileImgExample from '../assets/img/mobile-img-example.png'
+import logo from '../../common/assets/img/logo.png'
 import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../common/contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
-import Button from '../components/Button';
+import Button from '../../../components/Button';
 
 export default function Register() {
 

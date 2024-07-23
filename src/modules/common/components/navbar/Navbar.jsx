@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import logo from '../../assets/img/logo_dark_wide_300.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import { ReactComponent as UserSmallIcon } from '../../assets/img/svg/user-sm.svg'
 import UserDropdown from "./UserDropdown";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from './LanguageSelector';

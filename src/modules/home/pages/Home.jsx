@@ -1,10 +1,9 @@
 import React from 'react'
-import Features from '../../components/home/Features'
-import PlatformsView from '../../components/home/PlatformsView'
-import messagingExample from '../../assets/img/messagingScreensExample.png'
+import Features from '../components/Features'
+import PlatformsView from '../components/PlatformsView';
 import { useTranslation } from 'react-i18next';
-import HeroSection from './HeroSection'
-import Navbar from '../../components/navbar/Navbar';
+import HeroSection from '../components/HeroSection';
+import Navbar from '../../common/components/navbar/Navbar';
 
 function Home() {
 

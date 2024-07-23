@@ -1,4 +1,4 @@
-import { apiUrl } from './config';
+import { apiUrl } from '../../common/api/config';
 
 const register = async (name, email, password) => {
     

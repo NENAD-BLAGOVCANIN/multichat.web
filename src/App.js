@@ -1,22 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import AppLayout from './layouts/AppLayout';
-import AdminLayout from './layouts/AdminLayout';
-import Home from './pages/home/Home';
+import { AuthProvider, useAuth } from './modules/common/contexts/AuthContext';
+import HomeLayout from './modules/common/layouts/HomeLayout';
+import AppLayout from './modules/common/layouts/AppLayout';
+import AdminLayout from './modules/common/layouts/AdminLayout';
 import Downloads from './pages/Downloads';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Logout from './pages/Logout';
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
-import HomeLayout from './layouts/HomeLayout';
 import Account from './pages/account/Account';
 import Pricing from './pages/pricing/Pricing';
 import About from './pages/about/About';
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/termsOfService/TermsOfService';
 import adminPanelRoutes from './modules/admin_panel';
+import homeRoutes from './modules/home';
+import authRoutes from './modules/authentication';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -33,7 +31,7 @@ const routesConfig = [
     path: '/',
     element: <HomeLayout />,
     children: [
-      { path: '/', element: <Home /> }
+      ...homeRoutes
     ]
   },
   {
@@ -61,18 +59,7 @@ const routesConfig = [
       }
     ]
   },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/register',
-    element: <Register />
-  },
-  {
-    path: '/logout',
-    element: <Logout />
-  },
+  ...authRoutes,
   {
     path: '/admin',
     element: <AdminLayout />,

@@ -2,7 +2,7 @@ import React from 'react'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next';
-import multichatExample from '../../assets/img/multichatExample.webp'
+import multichatExample from '../../common/assets/img/multichatExample.webp'
 
 function HeroSection() {
 

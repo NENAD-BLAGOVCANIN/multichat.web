@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../../common/contexts/AuthContext';
 import { toast } from 'react-toastify';
-import logo from '../assets/img/logo.png'
+import logo from '../../common/assets/img/logo.png'
 import { useTranslation } from 'react-i18next';
-import Button from '../components/Button';
+import Button from '../../../components/Button';
 
 export default function Login() {
 

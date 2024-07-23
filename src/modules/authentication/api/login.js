@@ -1,4 +1,4 @@
-import { apiUrl } from './config';
+import { apiUrl } from '../../common/api/config';
 
 const login = async (email, password) => {
     

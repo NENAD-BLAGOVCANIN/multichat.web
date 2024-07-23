@@ -1,10 +1,10 @@
 import React from 'react'
-import whatsAppLogo from '../../assets/img/WhatsAppLogo.svg'
-import telegramLogo from '../../assets/img/TelegramLogo.svg'
-import skypeLogo from '../../assets/img/SkypeLogo.svg'
-import weChatLogo from '../../assets/img/WeChatLogo.svg'
-import discordLogo from '../../assets/img/DiscordLogo.svg'
-import messengerLogo from '../../assets/img/MessengerLogo.svg'
+import whatsAppLogo from '../../common/assets/img/WhatsAppLogo.svg'
+import telegramLogo from '../../common/assets/img/TelegramLogo.svg'
+import skypeLogo from '../../common/assets/img/SkypeLogo.svg'
+import weChatLogo from '../../common/assets/img/WeChatLogo.svg'
+import discordLogo from '../../common/assets/img/DiscordLogo.svg'
+import messengerLogo from '../../common/assets/img/MessengerLogo.svg'
 import { useTranslation } from 'react-i18next';
 
 function PlatformsView() {
