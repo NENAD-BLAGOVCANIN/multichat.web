@@ -1,6 +1,6 @@
 import { apiUrl } from "../../common/api/config";
 
-const getUsers = async () => {
+export const getUsers = async () => {
 
     try {
 
@@ -29,7 +29,7 @@ const getUsers = async () => {
 }
 
 
-const deleteUser = async (user_id) => {
+export const deleteUser = async (user_id) => {
 
     try {
 
@@ -53,6 +53,3 @@ const deleteUser = async (user_id) => {
     }
 
 }
-
-
-export { getUsers, deleteUser }

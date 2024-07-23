@@ -10,9 +10,9 @@ function Features() {
 
     return (
 
-        <div className='px-3'>
+        <div className='px-3 pb-5'>
 
-            <div className="pt-5 px-3 pb-3">
+            <div className="pt-5 pb-3 px-3">
                 <h1>{t('home.features.title')}</h1>
             </div>
 

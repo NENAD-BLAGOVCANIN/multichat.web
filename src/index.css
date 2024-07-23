@@ -265,7 +265,7 @@ hr {
 }
 
 #hero-section-wrapper .navbar .nav-item .nav-link {
-  color: #fff !important;
+  color: var(--color-gray) !important;
 }
 
 
@@ -274,7 +274,7 @@ hr {
 }
 
 .navbar .nav-item .nav-link:hover {
-  text-decoration: underline;
+  color: var(--color-text);
 }
 
 .navbar-brand img {
