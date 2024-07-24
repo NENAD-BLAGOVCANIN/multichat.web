@@ -7,7 +7,7 @@ import {
     faBuilding
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { PersonCircle, UiChecksGrid, QuestionCircle, Chat, Stripe } from 'react-bootstrap-icons';
+import { PersonCircle, UiChecksGrid, QuestionCircle, Chat, Stripe, People } from 'react-bootstrap-icons';
 
 
 function Sidebar({ userInfo, setUserInfo }) {
@@ -76,18 +76,18 @@ function Sidebar({ userInfo, setUserInfo }) {
                     </li>
                     <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
                         <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
-                            <PersonCircle />
+                            <People />
                             <span className='ps-3 medium'>Users</span>
                         </Link>
                     </li>
-                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
-                        <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
+                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/messaging-services' ? 'active' : ''}`}>
+                        <Link to="/admin/messaging-services" className='nav-link' onClick={() => handlePageChange('/admin/messaging-services')}>
                             <Chat />
                             <span className='ps-3 medium'>Messaging Services</span>
                         </Link>
                     </li>
-                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/users' ? 'active' : ''}`}>
-                        <Link to="/admin/users" className='nav-link' onClick={() => handlePageChange('/admin/users')}>
+                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/subscriptions' ? 'active' : ''}`}>
+                        <Link to="/admin/subscriptions" className='nav-link' onClick={() => handlePageChange('/admin/subscriptions')}>
                             <Stripe />
                             <span className='ps-3 medium'>Subscriptions</span>
                         </Link>

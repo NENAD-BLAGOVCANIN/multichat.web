@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js/auto';
 import { Pie, Doughnut, Line } from 'react-chartjs-2';
+import { CurrencyDollar } from 'react-bootstrap-icons';
 
 function Dashboard() {
     const [stats] = useState({
@@ -82,36 +83,54 @@ function Dashboard() {
 
             <div className="row">
                 <div className="col-md-4 p-3">
-                    <div className="bg-app p-3 rounded">
-                        <span className="small">Projects Completed</span>
+                    <div className="card p-3 rounded">
+                        <div className='d-flex align-items-center justify-content-between pb-2'>
+                            <span className="medium fw-500">Revenue</span>
+                            <CurrencyDollar className='text-muted' />
+                        </div>
                         <div className="d-flex align-items-center">
                             <h2 className="m-0 pe-2">{stats.contactCount}</h2>
-                            <FontAwesomeIcon icon={faArrowTrendUp} className="text-success" />
+                        </div>
+
+                        <div className='pt-1'>
+                            <span className='small'><span className='text-success'>+100.0%</span> from last period</span>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4 p-3">
-                    <div className="bg-app p-3 rounded">
-                        <span className="small">Active Clients</span>
+                    <div className="card p-3 rounded">
+                        <div className='d-flex align-items-center justify-content-between pb-2'>
+                            <span className="medium fw-500">Revenue</span>
+                            <CurrencyDollar className='text-muted' />
+                        </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{stats.leadCount}</h2>
-                            <FontAwesomeIcon icon={faArrowTrendUp} className="text-success" />
+                            <h2 className="m-0 pe-2">{stats.contactCount}</h2>
+                        </div>
+
+                        <div className='pt-1'>
+                            <span className='small'><span className='text-success'>+100.0%</span> from last period</span>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4 p-3">
-                    <div className="bg-app p-3 rounded">
-                        <span className="small">Monthy Earnings</span>
+                    <div className="card p-3 rounded">
+                        <div className='d-flex align-items-center justify-content-between pb-2'>
+                            <span className="medium fw-500">Revenue</span>
+                            <CurrencyDollar className='text-muted' />
+                        </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">${stats.taskCount}K</h2>
-                            <FontAwesomeIcon icon={faArrowTrendUp} className="text-success" />
+                            <h2 className="m-0 pe-2">{stats.contactCount}</h2>
+                        </div>
+
+                        <div className='pt-1'>
+                            <span className='small'><span className='text-success'>+100.0%</span> from last period</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col-md-12 p-3">
-                    <div className="bg-app p-3 rounded d-flex justify-content-center flex-column w-100">
+                    <div className="card p-3 rounded d-flex justify-content-center flex-column w-100">
                         <h5 className="mb-3">Monthly Earnings</h5>
                         <div className="m-auto w-100 h-100 d-flex justify-content-center text-center">
                             <Line data={lineChartData} options={options} style={{ height: 320 }} />
@@ -121,7 +140,7 @@ function Dashboard() {
             </div>
             <div className="row">
                 <div className="col-md-6 p-3">
-                    <div className="bg-app p-3 rounded d-flex justify-content-center flex-column w-100">
+                    <div className="card p-3 rounded d-flex justify-content-center flex-column w-100">
                         <h5 className="mb-4">Contact Management</h5>
                         <div className="m-auto pb-3" style={{ maxWidth: 400 }}>
                             <Doughnut data={contactData} />
@@ -129,7 +148,7 @@ function Dashboard() {
                     </div>
                 </div>
                 <div className="col-md-6 p-3">
-                    <div className="bg-app p-3 rounded d-flex justify-content-center flex-column w-100">
+                    <div className="card p-3 rounded d-flex justify-content-center flex-column w-100">
                         <h5 className="mb-4">Task Management</h5>
                         <div className="m-auto pb-3" style={{ maxWidth: 400 }}>
                             <Doughnut data={taskCompletionData} />

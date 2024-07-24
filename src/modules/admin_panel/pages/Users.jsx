@@ -45,21 +45,21 @@ function Users() {
                 <th className='medium fw-400'>Name</th>
                 <th className='medium fw-400'>Email</th>
                 <th className='medium fw-400'>Subscription</th>
-                <th className='medium fw-400 text-center'>Actions</th>
+                {/* <th className='medium fw-400 text-center'>Actions</th> */}
               </tr>
             </thead>
             <tbody>
               {users.map(user => (
                 <tr key={user.id}>
-                  <td className='medium'>{user.id}</td>
-                  <td className='medium'>{user.name}</td>
-                  <td className='medium'>{user.email}</td>
-                  <td className='medium'>
+                  <td className='medium py-3'>{user.id}</td>
+                  <td className='medium py-3'>{user.name}</td>
+                  <td className='medium py-3'>{user.email}</td>
+                  <td className='medium py-3'>
                     <span className='badge badge-primary bg-warning'>
                       {user?.subscription?.title}
                     </span>
                   </td>
-                  <td className='medium'>
+                  {/* <td className='medium'>
                     <div className="h-100 d-flex align-items-center justify-content-center">
                       <div className='px-1'>
                         <button className='btn btn-basic bg-gray-light text-danger' onClick={() => handleDeleteUser(user.id)}>
@@ -68,7 +68,7 @@ function Users() {
                       </div>
 
                     </div>
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>

@@ -307,6 +307,7 @@ hr {
 .card {
   color: var(--color-text) !important;
   background: var(--color-main-background) !important;
+  border: 1.3px solid var(--bs-gray-300) !important;
 }
 
 .switch-off.btn {
