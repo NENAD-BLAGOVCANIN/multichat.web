@@ -8,42 +8,28 @@ import { getDashboardStats } from '../api/dashboard';
 
 function Dashboard() {
 
-    const [data, setData] = useState([]);
-
-    const [stats] = useState({
-        contactCount: Math.floor(Math.random() * 100),
-        leadCount: Math.floor(Math.random() * 100),
-        taskCount: Math.floor(Math.random() * 100),
-        todoTasksCount: Math.floor(Math.random() * 100),
-        inProgressTasksCount: Math.floor(Math.random() * 100),
-        doneTasksCount: Math.floor(Math.random() * 100),
+    const [stats, setStats] = useState({
+        total_number_of_users: 0,
+        total_earnings: 0,
+        number_of_subscribed_users: 0,
+        number_of_standard_subscribed_users: 0,
+        number_of_pro_subscribed_users: 0,
     });
 
-    const contactData = {
-        labels: ['Contacts', 'Leads'],
-        datasets: [
-            {
-                label: '',
-                data: [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)],
-                backgroundColor: ['#cf004c', '#4D81F1'],
-                borderColor: ['#cf004c', '#4D81F1'],
-                borderWidth: 1,
-            },
-        ],
-    };
 
-    const taskCompletionData = {
-        labels: ['To Do', 'In Progress', 'Completed'],
+    const subscriptionData = {
+        labels: ['Standard Plan', 'Pro Enterprise'],
         datasets: [
             {
                 label: '',
                 data: [
-                    Math.floor(Math.random() * 100),
-                    Math.floor(Math.random() * 100),
-                    Math.floor(Math.random() * 100),
+                    Math.floor(stats.number_of_standard_subscribed_users * 100),
+                    Math.floor(stats.number_of_pro_subscribed_users * 100),
                 ],
-                backgroundColor: ['#cf004c', '#4D81F1', '#20c997'],
-                borderColor: ['#cf004c', '#4D81F1', '#20c997'],
+                backgroundColor: ['#cf004c', '#4D81F1'],
+                borderColor: ['#cf004c', '#4D81F1'],
+                backgroundColor: ['#791f9055', '#ffc10755'],
+                borderColor: ['#791f90', '#ffc107'],
                 borderWidth: 1,
             },
         ],
@@ -83,7 +69,7 @@ function Dashboard() {
         const fetchDashboardStats = async () => {
             try {
                 const fetchedStats = await getDashboardStats();
-                setData(fetchedStats);
+                setStats(fetchedStats);
             } catch (error) {
                 console.error('Error fetching :', error);
             }
@@ -106,7 +92,7 @@ function Dashboard() {
                             <Person className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{data.total_number_of_users}</h2>
+                            <h2 className="m-0 pe-2">{stats.total_number_of_users}</h2>
                         </div>
 
                         <div className='pt-1'>
@@ -121,7 +107,7 @@ function Dashboard() {
                             <CurrencyDollar className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{data.total_earnings}</h2>
+                            <h2 className="m-0 pe-2">{stats.total_earnings}</h2>
                         </div>
 
                         <div className='pt-1'>
@@ -136,7 +122,7 @@ function Dashboard() {
                             <CurrencyDollar className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{data.number_of_subscribed_users}</h2>
+                            <h2 className="m-0 pe-2">{stats.number_of_subscribed_users}</h2>
                         </div>
 
                         <div className='pt-1'>
@@ -156,19 +142,11 @@ function Dashboard() {
                 </div>
             </div>
             <div className="row">
-                <div className="col-md-6 p-3">
+                <div className="col-md-12 p-3">
                     <div className="card p-3 rounded d-flex justify-content-center flex-column w-100">
-                        <h5 className="mb-4">Contact Management</h5>
+                        <h5 className="mb-4">Subscripitions</h5>
                         <div className="m-auto pb-3" style={{ maxWidth: 400 }}>
-                            <Doughnut data={contactData} />
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6 p-3">
-                    <div className="card p-3 rounded d-flex justify-content-center flex-column w-100">
-                        <h5 className="mb-4">Task Management</h5>
-                        <div className="m-auto pb-3" style={{ maxWidth: 400 }}>
-                            <Doughnut data={taskCompletionData} />
+                            <Doughnut data={subscriptionData} />
                         </div>
                     </div>
                 </div>
