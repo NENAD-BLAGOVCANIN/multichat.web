@@ -28,15 +28,14 @@ export const getDashboardStats = async () => {
 
 }
 
-
-export const deleteUser = async (user_id) => {
+export const getMonthlyEarnings = async () => {
 
     try {
 
-        const token = localStorage.getItem('token'); 
+        const token = localStorage.getItem('accessToken');
 
-        const response = await fetch(apiUrl + '/users/' + user_id, {
-            method: 'DELETE',
+        const response = await fetch(apiUrl + '/admin_panel/earnings/', {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
@@ -46,10 +45,13 @@ export const deleteUser = async (user_id) => {
 
         const responseData = await response.json();
 
-        return responseData;
-
+        if (response.ok) {
+            return responseData;
+        } else {
+            throw new Error(responseData.errors);
+        }
     } catch (error) {
-        return error;
+        throw new Error(error);
     }
 
 }

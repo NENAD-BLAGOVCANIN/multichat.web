@@ -4,7 +4,7 @@ import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js/auto';
 import { Pie, Doughnut, Line } from 'react-chartjs-2';
 import { CurrencyDollar, Person } from 'react-bootstrap-icons';
-import { getDashboardStats } from '../api/dashboard';
+import { getDashboardStats, getMonthlyEarnings } from '../api/dashboard';
 
 function Dashboard() {
 
@@ -16,6 +16,20 @@ function Dashboard() {
         number_of_pro_subscribed_users: 0,
     });
 
+    const [monthlyEarnings, setMonthlyEarnings] = useState({ months: [], earnings: [] });
+    const [lineChartData, setLineChartData] = useState({
+        labels: [],
+        datasets: [
+            {
+                label: 'Monthly Earnings',
+                data: [],
+                fill: true,
+                backgroundColor: '#791f9055',
+                borderColor: '#791f90',
+                tension: 0.4,
+            },
+        ],
+    });
 
     const subscriptionData = {
         labels: ['Standard Plan', 'Pro Enterprise'],
@@ -40,20 +54,6 @@ function Dashboard() {
         return Array.from({ length: 12 }, (_, i) => base + (Math.sin(i) * variation));
     }
 
-    const lineChartData = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-        datasets: [
-            {
-                label: 'Smooth Data 1',
-                data: [1, 3, 10, 7, 8, 12, 15, 20, 17, 18, 28, 28, 30, 28, 35],
-                fill: true,
-                backgroundColor: '#791f9055',
-                borderColor: '#791f90',
-                tension: 0.4,
-            },
-        ],
-    };
-
     const options = {
         scales: {
             x: {
@@ -75,7 +75,30 @@ function Dashboard() {
             }
         };
 
+        const fetchMonthlyEarnings = async () => {
+            try {
+                const data = await getMonthlyEarnings();
+                setMonthlyEarnings(data);
+
+                setLineChartData({
+                    labels: data.months,
+                    datasets: [
+                        {
+                            label: 'Monthly Earnings',
+                            data: data.earnings,
+                            fill: true,
+                            backgroundColor: '#791f9055',
+                            borderColor: '#791f90',
+                            tension: 0.4,
+                        },
+                    ],
+                });
+            } catch (error) {
+                console.error('Error fetching monthly earnings:', error);
+            }
+        };
         fetchDashboardStats();
+        fetchMonthlyEarnings();
     }, []);
 
     return (
