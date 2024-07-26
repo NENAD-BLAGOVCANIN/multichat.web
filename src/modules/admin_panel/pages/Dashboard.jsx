@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js/auto';
 import { Pie, Doughnut, Line } from 'react-chartjs-2';
-import { CurrencyDollar, Person } from 'react-bootstrap-icons';
+import { CurrencyDollar, Person, Stripe } from 'react-bootstrap-icons';
 import { getDashboardStats, getMonthlyEarnings } from '../api/dashboard';
 
 function Dashboard() {
@@ -142,7 +142,7 @@ function Dashboard() {
                     <div className="card p-3 rounded">
                         <div className='d-flex align-items-center justify-content-between pb-2'>
                             <span className="medium fw-500">Subscriptions</span>
-                            <CurrencyDollar className='text-muted' />
+                            <Stripe className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
                             <h2 className="m-0 pe-2">{stats.number_of_subscribed_users}</h2>
