@@ -40,7 +40,7 @@ function MessagingServices() {
                                 <tr key={subscription.id}>
                                     <td className='medium py-3'>{subscription.name}</td>
                                     <td className='medium py-3'>{subscription.email}</td>
-                                    <td className='medium py-3'>{subscription?.subscription?.name}</td>
+                                    <td className='medium py-3'>{subscription?.subscription?.title}</td>
                                 </tr>
                             ))}
                         </tbody>
