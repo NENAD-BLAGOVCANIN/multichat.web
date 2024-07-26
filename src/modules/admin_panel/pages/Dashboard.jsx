@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowTrendUp } from '@fortawesome/free-solid-svg-icons';
 import { Chart, ArcElement, Tooltip, Legend } from 'chart.js/auto';
 import { Pie, Doughnut, Line } from 'react-chartjs-2';
-import { CurrencyDollar } from 'react-bootstrap-icons';
+import { CurrencyDollar, Person } from 'react-bootstrap-icons';
+import { getDashboardStats } from '../api/dashboard';
 
 function Dashboard() {
+
+    const [data, setData] = useState([]);
+
     const [stats] = useState({
         contactCount: Math.floor(Math.random() * 100),
         leadCount: Math.floor(Math.random() * 100),
@@ -75,6 +79,19 @@ function Dashboard() {
         maintainAspectRatio: false,
     };
 
+    useEffect(() => {
+        const fetchDashboardStats = async () => {
+            try {
+                const fetchedStats = await getDashboardStats();
+                setData(fetchedStats);
+            } catch (error) {
+                console.error('Error fetching :', error);
+            }
+        };
+
+        fetchDashboardStats();
+    }, []);
+
     return (
 
         <div className="container">
@@ -85,11 +102,11 @@ function Dashboard() {
                 <div className="col-md-4 p-3">
                     <div className="card p-3 rounded">
                         <div className='d-flex align-items-center justify-content-between pb-2'>
-                            <span className="medium fw-500">Revenue</span>
-                            <CurrencyDollar className='text-muted' />
+                            <span className="medium fw-500">Users</span>
+                            <Person className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{stats.contactCount}</h2>
+                            <h2 className="m-0 pe-2">{data.total_number_of_users}</h2>
                         </div>
 
                         <div className='pt-1'>
@@ -104,7 +121,7 @@ function Dashboard() {
                             <CurrencyDollar className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{stats.contactCount}</h2>
+                            <h2 className="m-0 pe-2">{data.total_earnings}</h2>
                         </div>
 
                         <div className='pt-1'>
@@ -115,11 +132,11 @@ function Dashboard() {
                 <div className="col-md-4 p-3">
                     <div className="card p-3 rounded">
                         <div className='d-flex align-items-center justify-content-between pb-2'>
-                            <span className="medium fw-500">Revenue</span>
+                            <span className="medium fw-500">Subscriptions</span>
                             <CurrencyDollar className='text-muted' />
                         </div>
                         <div className="d-flex align-items-center">
-                            <h2 className="m-0 pe-2">{stats.contactCount}</h2>
+                            <h2 className="m-0 pe-2">{data.number_of_subscribed_users}</h2>
                         </div>
 
                         <div className='pt-1'>
