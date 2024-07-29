@@ -37,8 +37,6 @@ function Footer() {
                                     className="fa-brands text-primary h4 fa-x-twitter"></i></a>
                                 <a href="#" className="px-3" data-bs-toggle="tooltip" data-placement="top" title="Facebook"><i
                                     className="fa-brands text-primary h4 fa-facebook"></i></a>
-                                <a href="https://www.linkedin.com/company/multichat/" data-bs-toggle="tooltip" data-placement="top" title="linkedin"><i
-                                    className="fa-brands text-primary h4 fa-linkedin"></i></a>
                             </ul>
 
                         </div>
@@ -97,22 +95,12 @@ function Footer() {
                                 </ul>
                                 <p className="pb-2 fw-500 m-0 pt-3">{t('footer.contact')}</p>
                                 <ul className="list-unstyled">
-                                    <li><a href="/customer-support" className="py-2 d-block text-secondary text-decoration-none">
-                                        <Headset className='me-2' />
-                                        {t('footer.contact_live_support')}
-                                    </a></li>
+                                    
                                     <li>
-                                        <a href="tel:33613498382"
-                                            className="py-2 d-block text-secondary text-decoration-none">
-                                            <Telephone className='me-2' />
-                                            +423563953
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:contact@multi-chat.io"
+                                        <a href="mailto:info@multi-chat.io"
                                             className="py-2 d-block text-secondary text-decoration-none">
                                             <Envelope className='me-2' />
-                                            contact@multi-chat.io
+                                            info@multi-chat.io
                                         </a>
                                     </li>
                                 </ul>

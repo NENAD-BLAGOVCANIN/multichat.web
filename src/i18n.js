@@ -52,8 +52,8 @@ i18n
                                 text: "Multichat lets you use many messaging platforms all in one place."
                             },
                             box_3: {
-                                title: "Customizable UI",
-                                text: "Customize the UI based on your preferences."
+                                title: "Boost Productivity with AI Assistance",
+                                text: "Automate chat summaries, draft responses, and translate replies seamlessly."
                             },
                             box_4: {
                                 title: "Privacy and Security",
@@ -120,7 +120,8 @@ i18n
                         premium_support: "Premium 24/7 support",
                         advanced_notifications: "Advanced notifications",
                         full_notifications: "Full notifications suite",
-                        standard_notifications: "Standard desktop notifications"
+                        standard_notifications: "Standard desktop notifications",
+                        ai_assistant: "AI Chat Assistant (coming soon)"
                     },
                     login: {
                         remember_pass: "Remember for 14 days",
@@ -187,8 +188,8 @@ i18n
                                 text: "通過我們的廣泛鍵盤支持以光速移動。"
                             },
                             box_3: {
-                                title: "可定制的用戶界面",
-                                text: "根據您的偏好自定義用戶界面。"
+                                title: "藉由AI協助提升生產力",
+                                text: "自動生成聊天摘要、草擬回應，並無縫翻譯回覆。"
                             },
                             box_4: {
                                 title: "隱私和安全",
@@ -255,7 +256,8 @@ i18n
                         premium_support: "高級24/7支持",
                         advanced_notifications: "高級通知",
                         full_notifications: "完整通知套件",
-                        standard_notifications: "標準桌面通知"
+                        standard_notifications: "標準桌面通知",
+                        ai_assistant: "AI聊天助理（即將推出）"
                     },
                     login: {
                         remember_pass: "記住14天",

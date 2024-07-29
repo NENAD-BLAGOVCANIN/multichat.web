@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faCircleHalfStroke, faEdit, faKeyboard, faShieldHalved } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from 'react-i18next';
-import { Bell, Chat, CircleHalf, Grid1x2, Infinity, Keyboard, Pencil, ShieldLock, WindowStack } from 'react-bootstrap-icons';
+import { Bell, Chat, CircleHalf, Grid1x2, Infinity, Keyboard, Pencil, Robot, ShieldLock, WindowStack } from 'react-bootstrap-icons';
 
 function Features() {
 
@@ -43,7 +43,7 @@ function Features() {
                 </div>
                 <div className="col-md-4 p-4">
                     <div className='card rounded bg-app py-3 px-4 h-100 border-0 shadow-sm'>
-                        <Grid1x2 className='me-auto mb-3 h2 text-primary' />
+                        <Robot className='me-auto mb-3 h2 text-primary' />
                         <span className="mb-2 bold">
                             {t('home.features.box_3.title')}
                         </span>

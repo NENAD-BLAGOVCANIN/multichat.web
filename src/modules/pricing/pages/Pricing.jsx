@@ -43,6 +43,10 @@ function Pricing() {
                                         <span className='pe-2'>{t('pricing.advanced_notifications')}</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
+                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
+                                        <span className='pe-2'>{t('pricing.ai_assistant')}</span>
+                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
+                                    </div>
                                 </div>
                             </div>
 
@@ -119,7 +123,10 @@ function Pricing() {
                                         <span className='pe-2'>{t('pricing.full_notifications')}</span>
                                         <FontAwesomeIcon icon={faCheck} className='text-success' />
                                     </div>
-
+                                    <div className='d-flex align-items-center h-100 justify-content-between py-2'>
+                                        <span className='pe-2'>{t('pricing.ai_assistant')}</span>
+                                        <FontAwesomeIcon icon={faCheck} className='text-success' />
+                                    </div>
                                 </div>
                             </div>
 
