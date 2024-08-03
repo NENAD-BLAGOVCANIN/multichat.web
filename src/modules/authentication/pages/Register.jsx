@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../common/contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
-import Button from '../../../components/Button';
+import Button from '../../common/components/Button';
 
 export default function Register() {
 

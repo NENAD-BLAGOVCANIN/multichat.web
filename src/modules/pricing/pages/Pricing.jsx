@@ -25,7 +25,10 @@ function Pricing() {
 
 
                             <div className='py-4'>
-                                <a href='https://pay.raply.ai/b/7sI14Cd88blP6s0aF2' className='btn btn-dark w-100 py-2'>Start Free Trial</a>
+                                <form action="https://api.multi-chat.io/payments/create-checkout-session" method='POST'>
+                                    <input type="hidden" name="user_id" value={1} />
+                                    <a className='btn btn-dark w-100 py-2'>Start Free Trial</a>
+                                </form>
                             </div>
 
 

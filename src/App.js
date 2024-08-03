@@ -34,8 +34,14 @@ const routesConfig = [
     path: '/',
     element: <AppLayout />,
     children: [
+      {
+        path: '/',
+        element: <PrivateRoutes />,
+        children: [
+          ...pricingRoutes,
+        ]
+      },
       ...accountRoutes,
-      ...pricingRoutes,
       ...downloadsRoutes,
       ...legalRoutes
     ]
