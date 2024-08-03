@@ -2,25 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next';
 import { faCheck, faX } from '@fortawesome/free-solid-svg-icons'
-import { getUserInfo } from '../../common/api/user';
+import { apiUrl } from '../../common/api/config';
+import { useAuth } from '../../common/contexts/AuthContext';
 
 function Pricing() {
 
     const { t } = useTranslation();
-    const [userInfo, setUserInfo] = useState([]);
-
-    useEffect(() => {
-        const fetchUserInfo = async () => {
-            try {
-                const fetchedUserInfo = await getUserInfo();
-                setUserInfo(fetchedUserInfo);
-            } catch (error) {
-                console.error('Error fetching :', error);
-            }
-        };
-
-        fetchUserInfo();
-    }, []);
+    const { userId } = useAuth();
 
     return (
         <div className='container py-5 px-5'>
@@ -40,8 +28,8 @@ function Pricing() {
 
 
                             <div className='py-4'>
-                                <form action="https://api.multi-chat.io/payments/create-checkout-session" method='POST'>
-                                    <input type="hidden" name="user_id" value={userInfo?.id} />
+                                <form action={apiUrl + "/payments/create-checkout-session"} method='POST'>
+                                    <input type="hidden" name="user_id" value={userId} />
                                     <input type="hidden" name="subscription_id" value={1} />
                                     <button type='submit' className='btn btn-dark w-100 py-2'>Start Free Trial</button>
                                 </form>

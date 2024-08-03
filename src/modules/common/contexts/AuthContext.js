@@ -15,6 +15,7 @@ export const AuthProvider = ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
     const [email, setEmail] = useState('');
     const [token, setToken] = useState('');
+    const [userId, setUserId] = useState('');
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
@@ -22,9 +23,11 @@ export const AuthProvider = ({ children }) => {
     const handleLogin = async (email, password) => {
         const response = await login(email, password);
         if (response.access) {
+            const decodedToken = jwtDecode(response.access);
             setAuthenticated(true);
             setEmail(email);
             setToken(response.access);
+            setUserId(decodedToken.user_id); // Extract user ID from token
             localStorage.setItem('accessToken', response.access);
             navigate('/');
             return { success: true };
@@ -37,6 +40,7 @@ export const AuthProvider = ({ children }) => {
         setAuthenticated(false);
         setEmail('');
         setToken('');
+        setUserId('');
         localStorage.removeItem('accessToken');
         navigate('/');
     };
@@ -52,9 +56,11 @@ export const AuthProvider = ({ children }) => {
         const storedToken = localStorage.getItem('accessToken');
         if (storedToken) {
             checkTokenExpiration(storedToken);
+            const decodedToken = jwtDecode(storedToken);
             setAuthenticated(true);
             setToken(storedToken);
-            setEmail(jwtDecode(storedToken).email);
+            setEmail(decodedToken.email);
+            setUserId(decodedToken.user_id); // Extract user ID from token
         }
         setLoading(false);
     }, []);
@@ -63,6 +69,7 @@ export const AuthProvider = ({ children }) => {
         authenticated,
         email,
         token,
+        userId, // Include user ID in the context value
         login: handleLogin,
         logout: handleLogout,
         loading
