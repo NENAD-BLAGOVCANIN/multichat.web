@@ -25,7 +25,7 @@ function Downloads() {
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
-                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
+                  <a href='https://multichat-storage.netlify.app/Multichat-Setup-0.3.8.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
                     <Download className='me-3' />
                     {t('home.hero_section.download_for_windows')}
                   </a>
@@ -68,7 +68,7 @@ function Downloads() {
 
               <div className='h-100 text-center pt-4'>
                 <div className='p-3'>
-                  <a href='https://multichat-storage.netlify.app/setup.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
+                  <a href='https://multichat-storage.netlify.app/Multichat-Setup-0.3.8.exe' className='btn btn-primary w-fit rounded py-3 px-4'>
                     <Download className='me-3' />
                     {t('home.hero_section.download_for_mac')}
                   </a>
