@@ -112,7 +112,11 @@ function Pricing() {
                             <p className='medium pt-2'>{t('pricing.billed_monthly')}</p>
 
                             <div className='py-4'>
-                                <a href='https://pay.raply.ai/b/00g6oWd884XreYw5kJ' className='btn btn-dark w-100 py-2'>Start Free Trial</a>
+                                <form action={apiUrl + "/payments/create-checkout-session"} method='POST'>
+                                    <input type="hidden" name="user_id" value={userId} />
+                                    <input type="hidden" name="subscription_id" value={3} />
+                                    <button type='submit' className='btn btn-dark w-100 py-2'>Start Free Trial</button>
+                                </form>
                             </div>
 
 
