@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getUserInfo } from '../../common/api/user';
+import { FormGroup, FormLabel, FormText } from 'react-bootstrap';
 
 function Account() {
     const [userInfo, setUserInfo] = useState([]);
@@ -33,17 +34,22 @@ function Account() {
 
 
     return (
-        <div className='container px-5 py-5'>
+        <div className='container px-3 py-3'>
 
-            <h2 className='mb-5'>My Account</h2>
+            <h2 className='mb-5'>Hello, {userInfo.name}</h2>
 
-
-            <p className="text-muted">Name: {userInfo.name}</p>
-            <p className="text-muted">Email: {userInfo.email}</p>
-            <p className="text-muted">
+            <FormGroup className='mt-3'>
+                <FormLabel>Name</FormLabel>
+                <input className='form-control' value={userInfo.name} readOnly />
+            </FormGroup>
+            <FormGroup className='mt-3'>
+                <FormLabel>Email</FormLabel>
+                <input className='form-control' value={userInfo.email} readOnly />
+            </FormGroup>
+            <p className="text-muted mt-3">
                 Profile Created At: {formatDate(userInfo.date_joined)}
             </p>
-            <p className="text-muted">
+            <p className="text-muted mt-3">
                 Email Verified:{" "}
                 <span className="badge bagde-primary bg-danger">No</span>
             </p>

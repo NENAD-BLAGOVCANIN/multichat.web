@@ -12,6 +12,7 @@ import downloadsRoutes from './modules/downloads';
 import pricingRoutes from './modules/pricing';
 import accountRoutes from './modules/account';
 import paymentRoutes from './modules/payments';
+import AccountLayout from './modules/account/layouts/AccountLayout';
 
 const PrivateRoutes = () => {
   const { authenticated, loading } = useAuth();
@@ -43,7 +44,13 @@ const routesConfig = [
           ...paymentRoutes,
         ]
       },
-      ...accountRoutes,
+      {
+        path: '/',
+        element: <AccountLayout />,
+        children: [
+          ...accountRoutes,
+        ]
+      },
       ...downloadsRoutes,
       ...legalRoutes
     ]
