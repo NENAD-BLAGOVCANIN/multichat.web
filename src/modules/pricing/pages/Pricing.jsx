@@ -30,7 +30,7 @@ function Pricing() {
                             <div className='py-4'>
                                 <form action={apiUrl + "/payments/create-checkout-session"} method='POST'>
                                     <input type="hidden" name="user_id" value={userId} />
-                                    <input type="hidden" name="subscription_id" value={1} />
+                                    <input type="hidden" name="subscription_id" value={2} />
                                     <button type='submit' className='btn btn-dark w-100 py-2'>Start Free Trial</button>
                                 </form>
                             </div>
