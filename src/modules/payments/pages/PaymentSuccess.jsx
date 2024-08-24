@@ -1,4 +1,5 @@
 import React from 'react'
+import { ShieldFillCheck } from 'react-bootstrap-icons';
 
 function PaymentSuccess() {
     return (
@@ -7,7 +8,9 @@ function PaymentSuccess() {
                 <div class="col-12 col-sm-12 col-md-12s col-lg-12s m-auto">
                     <div>
                         <div class="card-body text-center">
-                            <p class="card-icon"><i class="icon an an-shield-check fs-1"></i></p>
+                            <p class="card-icon">
+                                <ShieldFillCheck className='h1 text-success' />
+                            </p>
                             <h2 class="bold mb-3">Thank you for your order!</h2>
                             <p class="card-text mb-1">You will receive an email with details of your subscription and a monthly reminder for next payments.</p>
                             <p class="card-text mb-1">All necessary information about the subscription, will be sent to your email</p>
