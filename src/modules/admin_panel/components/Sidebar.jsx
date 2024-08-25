@@ -7,7 +7,7 @@ import {
     faBuilding
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { PersonCircle, UiChecksGrid, QuestionCircle, Chat, Stripe, People } from 'react-bootstrap-icons';
+import { PersonCircle, UiChecksGrid, QuestionCircle, Chat, Stripe, People, Wallet2 } from 'react-bootstrap-icons';
 
 
 function Sidebar({ userInfo, setUserInfo }) {
@@ -90,6 +90,12 @@ function Sidebar({ userInfo, setUserInfo }) {
                         <Link to="/admin/subscriptions" className='nav-link' onClick={() => handlePageChange('/admin/subscriptions')}>
                             <Stripe />
                             <span className='ps-3 medium'>Subscriptions</span>
+                        </Link>
+                    </li>
+                    <li className={`nav-item px-2 rounded ${currentPage === '/admin/payments' ? 'active' : ''}`}>
+                        <Link to="/admin/payments" className='nav-link' onClick={() => handlePageChange('/admin/payments')}>
+                            <Wallet2 />
+                            <span className='ps-3 medium'>Payments</span>
                         </Link>
                     </li>
                 </div>
