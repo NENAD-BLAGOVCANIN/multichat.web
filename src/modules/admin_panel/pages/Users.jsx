@@ -55,7 +55,7 @@ function Users() {
                   <td className='medium py-3'>{user.name}</td>
                   <td className='medium py-3'>{user.email}</td>
                   <td className='medium py-3'>
-                    <span className='badge badge-primary bg-warning'>
+                    <span className='badge badge-primary bg-info'>
                       {user?.subscription?.title}
                     </span>
                   </td>

@@ -33,14 +33,20 @@ function MessagingServices() {
                                 <th className='medium fw-400'>User Name</th>
                                 <th className='medium fw-400'>User Email</th>
                                 <th className='medium fw-400'>Type</th>
+                                <th className='medium fw-400'>Expires at</th>
+                                <th className='medium fw-400'>Created at</th>
                             </tr>
                         </thead>
                         <tbody>
                             {subscriptions.map(subscription => (
                                 <tr key={subscription.id}>
-                                    <td className='medium py-3'>{subscription.name}</td>
-                                    <td className='medium py-3'>{subscription.email}</td>
-                                    <td className='medium py-3'>{subscription?.subscription?.title}</td>
+                                    <td className='medium py-3'>{subscription?.user?.name}</td>
+                                    <td className='medium py-3'>{subscription?.user?.email}</td>
+                                    <td className='medium py-3'>
+                                        <span className='badge badge-primary bg-info'>{subscription?.subscription?.title}</span>
+                                    </td>
+                                    <td className='medium py-3'>{subscription.renewal_date}</td>
+                                    <td className='medium py-3'>{subscription.created_at}</td>
                                 </tr>
                             ))}
                         </tbody>
