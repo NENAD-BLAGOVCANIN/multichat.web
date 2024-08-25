@@ -34,7 +34,7 @@ function Account() {
 
 
     return (
-        <div className='card px-4 py-4'>
+        <div className='px-4 py-4'>
 
             <FormGroup>
                 <FormLabel>Name</FormLabel>
@@ -48,6 +48,11 @@ function Account() {
             <FormGroup className='mt-3'>
                 <FormLabel>Plan</FormLabel>
                 <input className='form-control' value={userInfo?.subscription?.title} readOnly />
+            </FormGroup>
+
+            <FormGroup className='mt-3'>
+                <FormLabel>Date joined</FormLabel>
+                <input className='form-control' value={userInfo.date_joined} readOnly />
             </FormGroup>
 
         </div>

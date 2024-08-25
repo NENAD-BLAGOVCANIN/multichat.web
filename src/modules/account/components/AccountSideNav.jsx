@@ -3,6 +3,9 @@ import { PersonCircle, Box2, Heart, BoxArrowRight, Gear, Lock, Ticket, Box, Stri
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { getUserInfo } from '../../common/api/user';
 import { truncateString } from '../../common/utils/format_utils'
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover'
+import Button from 'react-bootstrap/Button';
 
 function AccountSideNav() {
 
@@ -44,9 +47,12 @@ function AccountSideNav() {
                                             <p className='medium text-lighter'>{truncateString(userInfo.email, 20)}</p>
                                         </div>
                                     </div>
-                                    <a to="/profile/" class="btn btn-success my-3">
+
+                                    <span className='small text-warning mt-3 mb-1'>Feature still in development</span>
+                                    <a class="btn btn-success mb-3 disabled" >
                                         Edit Profile
                                     </a>
+
                                 </div>
                             </li>
 

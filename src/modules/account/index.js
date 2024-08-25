@@ -1,5 +1,6 @@
 import Account from './pages/Account';
 import Payments from './pages/Payments';
+import Privacy from './pages/Privacy';
 
 const accountRoutes = [
   {
@@ -9,6 +10,10 @@ const accountRoutes = [
   {
     path: 'account/payments',
     element: <Payments />,
+  },
+  {
+    path: 'account/privacy',
+    element: <Privacy />,
   },
 ];
 
