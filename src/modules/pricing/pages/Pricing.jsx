@@ -21,7 +21,7 @@ function Pricing() {
                                 {t('pricing.standard')}
                             </h4>
                             <div className='d-flex align-items-center pt-2'>
-                                <h2 className='bold mb-0'>8$</h2>
+                                <h2 className='bold mb-0'>9,99$</h2>
                                 <span className='text-muted ps-1'>/{t('pricing.month')}</span>
                             </div>
                             <p className='medium pt-2'>{t('pricing.billed_monthly')}</p>
@@ -106,7 +106,7 @@ function Pricing() {
                                 {t('pricing.pro')}
                             </h4>
                             <div className='d-flex align-items-center pt-2'>
-                                <h2 className='bold mb-0'>24$</h2>
+                                <h2 className='bold mb-0'>19,99$</h2>
                                 <span className='text-muted ps-1'>/{t('pricing.month')}</span>
                             </div>
                             <p className='medium pt-2'>{t('pricing.billed_monthly')}</p>
