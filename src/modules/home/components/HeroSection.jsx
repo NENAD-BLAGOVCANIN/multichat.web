@@ -21,7 +21,7 @@ function HeroSection() {
                             <p className='py-3 hero-subtitle'>{t('home.hero_section.subtitle')}</p>
 
                             <div className='d-flex align-items-center mt-1'>
-                                <a href='https://multichat-storage.netlify.app/Multichat-Setup-0.3.8.exe' className='btn btn-primary w-fit rounded-lg py-3 px-4'>
+                                <a href='https://multichat-storage.netlify.app/Multichat-Setup-0.3.9.exe' className='btn btn-primary w-fit rounded-lg py-3 px-4'>
                                     <Download className='me-2' />
                                     {t('home.hero_section.download_for_windows')}
                                 </a>
