@@ -58,7 +58,7 @@ function AccountSideNav() {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink className="nav-link px-0 d-flex align-items-center pb-2" to="my-products">
+                                <NavLink className="nav-link px-0 d-flex align-items-center pb-2" to="/account/payments">
                                     <Stripe />
                                     <span className='ps-2'>Payments</span>
                                 </NavLink>
