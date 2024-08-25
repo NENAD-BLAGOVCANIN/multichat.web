@@ -1,10 +1,27 @@
-import React from 'react'
-import { PersonCircle, Box2, Heart, BoxArrowRight, Gear, Lock, Ticket, Box } from 'react-bootstrap-icons';
+import React, { useState, useEffect } from 'react'
+import { PersonCircle, Box2, Heart, BoxArrowRight, Gear, Lock, Ticket, Box, Stripe } from 'react-bootstrap-icons';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { getUserInfo } from '../../common/api/user';
+import { truncateString } from '../../common/utils/format_utils'
 
 function AccountSideNav() {
 
     const location = useLocation();
+
+    const [userInfo, setUserInfo] = useState([]);
+
+    useEffect(() => {
+        const fetchUserInfo = async () => {
+            try {
+                const fetchedUserInfo = await getUserInfo();
+                setUserInfo(fetchedUserInfo);
+            } catch (error) {
+                console.error('Error fetching :', error);
+            }
+        };
+
+        fetchUserInfo();
+    }, []);
 
     return (
         <div style={{ width: 350 }} className='mb-3'>
@@ -16,15 +33,15 @@ function AccountSideNav() {
                         <ul className="nav px-2 flex-column d-none d-lg-block mt-1 mt-lg-0">
                             <li>
                                 <div class="d-flex flex-column">
-                                    <div class="d-flex">
+                                    <div class="d-flex align-items-center">
                                         <div>
-                                            <img style={{ width: 85, height: 85 }} src="https://assets.leetcode.com/users/nenad2807/avatar_1722986724.png" alt="Avatar" class="h-20 w-20 rounded-lg object-cover" />
+                                            <PersonCircle className='h1 text-muted border rounded-circle me-2' />
                                         </div>
                                         <div class="px-3">
                                             <p class="bold mb-0">
-                                                nenad2807
+                                                {userInfo.name}
                                             </p>
-                                            <p className='medium text-lighter'>Nenad Blagov</p>
+                                            <p className='medium text-lighter'>{truncateString(userInfo.email, 20)}</p>
                                         </div>
                                     </div>
                                     <a to="/profile/" class="btn btn-success my-3">
@@ -42,8 +59,8 @@ function AccountSideNav() {
 
                             <li className="nav-item">
                                 <NavLink className="nav-link px-0 d-flex align-items-center pb-2" to="my-products">
-                                    <Box />
-                                    <span className='ps-2'>My products</span>
+                                    <Stripe />
+                                    <span className='ps-2'>Payments</span>
                                 </NavLink>
                             </li>
 
@@ -54,12 +71,6 @@ function AccountSideNav() {
                                 </NavLink>
                             </li>
 
-                            <li className="nav-item">
-                                <NavLink className="nav-link px-0 d-flex align-items-center pb-2" to="/account/settings">
-                                    <Gear />
-                                    <span className='ps-2'>Account settings</span>
-                                </NavLink>
-                            </li>
 
                             <li className="nav-item border-top my-3"></li>
 

@@ -34,11 +34,9 @@ function Account() {
 
 
     return (
-        <div className='container px-3 py-3'>
+        <div className='card px-4 py-4'>
 
-            <h2 className='mb-5'>Hello, {userInfo.name}</h2>
-
-            <FormGroup className='mt-3'>
+            <FormGroup>
                 <FormLabel>Name</FormLabel>
                 <input className='form-control' value={userInfo.name} readOnly />
             </FormGroup>
@@ -46,13 +44,11 @@ function Account() {
                 <FormLabel>Email</FormLabel>
                 <input className='form-control' value={userInfo.email} readOnly />
             </FormGroup>
-            <p className="text-muted mt-3">
-                Profile Created At: {formatDate(userInfo.date_joined)}
-            </p>
-            <p className="text-muted mt-3">
-                Email Verified:{" "}
-                <span className="badge bagde-primary bg-danger">No</span>
-            </p>
+
+            <FormGroup className='mt-3'>
+                <FormLabel>Plan</FormLabel>
+                <input className='form-control' value={userInfo?.subscription?.title} readOnly />
+            </FormGroup>
 
         </div>
     )

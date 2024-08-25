@@ -8,7 +8,7 @@ function AccountLayout() {
 
             <div className="d-flex g-4">
                 <AccountSideNav />
-                <div className="col-md-7 mx-auto">
+                <div className="col-md-8 mx-auto">
                     <Outlet />
                 </div>
 
